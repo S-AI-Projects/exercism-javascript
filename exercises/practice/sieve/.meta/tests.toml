@@ -4,12 +4,15 @@
 
 [88529125-c4ce-43cc-bb36-1eb4ddd7b44f]
 description = "no primes under two"
+comment = "The JavaScript test 'no primes under two' asserts primes(1) is [], directly covering the reference implementation's n <= 1 boundary check."
 
 [4afe9474-c705-4477-9923-840e1024cc2b]
 description = "find first prime"
+comment = "The JavaScript test 'finds first prime' asserts primes(2) equals [2] and is marked xtest, so it is excluded from the normal test run. The reference selects 2 with possibilities.shift(), records it with primes.push(prime), then removes its multiples with possibilities.filter(indivisibleBy, prime)."
 
 [974945d8-8cd9-4f00-9463-7d813c7f17b7]
 description = "find primes up to 10"
+comment = "The JavaScript test 'finds primes up to 10' asserts primes(10) equals [2, 3, 5, 7] and is marked xtest, so it is excluded from the normal test run. The reference repeatedly selects candidates with possibilities.shift(), records primes with primes.push(prime), and filters multiples with possibilities.filter(indivisibleBy, prime)."
 
 [2e2417b7-3f3a-452a-8594-b9af08af6d82]
 description = "limit is prime"
