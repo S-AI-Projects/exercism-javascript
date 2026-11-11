@@ -1,0 +1,12 @@
+{
+  "task_id": "R53-T021",
+  "exercise": "robot-name",
+  "canonical_uuids_count": 4,
+  "executed_passed_tests": 8,
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
