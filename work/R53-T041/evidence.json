@@ -1,0 +1,158 @@
+{
+  "task": "R53-T041",
+  "inputs": {
+    "config": "exercises/practice/sieve/.meta/config.json",
+    "configured_files": {
+      "solution": [
+        "sieve.js"
+      ],
+      "test": [
+        "sieve.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "reference_implementation": "exercises/practice/sieve/.meta/proof.ci.js",
+    "test_script": "corepack pnpm jest",
+    "canonical_cases": [
+      {
+        "uuid": "88529125-c4ce-43cc-bb36-1eb4ddd7b44f",
+        "description": "no primes under two",
+        "test_name": "no primes under two",
+        "selected_before_verification": true
+      },
+      {
+        "uuid": "4afe9474-c705-4477-9923-840e1024cc2b",
+        "description": "find first prime",
+        "test_name": "finds first prime",
+        "selected_before_verification": false
+      },
+      {
+        "uuid": "974945d8-8cd9-4f00-9463-7d813c7f17b7",
+        "description": "find primes up to 10",
+        "test_name": "finds primes up to 10",
+        "selected_before_verification": false
+      },
+      {
+        "uuid": "2e2417b7-3f3a-452a-8594-b9af08af6d82",
+        "description": "limit is prime",
+        "test_name": "limit is prime",
+        "selected_before_verification": false
+      },
+      {
+        "uuid": "92102a05-4c7c-47de-9ed0-b7d5fcd00f21",
+        "description": "find primes up to 1000",
+        "test_name": "finds primes up to 1000",
+        "selected_before_verification": false
+      }
+    ],
+    "initial_canonical_counts": {
+      "included": 1,
+      "excluded": 4
+    }
+  },
+  "expected": {
+    "initial_canonical_counts": {
+      "included": 1,
+      "excluded": 4
+    },
+    "all_five_reference_cases_pass": true
+  },
+  "actual": {
+    "canonical_counts_before": {
+      "included": 1,
+      "excluded": 4
+    },
+    "canonical_counts_after": {
+      "included": 1,
+      "excluded": 4
+    },
+    "temporary_copy_enabled_counts": {
+      "included": 5,
+      "excluded": 0
+    },
+    "tests": {
+      "executed": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "canonical_case_results": [
+      {
+        "uuid": "88529125-c4ce-43cc-bb36-1eb4ddd7b44f",
+        "test_name": "no primes under two",
+        "expected_reference_status": "passed",
+        "actual_reference_status": "passed"
+      },
+      {
+        "uuid": "4afe9474-c705-4477-9923-840e1024cc2b",
+        "test_name": "finds first prime",
+        "expected_reference_status": "passed",
+        "actual_reference_status": "passed"
+      },
+      {
+        "uuid": "974945d8-8cd9-4f00-9463-7d813c7f17b7",
+        "test_name": "finds primes up to 10",
+        "expected_reference_status": "passed",
+        "actual_reference_status": "passed"
+      },
+      {
+        "uuid": "2e2417b7-3f3a-452a-8594-b9af08af6d82",
+        "test_name": "limit is prime",
+        "expected_reference_status": "passed",
+        "actual_reference_status": "passed"
+      },
+      {
+        "uuid": "92102a05-4c7c-47de-9ed0-b7d5fcd00f21",
+        "test_name": "finds primes up to 1000",
+        "expected_reference_status": "passed",
+        "actual_reference_status": "passed"
+      }
+    ],
+    "learner_solution_sha256_before": "6e2420e5a9cbdaf587662f41f94a4251d1750ad7709a3298136da6f13a0fd257",
+    "learner_solution_sha256_after": "6e2420e5a9cbdaf587662f41f94a4251d1750ad7709a3298136da6f13a0fd257"
+  },
+  "checks": {
+    "toml_parsing": true,
+    "configuration_path_resolution": true,
+    "non_zero_exit_rejected": true,
+    "zero_tests_rejected": true,
+    "assertion_failure_rejected": true,
+    "executed_count_reported": true,
+    "canonical_uuid_and_test_mapping": true,
+    "all_exercise_files_copied_including_hidden": true,
+    "reference_substituted_only_in_temporary_copy": true,
+    "all_five_canonical_cases_enabled_in_temp_copy": true,
+    "executed_test_count_matches_declared_cases": true,
+    "all_five_canonical_cases_pass": true,
+    "learner_solution_unchanged": true
+  },
+  "process": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "--dir",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/sieve-r53-t041-stqkhjx2/sieve",
+      "run",
+      "test",
+      "--runInBand",
+      "--watch=false",
+      "--runTestsByPath",
+      "sieve.spec.js",
+      "--json",
+      "--outputFile",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/sieve-r53-t041-stqkhjx2/jest-result.json"
+    ],
+    "return_code": 0,
+    "stdout": "\n> @exercism/javascript-sieve@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/sieve-r53-t041-stqkhjx2/sieve\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"sieve.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/sieve-r53-t041-stqkhjx2/jest-result.json\"\n\n",
+    "stderr": "PASS ./sieve.spec.js\n  Sieve\n    \u2713 no primes under two (1 ms)\n    \u2713 finds first prime\n    \u2713 finds primes up to 10 (1 ms)\n    \u2713 limit is prime\n    \u2713 finds primes up to 1000\n\nTest Suites: 1 passed, 1 total\nTests:       5 passed, 5 total\nSnapshots:   0 total\nTime:        0.343 s\nRan all test suites within paths \"sieve.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/sieve-r53-t041-stqkhjx2/jest-result.json\n"
+  },
+  "tool_versions": {
+    "node": "v24.19.0",
+    "pnpm": "9.15.2",
+    "python": "3.9.6",
+    "tomli": "2.5.0"
+  },
+  "temporary_copy_result": "PASS",
+  "success": true
+}
