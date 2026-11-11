@@ -1,0 +1,26 @@
+# Canonical test cases for robot-name
+# Canonical source: exercism/problem-specifications
+
+[0396495b-0056-4b77-8fa6-ba4be5877aa2]
+description = "has a name"
+include = true
+# Cites RegExp test: expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/)
+# Validates standard 2 uppercase letters followed by 3 digits format.
+
+[3fc83307-e854-4632-a9b0-917ec7b6b33a]
+description = "name is the same each time"
+include = true
+# Cites JavaScript property getter evaluation: expect(robot.name).toEqual(robot.name)
+# Ensures reading the getter multiple times returns an immutable persistent string.
+
+[068ba0fc-2b62-4217-91fb-5ec9cfb92c4b]
+description = "different robots have different names"
+include = true
+# Cites instance comparison: expect(differentRobot.name).not.toEqual(robot.name)
+# Ensures constructor invokes unique name generator per instance without collision.
+
+[a57f6d3f-5ce7-497d-aa21-4d37c95e1eb9]
+description = "reset name"
+include = true
+# Cites method invocation and equality assertion: robot.reset(); expect(originalName).not.toEqual(newName)
+# Covered by spec test 'is able to reset the name' and 'should set a unique name after reset'.

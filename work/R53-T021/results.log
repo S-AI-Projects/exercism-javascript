@@ -1,0 +1,18 @@
+
+PASS ./robot-name.spec.js
+  Robot
+    ✓ has a name (1 ms)
+    ✓ name is the same each time
+    ✓ different robots have different names
+    ✓ is able to reset the name (1 ms)
+    ✓ should set a unique name after reset (1 ms)
+    ✓ internal name cannot be modified (1 ms)
+    ✓ new names should not be sequential
+    ✓ names from reset should not be sequential (1 ms)
+    ○ skipped all the names can be generated
+
+Test Suites: 1 passed, 1 total
+Tests:       1 skipped, 8 passed, 9 total
+Snapshots:   0 total
+Time:        0.45 s
+Ran all test suites matching robot-name.spec.js.
