@@ -1,0 +1,29 @@
+{
+  "task_id": "R53-T026",
+  "exercise": "square-root",
+  "package_json_test_script": "corepack pnpm jest",
+  "named_cases_verified": [
+    "root of 1",
+    "root of 4",
+    "root of 5"
+  ],
+  "canonical_case_count": 6,
+  "reference_bitwise_base2": {
+    "exit_code": 0,
+    "executed_passed_tests": 6,
+    "status": "PASSED"
+  },
+  "alternative_binary_search": {
+    "exit_code": 0,
+    "executed_passed_tests": 6,
+    "status": "PASSED"
+  },
+  "behavioral_agreement": "AGREED_ON_ALL_CANONICAL_CASES",
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
