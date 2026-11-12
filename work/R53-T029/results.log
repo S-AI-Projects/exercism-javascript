@@ -1,0 +1,52 @@
+=== SCENARIO A: REAL REFERENCE JEST RUN ===
+
+PASS ./grade-school.spec.js
+  Grade School
+    ✓ Roster is empty when no student is added (1 ms)
+    ✓ Add a student
+    ✓ Student is added to the roster
+    ✓ Adding multiple students in the same grade in the roster (1 ms)
+    ✓ Multiple students in the same grade are added to the roster
+    ✓ Cannot add student to same grade in the roster more than once
+    ✓ Student not added to same grade in the roster more than once
+    ✓ Adding students in multiple grades
+    ✓ Students in multiple grades are added to the roster
+    ✓ Cannot add same student to multiple grades in the roster
+    ✓ Student not added to multiple grades in the roster
+    ✓ Students are sorted by grades in the roster
+    ✓ Students are sorted by name in the roster
+    ✓ Students are sorted by grades and then by name in the roster
+    ✓ Grade is empty if no students in the roster
+    ✓ Grade is empty if no students in that grade
+    ✓ Student not added to same grade more than once
+    ✓ Student not added to multiple grades
+    ✓ Student not added to other grade for multiple grades
+    ✓ Students are sorted by name in a grade
+
+Test Suites: 1 passed, 1 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        0.181 s
+Ran all test suites.
+
+=== SCENARIO B & C: NEGATIVE RUNNER CHECKS ===
+{
+  "real_reference": {
+    "exit_code": 0,
+    "executed_passed_tests": 20,
+    "hashes_unchanged": true,
+    "status": "PASSED"
+  },
+  "deliberately_failing_reference": {
+    "rejected_non_zero": true,
+    "reason": "Child Jest process exited non-zero (1):",
+    "hashes_unchanged": true,
+    "status": "FAILED_AS_EXPECTED"
+  },
+  "empty_test_selection": {
+    "rejected_non_zero": true,
+    "reason": "Zero-test run detected (passed=0, total=20):",
+    "hashes_unchanged": true,
+    "status": "FAILED_AS_EXPECTED"
+  }
+}
