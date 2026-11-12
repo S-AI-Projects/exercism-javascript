@@ -1,24 +1,19 @@
-const getSuffix = (number) => {
-  const lastTwoDigits = number % 100;
-  const lastDigit = number % 10;
+const ORDINAL_SUFFIXES = {
+  1: 'st',
+  2: 'nd',
+  3: 'rd',
+};
 
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+const getSuffix = (number) => {
+  // Invariant: numbers ending in 11, 12, or 13 always take 'th' before checking the units digit.
+  const lastTwoDigits = number % 100;
+  const isTeenException = lastTwoDigits >= 11 && lastTwoDigits <= 13;
+  if (isTeenException) {
     return 'th';
   }
 
-  if (lastDigit === 1) {
-    return 'st';
-  }
-
-  if (lastDigit === 2) {
-    return 'nd';
-  }
-
-  if (lastDigit === 3) {
-    return 'rd';
-  }
-
-  return 'th';
+  const unitsDigit = number % 10;
+  return ORDINAL_SUFFIXES[unitsDigit] ?? 'th';
 };
 
 export const format = (name, number) =>

@@ -1,0 +1,29 @@
+{
+  "task_id": "R53-T024",
+  "exercise": "line-up",
+  "package_json_test_script": "corepack pnpm jest",
+  "anchor_cases_verified": [
+    "format smallest non-exceptional ordinal numeral 4",
+    "format greatest single digit non-exceptional ordinal numeral 9",
+    "format non-exceptional ordinal numeral 5"
+  ],
+  "canonical_case_count": 25,
+  "before_refactor": {
+    "exit_code": 0,
+    "executed_passed_tests": 25,
+    "status": "PASSED"
+  },
+  "after_refactor": {
+    "exit_code": 0,
+    "executed_passed_tests": 25,
+    "status": "PASSED"
+  },
+  "behavioral_equivalence": "AGREED_ON_ALL_CASES",
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
