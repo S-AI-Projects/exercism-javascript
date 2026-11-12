@@ -1,0 +1,33 @@
+=== JEST SUITE RUN ===
+
+PASS ./grains.spec.js
+  Grains
+    ✓ returns the total number of grains on the board
+    returns the number of grains on the square
+      ✓ grains on square 1 (1 ms)
+      ✓ grains on square 2
+      ✓ grains on square 3
+      ✓ grains on square 4
+      ✓ grains on square 16
+      ✓ grains on square 32
+      ✓ grains on square 64
+      ✓ square 0 raises an exception (1 ms)
+      ✓ negative square raises an exception
+      ✓ square greater than 64 raises an exception (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        0.27 s
+Ran all test suites.
+
+=== MICRO-EXAMPLE VERIFICATION ===
+{
+  "bigint_expression": "(BigInt(2) ** BigInt(63)).toString()",
+  "bigint_expected": "9223372036854775808",
+  "bigint_actual": "9223372036854775808",
+  "pitfall_expression": "(2 ** 63).toString()",
+  "pitfall_expected": "9223372036854776000",
+  "pitfall_actual": "9223372036854776000",
+  "mixed_type_throws_type_error": true
+}

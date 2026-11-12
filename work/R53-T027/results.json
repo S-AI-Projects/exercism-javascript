@@ -1,0 +1,33 @@
+{
+  "task_id": "R53-T027",
+  "exercise": "grains",
+  "package_json_test_script": "corepack pnpm jest",
+  "selected_construct": "BigInt numeric coercion and arbitrary-precision exponentiation",
+  "named_cases_verified": [
+    "grains on square 1",
+    "grains on square 2",
+    "grains on square 3"
+  ],
+  "canonical_case_count": 11,
+  "jest_suite": {
+    "exit_code": 0,
+    "executed_passed_tests": 11,
+    "status": "PASSED"
+  },
+  "micro_examples": {
+    "bigint_expression": "(BigInt(2) ** BigInt(63)).toString()",
+    "bigint_expected": "9223372036854775808",
+    "bigint_actual": "9223372036854775808",
+    "pitfall_expression": "(2 ** 63).toString()",
+    "pitfall_expected": "9223372036854776000",
+    "pitfall_actual": "9223372036854776000",
+    "mixed_type_throws_type_error": true
+  },
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
