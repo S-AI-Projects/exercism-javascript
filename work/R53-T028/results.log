@@ -1,0 +1,83 @@
+=== METADATA & NEGATIVE FIXTURE CHECK ===
+{
+  "valid_metadata": {
+    "exercise_dir": "exercises/practice/split-second-stopwatch",
+    "roles": {
+      "solution": [
+        {
+          "declared": "split-second-stopwatch.js",
+          "resolved": "split-second-stopwatch.js"
+        }
+      ],
+      "test": [
+        {
+          "declared": "split-second-stopwatch.spec.js",
+          "resolved": "split-second-stopwatch.spec.js"
+        }
+      ],
+      "example": [
+        {
+          "declared": ".meta/proof.ci.js",
+          "resolved": ".meta/proof.ci.js"
+        }
+      ],
+      "editor": []
+    }
+  },
+  "negative_fixtures": [
+    {
+      "fixture": "missing-reference",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Declared example file does not exist: .meta/nonexistent-proof.ci.js"
+    },
+    {
+      "fixture": "missing-test",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Declared test file does not exist: missing-stopwatch.spec.js"
+    },
+    {
+      "fixture": "outside-exercise",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Parent traversal rejected in role 'solution': ../two-fer/two-fer.js"
+    }
+  ]
+}
+=== JEST SUITE RUN ===
+
+PASS ./split-second-stopwatch.spec.js
+  SplitSecondStopwatch
+    ✓ new stopwatch starts in ready state (1 ms)
+    ✓ new stopwatch's current lap has no elapsed time
+    ✓ new stopwatch's total has no elapsed time
+    ✓ new stopwatch does not have previous laps
+    ✓ start from ready state changes state to running (1 ms)
+    ✓ start does not change previous laps
+    ✓ start initiates time tracking for current lap
+    ✓ start initiates time tracking for total
+    ✓ start cannot be called from running state (1 ms)
+    ✓ stop from running state changes state to stopped
+    ✓ stop pauses time tracking for current lap
+    ✓ stop pauses time tracking for total
+    ✓ stop cannot be called from ready state
+    ✓ stop cannot be called from stopped state
+    ✓ start from stopped state changes state to running
+    ✓ start from stopped state resumes time tracking for current lap
+    ✓ start from stopped state resumes time tracking for total
+    ✓ lap adds current lap to previous laps
+    ✓ lap resets current lap and resumes time tracking
+    ✓ lap continues time tracking for total
+    ✓ lap cannot be called from ready state
+    ✓ lap cannot be called from stopped state
+    ✓ stop does not change previous laps
+    ✓ reset from stopped state changes state to ready
+    ✓ reset resets current lap
+    ✓ reset clears previous laps (1 ms)
+    ✓ reset cannot be called from ready state
+    ✓ reset cannot be called from running state
+    ✓ supports very long laps
+
+Test Suites: 1 passed, 1 total
+Tests:       29 passed, 29 total
+Snapshots:   0 total
+Time:        0.296 s
+Ran all test suites.
