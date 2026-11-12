@@ -4,9 +4,15 @@
   "inputs": {
     "configuration": "exercises/practice/word-search/.meta/config.json",
     "resolved_paths": {
-      "solution": ["word-search.js"],
-      "test": ["word-search.spec.js"],
-      "example": [".meta/proof.ci.js"]
+      "solution": [
+        "word-search.js"
+      ],
+      "test": [
+        "word-search.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
     },
     "initial_grid_and_target_case": {
       "test_id": "b4057815-0d01-41f0-9119-6a91f54b2a0a",
@@ -14,7 +20,9 @@
         "Should accept an initial game grid",
         "Can accept a target search word"
       ],
-      "grid": ["jefblpepre"],
+      "grid": [
+        "jefblpepre"
+      ],
       "target": "glasnost",
       "assertions": [
         "wordSearch instanceof WordSearch equals true",
@@ -24,32 +32,57 @@
     "existing_rejecting_case": {
       "test_id": "6b22bcc5-6cbf-4674-931b-d2edbff73132",
       "test_name": "Should locate a word written left to right",
-      "grid": ["clojurermt"],
+      "grid": [
+        "clojurermt"
+      ],
       "target": "clojure",
       "expected": {
         "clojure": {
-          "start": [1, 1],
-          "end": [1, 7]
+          "start": [
+            1,
+            1
+          ],
+          "end": [
+            1,
+            7
+          ]
         }
       },
       "assertion": "expect(wordSearch.find(['clojure'])).toEqual(expectedResults)"
     },
     "minimal_diagnostic": {
-      "grid": ["ab", "cd"],
+      "grid": [
+        "ab",
+        "cd"
+      ],
       "target": "ab",
       "expected": {
         "ab": {
-          "start": [1, 1],
-          "end": [1, 2]
+          "start": [
+            1,
+            1
+          ],
+          "end": [
+            1,
+            2
+          ]
         }
       },
       "one_cell_control": {
-        "grid": ["a"],
+        "grid": [
+          "a"
+        ],
         "target": "a",
         "mutant_result": {
           "a": {
-            "start": [1, 1],
-            "end": [1, 1]
+            "start": [
+              1,
+              1
+            ],
+            "end": [
+              1,
+              1
+            ]
           }
         },
         "reason_not_sufficient": "diagonal fallback still locates a one-letter word"
@@ -99,14 +132,26 @@
     },
     "existing_test_input_actual": {
       "clojure": {
-        "start": [1, 1],
-        "end": [1, 7]
+        "start": [
+          1,
+          1
+        ],
+        "end": [
+          1,
+          7
+        ]
       }
     },
     "minimal_input_actual": {
       "ab": {
-        "start": [1, 1],
-        "end": [1, 2]
+        "start": [
+          1,
+          1
+        ],
+        "end": [
+          1,
+          2
+        ]
       }
     },
     "named_test_statuses": {
@@ -126,7 +171,7 @@
       "test_id": "6b22bcc5-6cbf-4674-931b-d2edbff73132",
       "test_name": "Should locate a word written left to right",
       "status": "failed",
-      "assertion_failure": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 10\n+ Received  +  1\n\n  Object {\n-   \"clojure\": Object {\n-     \"end\": Array [\n-       1,\n-       7,\n-     ],\n-     \"start\": Array [\n-       1,\n-       1,\n-     ],\n-   },\n+   \"clojure\": undefined,\n  }\n    at Object.toEqual (/private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-mhvmz4la/mutated/word-search.spec.js:29:42)\n    at Promise.finally.completed (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1557:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1497:10)\n    at _callCircusTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1007:40)\n    at _runTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:947:3)\n    at /Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:849:7\n    at _runTestsForDescribeBlock (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:862:11)\n    at _runTestsForDescribeBlock (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:857:11)\n    at run (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:761:3)\n    at runAndTransformResultsToJestFormat (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1918:21)\n    at jestAdapter (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-runner@30.2.0/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-runner@30.2.0/node_modules/jest-runner/build/index.js:343:7)",
+      "assertion_failure": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 10\n+ Received  +  1\n\n  Object {\n-   \"clojure\": Object {\n-     \"end\": Array [\n-       1,\n-       7,\n-     ],\n-     \"start\": Array [\n-       1,\n-       1,\n-     ],\n-   },\n+   \"clojure\": undefined,\n  }\n    at Object.toEqual (/private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-e2gzjwo0/mutated/word-search.spec.js:29:42)\n    at Promise.finally.completed (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1557:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1497:10)\n    at _callCircusTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1007:40)\n    at _runTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:947:3)\n    at /Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:849:7\n    at _runTestsForDescribeBlock (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:862:11)\n    at _runTestsForDescribeBlock (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:857:11)\n    at run (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:761:3)\n    at runAndTransformResultsToJestFormat (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/jestAdapterInit.js:1918:21)\n    at jestAdapter (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-circus@30.2.0/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-runner@30.2.0/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/Users/anuradhagaur/exercism_javascript/exercism-javascript/node_modules/.pnpm/jest-runner@30.2.0/node_modules/jest-runner/build/index.js:343:7)",
       "return_code": 1
     },
     "jest_counts": {
@@ -139,14 +184,21 @@
   "processes": [
     {
       "label": "node version",
-      "command": ["node", "--version"],
+      "command": [
+        "node",
+        "--version"
+      ],
       "return_code": 0,
       "stdout": "v24.19.0\n",
       "stderr": ""
     },
     {
       "label": "pnpm version",
-      "command": ["corepack", "pnpm", "--version"],
+      "command": [
+        "corepack",
+        "pnpm",
+        "--version"
+      ],
       "return_code": 0,
       "stdout": "9.15.2\n",
       "stderr": ""
@@ -157,7 +209,7 @@
         "corepack",
         "pnpm",
         "--dir",
-        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-mhvmz4la/original",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-e2gzjwo0/original",
         "run",
         "test",
         "--runInBand",
@@ -166,11 +218,11 @@
         "word-search.spec.js",
         "--json",
         "--outputFile",
-        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-xd9nbpn7.json"
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-6cxk8tlj.json"
       ],
       "return_code": 0,
-      "stdout": "\n> @exercism/javascript-word-search@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-mhvmz4la/original\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"word-search.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-xd9nbpn7.json\"\n\n",
-      "stderr": "PASS ./word-search.spec.js\n  Word Search\n    \u2713 Should accept an initial game grid (1 ms)\n    \u2713 Can accept a target search word (1 ms)\n    \u2713 Should locate a word written left to right\n    \u2713 Can locate a left to right word in a different position\n    \u2713 Can locate a different left to right word\n    \u2713 Can locate that different left to right word in a different position\n    \u2713 Can locate a left to right word in a two line grid\n    \u2713 Can locate a left to right word in a different position in a two line grid\n    \u2713 Can locate a left to right word in a three line grid\n    \u2713 Can locate a left to right word in a ten line grid\n    \u2713 Can locate a left to right word in a different position in a ten line grid (1 ms)\n    \u2713 Can locate a different left to right word in a ten line grid\n    \u2713 Can find two words written left to right\n    \u2713 Should locate a single word written right to left\n    \u2713 Should locate multiple words written in different horizontal directions\n    \u2713 Should locate words written top to bottom\n    \u2713 Should locate words written bottom to top\n    \u2713 Should locate words written top left to bottom right\n    \u2713 Should locate words written bottom right to top left\n    \u2713 Should locate words written bottom left to top right (1 ms)\n    \u2713 Should locate words written top right to bottom left\n    \u2713 Should fail to locate a word that is not in the puzzle\n    \u2713 Should fail to locate words that are not on horizontal, vertical, or diagonal lines\n    \u2713 Should not concatenate different lines to find a horizontal word\n    \u2713 Should not wrap around horizontally to find a word (1 ms)\n    \u2713 Should not wrap around vertically to find a word\n\nTest Suites: 1 passed, 1 total\nTests:       26 passed, 26 total\nSnapshots:   0 total\nTime:        0.39 s\nRan all test suites within paths \"word-search.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-xd9nbpn7.json\n"
+      "stdout": "\n> @exercism/javascript-word-search@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-e2gzjwo0/original\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"word-search.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-6cxk8tlj.json\"\n\n",
+      "stderr": "PASS ./word-search.spec.js\n  Word Search\n    \u2713 Should accept an initial game grid (1 ms)\n    \u2713 Can accept a target search word\n    \u2713 Should locate a word written left to right\n    \u2713 Can locate a left to right word in a different position\n    \u2713 Can locate a different left to right word (1 ms)\n    \u2713 Can locate that different left to right word in a different position\n    \u2713 Can locate a left to right word in a two line grid\n    \u2713 Can locate a left to right word in a different position in a two line grid\n    \u2713 Can locate a left to right word in a three line grid\n    \u2713 Can locate a left to right word in a ten line grid\n    \u2713 Can locate a left to right word in a different position in a ten line grid\n    \u2713 Can locate a different left to right word in a ten line grid\n    \u2713 Can find two words written left to right (1 ms)\n    \u2713 Should locate a single word written right to left\n    \u2713 Should locate multiple words written in different horizontal directions\n    \u2713 Should locate words written top to bottom\n    \u2713 Should locate words written bottom to top\n    \u2713 Should locate words written top left to bottom right\n    \u2713 Should locate words written bottom right to top left\n    \u2713 Should locate words written bottom left to top right (1 ms)\n    \u2713 Should locate words written top right to bottom left\n    \u2713 Should fail to locate a word that is not in the puzzle\n    \u2713 Should fail to locate words that are not on horizontal, vertical, or diagonal lines\n    \u2713 Should not concatenate different lines to find a horizontal word\n    \u2713 Should not wrap around horizontally to find a word\n    \u2713 Should not wrap around vertically to find a word\n\nTest Suites: 1 passed, 1 total\nTests:       26 passed, 26 total\nSnapshots:   0 total\nTime:        0.356 s\nRan all test suites within paths \"word-search.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-6cxk8tlj.json\n"
     },
     {
       "label": "original minimized diagnostic input",
@@ -222,7 +274,7 @@
         "corepack",
         "pnpm",
         "--dir",
-        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-mhvmz4la/mutated",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-e2gzjwo0/mutated",
         "run",
         "test",
         "--runInBand",
@@ -231,12 +283,12 @@
         "word-search.spec.js",
         "--json",
         "--outputFile",
-        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-ru7_wp8m.json",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-tltw5_1c.json",
         "--testNamePattern=Should locate a word written left to right"
       ],
       "return_code": 1,
-      "stdout": "\n> @exercism/javascript-word-search@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-mhvmz4la/mutated\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"word-search.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-ru7_wp8m.json\" \"--testNamePattern=Should locate a word written left to right\"\n\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n\u2009WARN\u2009  Local package.json exists, but node_modules missing, did you mean to install?\n",
-      "stderr": "FAIL ./word-search.spec.js\n  Word Search\n    \u2715 Should locate a word written left to right (4 ms)\n    \u25cb skipped Should accept an initial game grid\n    \u25cb skipped Can accept a target search word\n    \u25cb skipped Can locate a left to right word in a different position\n    \u25cb skipped Can locate a different left to right word\n    \u25cb skipped Can locate that different left to right word in a different position\n    \u25cb skipped Can locate a left to right word in a two line grid\n    \u25cb skipped Can locate a left to right word in a different position in a two line grid\n    \u25cb skipped Can locate a left to right word in a three line grid\n    \u25cb skipped Can locate a left to right word in a ten line grid\n    \u25cb skipped Can locate a left to right word in a different position in a ten line grid\n    \u25cb skipped Can locate a different left to right word in a ten line grid\n    \u25cb skipped Can find two words written left to right\n    \u25cb skipped Should locate a single word written right to left\n    \u25cb skipped Should locate multiple words written in different horizontal directions\n    \u25cb skipped Should locate words written top to bottom\n    \u25cb skipped Should locate words written bottom to top\n    \u25cb skipped Should locate words written top left to bottom right\n    \u25cb skipped Should locate words written bottom right to top left\n    \u25cb skipped Should locate words written bottom left to top right\n    \u25cb skipped Should locate words written top right to bottom left\n    \u25cb skipped Should fail to locate a word that is not in the puzzle\n    \u25cb skipped Should fail to locate words that are not on horizontal, vertical, or diagonal lines\n    \u25cb skipped Should not concatenate different lines to find a horizontal word\n    \u25cb skipped Should not wrap around horizontally to find a word\n    \u25cb skipped Should not wrap around vertically to find a word\n\n  \u25cf Word Search \u203a Should locate a word written left to right\n\n    expect(received).toEqual(expected) // deep equality\n\n    - Expected  - 10\n    + Received  +  1\n\n      Object {\n    -   \"clojure\": Object {\n    -     \"end\": Array [\n    -       1,\n    -       7,\n    -     ],\n    -     \"start\": Array [\n    -       1,\n    -       1,\n    -     ],\n    -   },\n    +   \"clojure\": undefined,\n      }\n\n    \u001b[0m \u001b[90m 27 |\u001b[39m     \u001b[36mconst\u001b[39m wordSearch \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mWordSearch\u001b[39m(grid)\u001b[33m;\u001b[39m\n     \u001b[90m 28 |\u001b[39m\n    \u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m     expect(wordSearch\u001b[33m.\u001b[39mfind([\u001b[32m'clojure'\u001b[39m]))\u001b[33m.\u001b[39mtoEqual(expectedResults)\u001b[33m;\u001b[39m\n     \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n     \u001b[90m 30 |\u001b[39m   })\u001b[33m;\u001b[39m\n     \u001b[90m 31 |\u001b[39m\n     \u001b[90m 32 |\u001b[39m   test(\u001b[32m'Can locate a left to right word in a different position'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\n      at Object.toEqual (word-search.spec.js:29:42)\n\nTest Suites: 1 failed, 1 total\nTests:       1 failed, 25 skipped, 26 total\nSnapshots:   0 total\nTime:        0.493 s\nRan all test suites within paths \"word-search.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-ru7_wp8m.json\n"
+      "stdout": "\n> @exercism/javascript-word-search@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-r53-t043-e2gzjwo0/mutated\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"word-search.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-tltw5_1c.json\" \"--testNamePattern=Should locate a word written left to right\"\n\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n\u2009WARN\u2009  Local package.json exists, but node_modules missing, did you mean to install?\n",
+      "stderr": "FAIL ./word-search.spec.js\n  Word Search\n    \u2715 Should locate a word written left to right (2 ms)\n    \u25cb skipped Should accept an initial game grid\n    \u25cb skipped Can accept a target search word\n    \u25cb skipped Can locate a left to right word in a different position\n    \u25cb skipped Can locate a different left to right word\n    \u25cb skipped Can locate that different left to right word in a different position\n    \u25cb skipped Can locate a left to right word in a two line grid\n    \u25cb skipped Can locate a left to right word in a different position in a two line grid\n    \u25cb skipped Can locate a left to right word in a three line grid\n    \u25cb skipped Can locate a left to right word in a ten line grid\n    \u25cb skipped Can locate a left to right word in a different position in a ten line grid\n    \u25cb skipped Can locate a different left to right word in a ten line grid\n    \u25cb skipped Can find two words written left to right\n    \u25cb skipped Should locate a single word written right to left\n    \u25cb skipped Should locate multiple words written in different horizontal directions\n    \u25cb skipped Should locate words written top to bottom\n    \u25cb skipped Should locate words written bottom to top\n    \u25cb skipped Should locate words written top left to bottom right\n    \u25cb skipped Should locate words written bottom right to top left\n    \u25cb skipped Should locate words written bottom left to top right\n    \u25cb skipped Should locate words written top right to bottom left\n    \u25cb skipped Should fail to locate a word that is not in the puzzle\n    \u25cb skipped Should fail to locate words that are not on horizontal, vertical, or diagonal lines\n    \u25cb skipped Should not concatenate different lines to find a horizontal word\n    \u25cb skipped Should not wrap around horizontally to find a word\n    \u25cb skipped Should not wrap around vertically to find a word\n\n  \u25cf Word Search \u203a Should locate a word written left to right\n\n    expect(received).toEqual(expected) // deep equality\n\n    - Expected  - 10\n    + Received  +  1\n\n      Object {\n    -   \"clojure\": Object {\n    -     \"end\": Array [\n    -       1,\n    -       7,\n    -     ],\n    -     \"start\": Array [\n    -       1,\n    -       1,\n    -     ],\n    -   },\n    +   \"clojure\": undefined,\n      }\n\n    \u001b[0m \u001b[90m 27 |\u001b[39m     \u001b[36mconst\u001b[39m wordSearch \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mWordSearch\u001b[39m(grid)\u001b[33m;\u001b[39m\n     \u001b[90m 28 |\u001b[39m\n    \u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m     expect(wordSearch\u001b[33m.\u001b[39mfind([\u001b[32m'clojure'\u001b[39m]))\u001b[33m.\u001b[39mtoEqual(expectedResults)\u001b[33m;\u001b[39m\n     \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n     \u001b[90m 30 |\u001b[39m   })\u001b[33m;\u001b[39m\n     \u001b[90m 31 |\u001b[39m\n     \u001b[90m 32 |\u001b[39m   test(\u001b[32m'Can locate a left to right word in a different position'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\n      at Object.toEqual (word-search.spec.js:29:42)\n\nTest Suites: 1 failed, 1 total\nTests:       1 failed, 25 skipped, 26 total\nSnapshots:   0 total\nTime:        0.252 s\nRan all test suites within paths \"word-search.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/word-search-jest-tltw5_1c.json\n"
     },
     {
       "label": "mutant one-cell minimality control",
