@@ -1,0 +1,22 @@
+
+PASS ./parallel-letter-frequency.spec.js
+  ParallelLetterFrequency
+    ✓ no texts (1 ms)
+    ✓ one text with one letter (7 ms)
+    ✓ one text with multiple letters (5 ms)
+    ✓ two texts with one letter (5 ms)
+    ✓ two texts with multiple letters (5 ms)
+    ✓ ignore letter casing (4 ms)
+    ✓ ignore whitespace
+    ✓ ignore punctuation (1 ms)
+    ✓ ignore numbers
+    ✓ Unicode letters (6 ms)
+    ✓ combination of lower- and uppercase letters, punctuation and white space (4 ms)
+    ✓ large texts (5 ms)
+    ✓ many small texts (40 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.229 s
+Ran all test suites.
