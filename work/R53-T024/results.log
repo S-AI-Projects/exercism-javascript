@@ -1,0 +1,113 @@
+=== PRE-REFACTOR (HEAD) JEST RUN ===
+
+PASS ./line-up.spec.js
+  Line Up
+    ✓ format smallest non-exceptional ordinal numeral 4 (1 ms)
+    ✓ format greatest single digit non-exceptional ordinal numeral 9
+    ✓ format non-exceptional ordinal numeral 5
+    ✓ format non-exceptional ordinal numeral 6
+    ✓ format non-exceptional ordinal numeral 7
+    ✓ format non-exceptional ordinal numeral 8 (1 ms)
+    ✓ format exceptional ordinal numeral 1
+    ✓ format exceptional ordinal numeral 2
+    ✓ format exceptional ordinal numeral 3
+    ✓ format smallest two digit non-exceptional ordinal numeral 10
+    ✓ format non-exceptional ordinal numeral 11
+    ✓ format non-exceptional ordinal numeral 12
+    ✓ format non-exceptional ordinal numeral 13
+    ✓ format exceptional ordinal numeral 21
+    ✓ format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11
+    ✓ format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11
+    ✓ format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13
+    ✓ format exceptional ordinal numeral 62
+    ✓ format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12
+    ✓ format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13
+    ✓ format exceptional ordinal numeral 100
+    ✓ format exceptional ordinal numeral 101
+    ✓ format exceptional ordinal numeral 112
+    ✓ format exceptional ordinal numeral 123
+    ✓ format large number 972 ending in nd even though it is a multiple of 12
+
+Test Suites: 1 passed, 1 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        0.264 s
+Ran all test suites.
+
+=== POST-REFACTOR JEST RUN ===
+
+PASS ./line-up.spec.js
+  Line Up
+    ✓ format smallest non-exceptional ordinal numeral 4
+    ✓ format greatest single digit non-exceptional ordinal numeral 9 (1 ms)
+    ✓ format non-exceptional ordinal numeral 5
+    ✓ format non-exceptional ordinal numeral 6
+    ✓ format non-exceptional ordinal numeral 7
+    ✓ format non-exceptional ordinal numeral 8
+    ✓ format exceptional ordinal numeral 1
+    ✓ format exceptional ordinal numeral 2
+    ✓ format exceptional ordinal numeral 3
+    ✓ format smallest two digit non-exceptional ordinal numeral 10
+    ✓ format non-exceptional ordinal numeral 11
+    ✓ format non-exceptional ordinal numeral 12
+    ✓ format non-exceptional ordinal numeral 13
+    ✓ format exceptional ordinal numeral 21
+    ✓ format exceptional ordinal numeral 22 ending in nd even though it is a multiple of 11
+    ✓ format exceptional ordinal numeral 33 ending in rd even though it is a multiple of 11
+    ✓ format exceptional ordinal numeral 52 ending in nd even though it is a multiple of 13
+    ✓ format exceptional ordinal numeral 62
+    ✓ format non-exceptional ordinal numeral 72 ending in nd even though it is a multiple of 12
+    ✓ format exceptional ordinal numeral 91 ending in st even though it is a multiple of 13
+    ✓ format exceptional ordinal numeral 100
+    ✓ format exceptional ordinal numeral 101
+    ✓ format exceptional ordinal numeral 112
+    ✓ format exceptional ordinal numeral 123
+    ✓ format large number 972 ending in nd even though it is a multiple of 12
+
+Test Suites: 1 passed, 1 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        0.159 s
+Ran all test suites.
+
+=== GIT DIFF ===
+diff --git a/exercises/practice/line-up/.meta/proof.ci.js b/exercises/practice/line-up/.meta/proof.ci.js
+index 64ba5c191..8ac0b1c49 100644
+--- a/exercises/practice/line-up/.meta/proof.ci.js
++++ b/exercises/practice/line-up/.meta/proof.ci.js
+@@ -1,24 +1,19 @@
++const ORDINAL_SUFFIXES = {
++  1: 'st',
++  2: 'nd',
++  3: 'rd',
++};
++
+ const getSuffix = (number) => {
++  // Invariant: numbers ending in 11, 12, or 13 always take 'th' before checking the units digit.
+   const lastTwoDigits = number % 100;
+-  const lastDigit = number % 10;
+-
+-  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
++  const isTeenException = lastTwoDigits >= 11 && lastTwoDigits <= 13;
++  if (isTeenException) {
+     return 'th';
+   }
+ 
+-  if (lastDigit === 1) {
+-    return 'st';
+-  }
+-
+-  if (lastDigit === 2) {
+-    return 'nd';
+-  }
+-
+-  if (lastDigit === 3) {
+-    return 'rd';
+-  }
+-
+-  return 'th';
++  const unitsDigit = number % 10;
++  return ORDINAL_SUFFIXES[unitsDigit] ?? 'th';
+ };
+ 
+ export const format = (name, number) =>
