@@ -1,0 +1,64 @@
+{
+  "task_id": "R53-T028",
+  "exercise": "split-second-stopwatch",
+  "package_json_test_script": "corepack pnpm jest",
+  "valid_metadata": {
+    "exercise_dir": "exercises/practice/split-second-stopwatch",
+    "roles": {
+      "solution": [
+        {
+          "declared": "split-second-stopwatch.js",
+          "resolved": "split-second-stopwatch.js"
+        }
+      ],
+      "test": [
+        {
+          "declared": "split-second-stopwatch.spec.js",
+          "resolved": "split-second-stopwatch.spec.js"
+        }
+      ],
+      "example": [
+        {
+          "declared": ".meta/proof.ci.js",
+          "resolved": ".meta/proof.ci.js"
+        }
+      ],
+      "editor": []
+    }
+  },
+  "negative_fixtures": [
+    {
+      "fixture": "missing-reference",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Declared example file does not exist: .meta/nonexistent-proof.ci.js"
+    },
+    {
+      "fixture": "missing-test",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Declared test file does not exist: missing-stopwatch.spec.js"
+    },
+    {
+      "fixture": "outside-exercise",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "Parent traversal rejected in role 'solution': ../two-fer/two-fer.js"
+    }
+  ],
+  "named_cases_verified": [
+    "new stopwatch starts in ready state",
+    "new stopwatch's current lap has no elapsed time",
+    "new stopwatch's total has no elapsed time"
+  ],
+  "canonical_case_count": 29,
+  "jest_suite": {
+    "exit_code": 0,
+    "executed_passed_tests": 29,
+    "status": "PASSED"
+  },
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
