@@ -1,0 +1,38 @@
+{
+  "task_id": "R53-T029",
+  "exercise": "grade-school",
+  "named_cases_verified": [
+    "Roster is empty when no student is added",
+    "Add a student",
+    "Student is added to the roster"
+  ],
+  "enabled_canonical_case_count": 20,
+  "scenarios": {
+    "real_reference": {
+      "exit_code": 0,
+      "executed_passed_tests": 20,
+      "hashes_unchanged": true,
+      "status": "PASSED"
+    },
+    "deliberately_failing_reference": {
+      "rejected_non_zero": true,
+      "reason": "Child Jest process exited non-zero (1):",
+      "hashes_unchanged": true,
+      "status": "FAILED_AS_EXPECTED"
+    },
+    "empty_test_selection": {
+      "rejected_non_zero": true,
+      "reason": "Zero-test run detected (passed=0, total=20):",
+      "hashes_unchanged": true,
+      "status": "FAILED_AS_EXPECTED"
+    }
+  },
+  "learner_stub_sha256": "6615f27080f3c0d7f344b783b612d503cf8d39e9b31b9dc9e193f3a338cc14b2",
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
