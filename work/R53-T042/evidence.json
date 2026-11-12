@@ -1,0 +1,248 @@
+{
+  "task": "R53-T042",
+  "success": true,
+  "inputs": {
+    "config": "exercises/practice/meetup/.meta/config.json",
+    "package_test_script": "corepack pnpm jest",
+    "configured_paths": {
+      "solution": ["meetup.js"],
+      "test": ["meetup.spec.js"],
+      "example": [".meta/proof.ci.js"]
+    },
+    "canonical_test_count": 95,
+    "test_names": [
+      "monteenth of May 2013",
+      "monteenth of August 2013",
+      "monteenth of September 2013",
+      "tuesteenth of March 2013",
+      "tuesteenth of April 2013",
+      "tuesteenth of August 2013",
+      "wednesteenth of January 2013",
+      "wednesteenth of February 2013",
+      "wednesteenth of June 2013",
+      "thursteenth of May 2013",
+      "thursteenth of June 2013",
+      "thursteenth of September 2013",
+      "friteenth of April 2013",
+      "friteenth of August 2013",
+      "friteenth of September 2013",
+      "saturteenth of February 2013",
+      "saturteenth of April 2013",
+      "saturteenth of October 2013",
+      "sunteenth of May 2013",
+      "sunteenth of June 2013",
+      "sunteenth of October 2013",
+      "first Monday of March 2013",
+      "first Monday of April 2013",
+      "first Tuesday of May 2013",
+      "first Tuesday of June 2013",
+      "first Wednesday of July 2013",
+      "first Wednesday of August 2013",
+      "first Thursday of September 2013",
+      "first Thursday of October 2013",
+      "first Friday of November 2013",
+      "first Friday of December 2013",
+      "first Saturday of January 2013",
+      "first Saturday of February 2013",
+      "first Sunday of March 2013",
+      "first Sunday of April 2013",
+      "second Monday of March 2013",
+      "second Monday of April 2013",
+      "second Tuesday of May 2013",
+      "second Tuesday of June 2013",
+      "second Wednesday of July 2013",
+      "second Wednesday of August 2013",
+      "second Thursday of September 2013",
+      "second Thursday of October 2013",
+      "second Friday of November 2013",
+      "second Friday of December 2013",
+      "second Saturday of January 2013",
+      "second Saturday of February 2013",
+      "second Sunday of March 2013",
+      "second Sunday of April 2013",
+      "third Monday of March 2013",
+      "third Monday of April 2013",
+      "third Tuesday of May 2013",
+      "third Tuesday of June 2013",
+      "third Wednesday of July 2013",
+      "third Wednesday of August 2013",
+      "third Thursday of September 2013",
+      "third Thursday of October 2013",
+      "third Friday of November 2013",
+      "third Friday of December 2013",
+      "third Saturday of January 2013",
+      "third Saturday of February 2013",
+      "third Sunday of March 2013",
+      "third Sunday of April 2013",
+      "fourth Monday of March 2013",
+      "fourth Monday of April 2013",
+      "fourth Tuesday of May 2013",
+      "fourth Tuesday of June 2013",
+      "fourth Wednesday of July 2013",
+      "fourth Wednesday of August 2013",
+      "fourth Thursday of September 2013",
+      "fourth Thursday of October 2013",
+      "fourth Friday of November 2013",
+      "fourth Friday of December 2013",
+      "fourth Saturday of January 2013",
+      "fourth Saturday of February 2013",
+      "fourth Sunday of March 2013",
+      "fourth Sunday of April 2013",
+      "last Monday of March 2013",
+      "last Monday of April 2013",
+      "last Tuesday of May 2013",
+      "last Tuesday of June 2013",
+      "last Wednesday of July 2013",
+      "last Wednesday of August 2013",
+      "last Thursday of September 2013",
+      "last Thursday of October 2013",
+      "last Friday of November 2013",
+      "last Friday of December 2013",
+      "last Saturday of January 2013",
+      "last Saturday of February 2013",
+      "last Sunday of March 2013",
+      "last Sunday of April 2013",
+      "last Wednesday of February 2012",
+      "last Wednesday of December 2014",
+      "last Sunday of February 2015",
+      "first Friday of December 2012"
+    ]
+  },
+  "expected": {
+    "tests_executed": 95,
+    "tests_failed": 0,
+    "named_cases": {
+      "monteenth of May 2013": {
+        "input": "meetup(2013, 5, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 4, 13)",
+        "expected_calendar_date": "2013-05-13"
+      },
+      "monteenth of August 2013": {
+        "input": "meetup(2013, 8, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 7, 19)",
+        "expected_calendar_date": "2013-08-19"
+      },
+      "monteenth of September 2013": {
+        "input": "meetup(2013, 9, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 8, 16)",
+        "expected_calendar_date": "2013-09-16"
+      }
+    }
+  },
+  "actual": {
+    "tests_executed": 95,
+    "tests_passed": 95,
+    "tests_failed": 0,
+    "named_cases": [
+      {
+        "uuid": "d7f8eadd-d4fc-46ee-8a20-e97bd3fd01c8",
+        "name": "monteenth of May 2013",
+        "input": "meetup(2013, 5, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 4, 13)",
+        "expected_calendar_date": "2013-05-13",
+        "status": "passed"
+      },
+      {
+        "uuid": "f78373d1-cd53-4a7f-9d37-e15bf8a456b4",
+        "name": "monteenth of August 2013",
+        "input": "meetup(2013, 8, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 7, 19)",
+        "expected_calendar_date": "2013-08-19",
+        "status": "passed"
+      },
+      {
+        "uuid": "8c78bea7-a116-425b-9c6b-c9898266d92a",
+        "name": "monteenth of September 2013",
+        "input": "meetup(2013, 9, 'teenth', 'Monday')",
+        "expected_javascript_date": "new Date(2013, 8, 16)",
+        "expected_calendar_date": "2013-09-16",
+        "status": "passed"
+      }
+    ],
+    "reference_substitution": {
+      "copied_reference": ["exercises/practice/meetup/.meta/proof.ci.js"],
+      "temporary_solution_files": ["meetup.js"]
+    },
+    "generated_test_count": 95,
+    "temporary_copy_test_file_sha256": {
+      "meetup.spec.js": "7461302b610ae0407204b02d045988dcf7b29fa297159bcba0c51dd8d9dc319d"
+    },
+    "learner_solution_sha256": {
+      "meetup.js": "15ed923a6ecbd9095bbe6b1f9200dec82bc6554ac9e60708c45a0432f05655b8"
+    },
+    "maintained_spec_sha256_before": {
+      "meetup.spec.js": "3071b9c003ecb95f9d445ed2c88f7f49cd87a84991e98f212afa8aad91c386c6"
+    },
+    "maintained_spec_sha256_after": {
+      "meetup.spec.js": "3071b9c003ecb95f9d445ed2c88f7f49cd87a84991e98f212afa8aad91c386c6"
+    }
+  },
+  "checks": {
+    "config_paths_resolved": true,
+    "all_hidden_exercise_files_copied": true,
+    "canonical_and_spec_cases_match": true,
+    "all_generated_tests_enabled": true,
+    "all_three_monteenth_cases_pass": true,
+    "test_count_nonzero_and_complete": true,
+    "assertions_passed": true,
+    "learner_solution_unchanged": true,
+    "maintained_spec_unchanged": true
+  },
+  "processes": [
+    {
+      "label": "node version",
+      "command": ["node", "--version"],
+      "return_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "label": "pnpm version",
+      "command": ["corepack", "pnpm", "--version"],
+      "return_code": 0,
+      "stdout": "9.15.2\n",
+      "stderr": ""
+    },
+    {
+      "label": "Meetup prepare generator",
+      "command": [
+        "corepack",
+        "pnpm",
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { prepare } from './scripts/helpers.mjs'; prepare('practice/meetup');"
+      ],
+      "return_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "Meetup package test script",
+      "command": [
+        "corepack",
+        "pnpm",
+        "--dir",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/meetup-r53-t042-check-szu6uci8/repository/exercises/practice/meetup",
+        "run",
+        "test",
+        "--runInBand",
+        "--watch=false",
+        "--runTestsByPath",
+        "meetup.spec.js",
+        "--json",
+        "--outputFile",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/meetup-r53-t042-check-szu6uci8/jest-result.json"
+      ],
+      "return_code": 0,
+      "stdout": "\n> @exercism/javascript-meetup@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/meetup-r53-t042-check-szu6uci8/repository/exercises/practice/meetup\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"meetup.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/meetup-r53-t042-check-szu6uci8/jest-result.json\"\n\n",
+      "stderr": "PASS ./meetup.spec.js\n  Meetup\n    \u2713 monteenth of May 2013 (1 ms)\n    \u2713 monteenth of August 2013\n    \u2713 monteenth of September 2013\n    \u2713 tuesteenth of March 2013\n    \u2713 tuesteenth of April 2013\n    \u2713 tuesteenth of August 2013 (1 ms)\n    \u2713 wednesteenth of January 2013\n    \u2713 wednesteenth of February 2013\n    \u2713 wednesteenth of June 2013\n    \u2713 thursteenth of May 2013\n    \u2713 thursteenth of June 2013\n    \u2713 thursteenth of September 2013\n    \u2713 friteenth of April 2013\n    \u2713 friteenth of August 2013\n    \u2713 friteenth of September 2013\n    \u2713 saturteenth of February 2013\n    \u2713 saturteenth of April 2013\n    \u2713 saturteenth of October 2013\n    \u2713 sunteenth of May 2013\n    \u2713 sunteenth of June 2013\n    \u2713 sunteenth of October 2013\n    \u2713 first Monday of March 2013\n    \u2713 first Monday of April 2013\n    \u2713 first Tuesday of May 2013\n    \u2713 first Tuesday of June 2013\n    \u2713 first Wednesday of July 2013\n    \u2713 first Wednesday of August 2013 (1 ms)\n    \u2713 first Thursday of September 2013\n    \u2713 first Thursday of October 2013\n    \u2713 first Friday of November 2013\n    \u2713 first Friday of December 2013\n    \u2713 first Saturday of January 2013\n    \u2713 first Saturday of February 2013\n    \u2713 first Sunday of March 2013\n    \u2713 first Sunday of April 2013\n    \u2713 second Monday of March 2013\n    \u2713 second Monday of April 2013\n    \u2713 second Tuesday of May 2013\n    \u2713 second Tuesday of June 2013\n    \u2713 second Wednesday of July 2013\n    \u2713 second Wednesday of August 2013\n    \u2713 second Thursday of September 2013\n    \u2713 second Thursday of October 2013\n    \u2713 second Friday of November 2013\n    \u2713 second Friday of December 2013\n    \u2713 second Saturday of January 2013\n    \u2713 second Saturday of February 2013\n    \u2713 second Sunday of March 2013\n    \u2713 second Sunday of April 2013\n    \u2713 third Monday of March 2013\n    \u2713 third Monday of April 2013\n    \u2713 third Tuesday of May 2013\n    \u2713 third Tuesday of June 2013\n    \u2713 third Wednesday of July 2013\n    \u2713 third Wednesday of August 2013\n    \u2713 third Thursday of September 2013\n    \u2713 third Thursday of October 2013\n    \u2713 third Friday of November 2013\n    \u2713 third Friday of December 2013\n    \u2713 third Saturday of January 2013\n    \u2713 third Saturday of February 2013\n    \u2713 third Sunday of March 2013\n    \u2713 third Sunday of April 2013\n    \u2713 fourth Monday of March 2013\n    \u2713 fourth Monday of April 2013\n    \u2713 fourth Tuesday of May 2013\n    \u2713 fourth Tuesday of June 2013\n    \u2713 fourth Wednesday of July 2013\n    \u2713 fourth Wednesday of August 2013\n    \u2713 fourth Thursday of September 2013\n    \u2713 fourth Thursday of October 2013\n    \u2713 fourth Friday of November 2013\n    \u2713 fourth Friday of December 2013\n    \u2713 fourth Saturday of January 2013\n    \u2713 fourth Saturday of February 2013 (1 ms)\n    \u2713 fourth Sunday of March 2013\n    \u2713 fourth Sunday of April 2013\n    \u2713 last Monday of March 2013\n    \u2713 last Monday of April 2013\n    \u2713 last Tuesday of May 2013\n    \u2713 last Tuesday of June 2013\n    \u2713 last Wednesday of July 2013\n    \u2713 last Wednesday of August 2013\n    \u2713 last Thursday of September 2013\n    \u2713 last Thursday of October 2013\n    \u2713 last Friday of November 2013\n    \u2713 last Friday of December 2013\n    \u2713 last Saturday of January 2013\n    \u2713 last Saturday of February 2013\n    \u2713 last Sunday of March 2013\n    \u2713 last Sunday of April 2013\n    \u2713 last Wednesday of February 2012\n    \u2713 last Wednesday of December 2014\n    \u2713 last Sunday of February 2015\n    \u2713 first Friday of December 2012\n\nTest Suites: 1 passed, 1 total\nTests:       95 passed, 95 total\nSnapshots:   0 total\nTime:        0.402 s\nRan all test suites within paths \"meetup.spec.js\".\nTest results written to: ../../../../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/meetup-r53-t042-check-szu6uci8/jest-result.json\n"
+    }
+  ],
+  "tool_versions": {
+    "node": "v24.19.0",
+    "pnpm": "9.15.2",
+    "python": "3.9.6",
+    "tomli": "2.5.0"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "task": "R53-T042",
+  "success": true,
+  "inputs": {
+    "canonical_metadata": "exercises/practice/meetup/.meta/tests.toml",
+    "maintained_test_spec": "exercises/practice/meetup/meetup.spec.js",
+    "reference_implementation": "exercises/practice/meetup/.meta/proof.ci.js",
+    "exercise_configuration": "exercises/practice/meetup/.meta/config.json",
+    "configured_test_path": "meetup.spec.js",
+    "test_case_count": 95,
+    "test_names": [
+      "monteenth of May 2013",
+      "monteenth of August 2013",
+      "monteenth of September 2013",
+      "tuesteenth of March 2013",
+      "tuesteenth of April 2013",
+      "tuesteenth of August 2013",
+      "wednesteenth of January 2013",
+      "wednesteenth of February 2013",
+      "wednesteenth of June 2013",
+      "thursteenth of May 2013",
+      "thursteenth of June 2013",
+      "thursteenth of September 2013",
+      "friteenth of April 2013",
+      "friteenth of August 2013",
+      "friteenth of September 2013",
+      "saturteenth of February 2013",
+      "saturteenth of April 2013",
+      "saturteenth of October 2013",
+      "sunteenth of May 2013",
+      "sunteenth of June 2013",
+      "sunteenth of October 2013",
+      "first Monday of March 2013",
+      "first Monday of April 2013",
+      "first Tuesday of May 2013",
+      "first Tuesday of June 2013",
+      "first Wednesday of July 2013",
+      "first Wednesday of August 2013",
+      "first Thursday of September 2013",
+      "first Thursday of October 2013",
+      "first Friday of November 2013",
+      "first Friday of December 2013",
+      "first Saturday of January 2013",
+      "first Saturday of February 2013",
+      "first Sunday of March 2013",
+      "first Sunday of April 2013",
+      "second Monday of March 2013",
+      "second Monday of April 2013",
+      "second Tuesday of May 2013",
+      "second Tuesday of June 2013",
+      "second Wednesday of July 2013",
+      "second Wednesday of August 2013",
+      "second Thursday of September 2013",
+      "second Thursday of October 2013",
+      "second Friday of November 2013",
+      "second Friday of December 2013",
+      "second Saturday of January 2013",
+      "second Saturday of February 2013",
+      "second Sunday of March 2013",
+      "second Sunday of April 2013",
+      "third Monday of March 2013",
+      "third Monday of April 2013",
+      "third Tuesday of May 2013",
+      "third Tuesday of June 2013",
+      "third Wednesday of July 2013",
+      "third Wednesday of August 2013",
+      "third Thursday of September 2013",
+      "third Thursday of October 2013",
+      "third Friday of November 2013",
+      "third Friday of December 2013",
+      "third Saturday of January 2013",
+      "third Saturday of February 2013",
+      "third Sunday of March 2013",
+      "third Sunday of April 2013",
+      "fourth Monday of March 2013",
+      "fourth Monday of April 2013",
+      "fourth Tuesday of May 2013",
+      "fourth Tuesday of June 2013",
+      "fourth Wednesday of July 2013",
+      "fourth Wednesday of August 2013",
+      "fourth Thursday of September 2013",
+      "fourth Thursday of October 2013",
+      "fourth Friday of November 2013",
+      "fourth Friday of December 2013",
+      "fourth Saturday of January 2013",
+      "fourth Saturday of February 2013",
+      "fourth Sunday of March 2013",
+      "fourth Sunday of April 2013",
+      "last Monday of March 2013",
+      "last Monday of April 2013",
+      "last Tuesday of May 2013",
+      "last Tuesday of June 2013",
+      "last Wednesday of July 2013",
+      "last Wednesday of August 2013",
+      "last Thursday of September 2013",
+      "last Thursday of October 2013",
+      "last Friday of November 2013",
+      "last Friday of December 2013",
+      "last Saturday of January 2013",
+      "last Saturday of February 2013",
+      "last Sunday of March 2013",
+      "last Sunday of April 2013",
+      "last Wednesday of February 2012",
+      "last Wednesday of December 2014",
+      "last Sunday of February 2015",
+      "first Friday of December 2012"
+    ],
+    "named_cases": [
+      {
+        "uuid": "d7f8eadd-d4fc-46ee-8a20-e97bd3fd01c8",
+        "canonical_name": "monteenth of May 2013",
+        "spec_assertion": "meetup(2013, month, 'teenth', 'Monday') equals the Date in the test"
+      },
+      {
+        "uuid": "f78373d1-cd53-4a7f-9d37-e15bf8a456b4",
+        "canonical_name": "monteenth of August 2013",
+        "spec_assertion": "meetup(2013, month, 'teenth', 'Monday') equals the Date in the test"
+      },
+      {
+        "uuid": "8c78bea7-a116-425b-9c6b-c9898266d92a",
+        "canonical_name": "monteenth of September 2013",
+        "spec_assertion": "meetup(2013, month, 'teenth', 'Monday') equals the Date in the test"
+      }
+    ]
+  },
+  "generations": [
+    {
+      "copy": 1,
+      "generated_path": "tmp_exercises/practice/meetup/meetup.spec.js",
+      "saved_output": "work/R53-T042/generation-1.meetup.spec.js",
+      "sha256": "7461302b610ae0407204b02d045988dcf7b29fa297159bcba0c51dd8d9dc319d",
+      "test_count": 95,
+      "enabled_test_count": 95,
+      "disabled_test_count": 0
+    },
+    {
+      "copy": 2,
+      "generated_path": "tmp_exercises/practice/meetup/meetup.spec.js",
+      "saved_output": "work/R53-T042/generation-2.meetup.spec.js",
+      "sha256": "7461302b610ae0407204b02d045988dcf7b29fa297159bcba0c51dd8d9dc319d",
+      "test_count": 95,
+      "enabled_test_count": 95,
+      "disabled_test_count": 0
+    }
+  ],
+  "comparison": {
+    "generation_1_equals_generation_2": true,
+    "generation_equals_expected_helper_output": true,
+    "normalization": "none; no generated timestamp is present",
+    "unexpected_differences": [],
+    "cases_preserved": true
+  },
+  "ci_runs": [
+    {
+      "copy": 1,
+      "command": ["corepack", "pnpm", "node", "scripts/ci.mjs"],
+      "return_code": 0,
+      "tests_executed": 95,
+      "tests_passed": 95,
+      "tests_failed": 0,
+      "named_cases_passed": [
+        "monteenth of May 2013",
+        "monteenth of August 2013",
+        "monteenth of September 2013"
+      ],
+      "stdout": "Running tests for practice/meetup\n[Success] Tests passed for practice/meetup\n",
+      "stderr": "PASS tmp_exercises/practice/meetup/meetup.spec.js\n  Meetup\n    \u2713 monteenth of May 2013 (1 ms)\n    \u2713 monteenth of August 2013 (1 ms)\n    \u2713 monteenth of September 2013\n    \u2713 tuesteenth of March 2013\n    \u2713 tuesteenth of April 2013\n    \u2713 tuesteenth of August 2013\n    \u2713 wednesteenth of January 2013\n    \u2713 wednesteenth of February 2013\n    \u2713 wednesteenth of June 2013\n    \u2713 thursteenth of May 2013\n    \u2713 thursteenth of June 2013\n    \u2713 thursteenth of September 2013\n    \u2713 friteenth of April 2013\n    \u2713 friteenth of August 2013\n    \u2713 friteenth of September 2013\n    \u2713 saturteenth of February 2013\n    \u2713 saturteenth of April 2013\n    \u2713 saturteenth of October 2013\n    \u2713 sunteenth of May 2013\n    \u2713 sunteenth of June 2013\n    \u2713 sunteenth of October 2013\n    \u2713 first Monday of March 2013 (1 ms)\n    \u2713 first Monday of April 2013\n    \u2713 first Tuesday of May 2013\n    \u2713 first Tuesday of June 2013\n    \u2713 first Wednesday of July 2013\n    \u2713 first Wednesday of August 2013\n    \u2713 first Thursday of September 2013\n    \u2713 first Thursday of October 2013\n    \u2713 first Friday of November 2013\n    \u2713 first Friday of December 2013\n    \u2713 first Saturday of January 2013\n    \u2713 first Saturday of February 2013\n    \u2713 first Sunday of March 2013\n    \u2713 first Sunday of April 2013 (1 ms)\n    \u2713 second Monday of March 2013\n    \u2713 second Monday of April 2013\n    \u2713 second Tuesday of May 2013\n    \u2713 second Tuesday of June 2013\n    \u2713 second Wednesday of July 2013\n    \u2713 second Wednesday of August 2013\n    \u2713 second Thursday of September 2013\n    \u2713 second Thursday of October 2013\n    \u2713 second Friday of November 2013\n    \u2713 second Friday of December 2013\n    \u2713 second Saturday of January 2013\n    \u2713 second Saturday of February 2013\n    \u2713 second Sunday of March 2013\n    \u2713 second Sunday of April 2013\n    \u2713 third Monday of March 2013 (1 ms)\n    \u2713 third Monday of April 2013\n    \u2713 third Tuesday of May 2013\n    \u2713 third Tuesday of June 2013\n    \u2713 third Wednesday of July 2013\n    \u2713 third Wednesday of August 2013\n    \u2713 third Thursday of September 2013\n    \u2713 third Thursday of October 2013\n    \u2713 third Friday of November 2013\n    \u2713 third Friday of December 2013\n    \u2713 third Saturday of January 2013\n    \u2713 third Saturday of February 2013\n    \u2713 third Sunday of March 2013\n    \u2713 third Sunday of April 2013\n    \u2713 fourth Monday of March 2013 (1 ms)\n    \u2713 fourth Monday of April 2013\n    \u2713 fourth Tuesday of May 2013\n    \u2713 fourth Tuesday of June 2013\n    \u2713 fourth Wednesday of July 2013\n    \u2713 fourth Wednesday of August 2013\n    \u2713 fourth Thursday of September 2013\n    \u2713 fourth Thursday of October 2013\n    \u2713 fourth Friday of November 2013\n    \u2713 fourth Friday of December 2013 (1 ms)\n    \u2713 fourth Saturday of January 2013\n    \u2713 fourth Saturday of February 2013\n    \u2713 fourth Sunday of March 2013\n    \u2713 fourth Sunday of April 2013\n    \u2713 last Monday of March 2013\n    \u2713 last Monday of April 2013\n    \u2713 last Tuesday of May 2013\n    \u2713 last Tuesday of June 2013\n    \u2713 last Wednesday of July 2013\n    \u2713 last Wednesday of August 2013\n    \u2713 last Thursday of September 2013\n    \u2713 last Thursday of October 2013\n    \u2713 last Friday of November 2013\n    \u2713 last Friday of December 2013\n    \u2713 last Saturday of January 2013\n    \u2713 last Saturday of February 2013\n    \u2713 last Sunday of March 2013\n    \u2713 last Sunday of April 2013\n    \u2713 last Wednesday of February 2012\n    \u2713 last Wednesday of December 2014\n    \u2713 last Sunday of February 2015\n    \u2713 first Friday of December 2012\n\nTest Suites: 1 passed, 1 total\nTests:       95 passed, 95 total\nSnapshots:   0 total\nTime:        0.254 s\nRan all test suites matching tmp_exercises.\n"
+    },
+    {
+      "copy": 2,
+      "command": ["corepack", "pnpm", "node", "scripts/ci.mjs"],
+      "return_code": 0,
+      "tests_executed": 95,
+      "tests_passed": 95,
+      "tests_failed": 0,
+      "named_cases_passed": [
+        "monteenth of May 2013",
+        "monteenth of August 2013",
+        "monteenth of September 2013"
+      ],
+      "stdout": "Running tests for practice/meetup\n[Success] Tests passed for practice/meetup\n",
+      "stderr": "PASS tmp_exercises/practice/meetup/meetup.spec.js\n  Meetup\n    \u2713 monteenth of May 2013 (2 ms)\n    \u2713 monteenth of August 2013\n    \u2713 monteenth of September 2013\n    \u2713 tuesteenth of March 2013 (1 ms)\n    \u2713 tuesteenth of April 2013\n    \u2713 tuesteenth of August 2013\n    \u2713 wednesteenth of January 2013 (1 ms)\n    \u2713 wednesteenth of February 2013\n    \u2713 wednesteenth of June 2013\n    \u2713 thursteenth of May 2013\n    \u2713 thursteenth of June 2013\n    \u2713 thursteenth of September 2013\n    \u2713 friteenth of April 2013\n    \u2713 friteenth of August 2013\n    \u2713 friteenth of September 2013\n    \u2713 saturteenth of February 2013\n    \u2713 saturteenth of April 2013\n    \u2713 saturteenth of October 2013\n    \u2713 sunteenth of May 2013\n    \u2713 sunteenth of June 2013\n    \u2713 sunteenth of October 2013\n    \u2713 first Monday of March 2013\n    \u2713 first Monday of April 2013\n    \u2713 first Tuesday of May 2013\n    \u2713 first Tuesday of June 2013\n    \u2713 first Wednesday of July 2013\n    \u2713 first Wednesday of August 2013\n    \u2713 first Thursday of September 2013\n    \u2713 first Thursday of October 2013\n    \u2713 first Friday of November 2013\n    \u2713 first Friday of December 2013\n    \u2713 first Saturday of January 2013\n    \u2713 first Saturday of February 2013\n    \u2713 first Sunday of March 2013\n    \u2713 first Sunday of April 2013\n    \u2713 second Monday of March 2013\n    \u2713 second Monday of April 2013\n    \u2713 second Tuesday of May 2013\n    \u2713 second Tuesday of June 2013\n    \u2713 second Wednesday of July 2013\n    \u2713 second Wednesday of August 2013\n    \u2713 second Thursday of September 2013 (1 ms)\n    \u2713 second Thursday of October 2013\n    \u2713 second Friday of November 2013\n    \u2713 second Friday of December 2013\n    \u2713 second Saturday of January 2013\n    \u2713 second Saturday of February 2013\n    \u2713 second Sunday of March 2013\n    \u2713 second Sunday of April 2013\n    \u2713 third Monday of March 2013\n    \u2713 third Monday of April 2013\n    \u2713 third Tuesday of May 2013\n    \u2713 third Tuesday of June 2013\n    \u2713 third Wednesday of July 2013\n    \u2713 third Wednesday of August 2013\n    \u2713 third Thursday of September 2013 (1 ms)\n    \u2713 third Thursday of October 2013\n    \u2713 third Friday of November 2013\n    \u2713 third Friday of December 2013\n    \u2713 third Saturday of January 2013\n    \u2713 third Saturday of February 2013\n    \u2713 third Sunday of March 2013\n    \u2713 third Sunday of April 2013\n    \u2713 fourth Monday of March 2013\n    \u2713 fourth Monday of April 2013\n    \u2713 fourth Tuesday of May 2013\n    \u2713 fourth Tuesday of June 2013\n    \u2713 fourth Wednesday of July 2013\n    \u2713 fourth Wednesday of August 2013\n    \u2713 fourth Thursday of September 2013\n    \u2713 fourth Thursday of October 2013\n    \u2713 fourth Friday of November 2013\n    \u2713 fourth Friday of December 2013\n    \u2713 fourth Saturday of January 2013\n    \u2713 fourth Saturday of February 2013\n    \u2713 fourth Sunday of March 2013\n    \u2713 fourth Sunday of April 2013\n    \u2713 last Monday of March 2013\n    \u2713 last Monday of April 2013\n    \u2713 last Tuesday of May 2013\n    \u2713 last Tuesday of June 2013\n    \u2713 last Wednesday of July 2013\n    \u2713 last Wednesday of August 2013\n    \u2713 last Thursday of September 2013\n    \u2713 last Thursday of October 2013\n    \u2713 last Friday of November 2013\n    \u2713 last Friday of December 2013\n    \u2713 last Saturday of January 2013\n    \u2713 last Saturday of February 2013\n    \u2713 last Sunday of March 2013\n    \u2713 last Sunday of April 2013\n    \u2713 last Wednesday of February 2012\n    \u2713 last Wednesday of December 2014\n    \u2713 last Sunday of February 2015\n    \u2713 first Friday of December 2012\n\nTest Suites: 1 passed, 1 total\nTests:       95 passed, 95 total\nSnapshots:   0 total\nTime:        0.262 s\nRan all test suites matching tmp_exercises.\n"
+    }
+  ],
+  "tool_versions": {
+    "node": "v24.19.0",
+    "pnpm": "9.15.2",
+    "python": "3.9.6",
+    "tomli": "2.5.0"
+  },
+  "timestamp_normalization": {
+    "applied": false,
+    "reason": "Neither generated spec contains a timestamp; outputs are compared byte-for-byte.",
+    "rule": null
+  },
+  "maintained_source_hashes_before": {
+    "meetup.spec.js": "3071b9c003ecb95f9d445ed2c88f7f49cd87a84991e98f212afa8aad91c386c6",
+    "proof.ci.js": "7cb6f0be0e68623b08dd5559aedab9ebf267032099b9d2b813273994b8cc93ed",
+    "meetup.js": "15ed923a6ecbd9095bbe6b1f9200dec82bc6554ac9e60708c45a0432f05655b8",
+    "tests.toml": "ad903dedc98f2f1ffbd7f86c28ef446bf0f332020481d8d7f9e0aa1e14de9ccf"
+  },
+  "maintained_source_hashes_after": {
+    "meetup.spec.js": "3071b9c003ecb95f9d445ed2c88f7f49cd87a84991e98f212afa8aad91c386c6",
+    "proof.ci.js": "7cb6f0be0e68623b08dd5559aedab9ebf267032099b9d2b813273994b8cc93ed",
+    "meetup.js": "15ed923a6ecbd9095bbe6b1f9200dec82bc6554ac9e60708c45a0432f05655b8",
+    "tests.toml": "ad903dedc98f2f1ffbd7f86c28ef446bf0f332020481d8d7f9e0aa1e14de9ccf"
+  },
+  "processes": [
+    {
+      "label": "Node version",
+      "command": ["node", "--version"],
+      "return_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "label": "pnpm version",
+      "command": ["corepack", "pnpm", "--version"],
+      "return_code": 0,
+      "stdout": "9.15.2\n",
+      "stderr": ""
+    },
+    {
+      "label": "generation 1: track prepare helper",
+      "command": [
+        "corepack",
+        "pnpm",
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { prepare } from './scripts/helpers.mjs'; prepare('practice/meetup');"
+      ],
+      "return_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "generation 1: actual track CI entry point",
+      "command": ["corepack", "pnpm", "node", "scripts/ci.mjs"],
+      "return_code": 0,
+      "stdout": "Running tests for practice/meetup\n[Success] Tests passed for practice/meetup\n",
+      "stderr": "PASS tmp_exercises/practice/meetup/meetup.spec.js\n  Meetup\n    \u2713 monteenth of May 2013 (1 ms)\n    \u2713 monteenth of August 2013 (1 ms)\n    \u2713 monteenth of September 2013\n    \u2713 tuesteenth of March 2013\n    \u2713 tuesteenth of April 2013\n    \u2713 tuesteenth of August 2013\n    \u2713 wednesteenth of January 2013\n    \u2713 wednesteenth of February 2013\n    \u2713 wednesteenth of June 2013\n    \u2713 thursteenth of May 2013\n    \u2713 thursteenth of June 2013\n    \u2713 thursteenth of September 2013\n    \u2713 friteenth of April 2013\n    \u2713 friteenth of August 2013\n    \u2713 friteenth of September 2013\n    \u2713 saturteenth of February 2013\n    \u2713 saturteenth of April 2013\n    \u2713 saturteenth of October 2013\n    \u2713 sunteenth of May 2013\n    \u2713 sunteenth of June 2013\n    \u2713 sunteenth of October 2013\n    \u2713 first Monday of March 2013 (1 ms)\n    \u2713 first Monday of April 2013\n    \u2713 first Tuesday of May 2013\n    \u2713 first Tuesday of June 2013\n    \u2713 first Wednesday of July 2013\n    \u2713 first Wednesday of August 2013\n    \u2713 first Thursday of September 2013\n    \u2713 first Thursday of October 2013\n    \u2713 first Friday of November 2013\n    \u2713 first Friday of December 2013\n    \u2713 first Saturday of January 2013\n    \u2713 first Saturday of February 2013\n    \u2713 first Sunday of March 2013\n    \u2713 first Sunday of April 2013 (1 ms)\n    \u2713 second Monday of March 2013\n    \u2713 second Monday of April 2013\n    \u2713 second Tuesday of May 2013\n    \u2713 second Tuesday of June 2013\n    \u2713 second Wednesday of July 2013\n    \u2713 second Wednesday of August 2013\n    \u2713 second Thursday of September 2013\n    \u2713 second Thursday of October 2013\n    \u2713 second Friday of November 2013\n    \u2713 second Friday of December 2013\n    \u2713 second Saturday of January 2013\n    \u2713 second Saturday of February 2013\n    \u2713 second Sunday of March 2013\n    \u2713 second Sunday of April 2013\n    \u2713 third Monday of March 2013 (1 ms)\n    \u2713 third Monday of April 2013\n    \u2713 third Tuesday of May 2013\n    \u2713 third Tuesday of June 2013\n    \u2713 third Wednesday of July 2013\n    \u2713 third Wednesday of August 2013\n    \u2713 third Thursday of September 2013\n    \u2713 third Thursday of October 2013\n    \u2713 third Friday of November 2013\n    \u2713 third Friday of December 2013\n    \u2713 third Saturday of January 2013\n    \u2713 third Saturday of February 2013\n    \u2713 third Sunday of March 2013\n    \u2713 third Sunday of April 2013\n    \u2713 fourth Monday of March 2013 (1 ms)\n    \u2713 fourth Monday of April 2013\n    \u2713 fourth Tuesday of May 2013\n    \u2713 fourth Tuesday of June 2013\n    \u2713 fourth Wednesday of July 2013\n    \u2713 fourth Wednesday of August 2013\n    \u2713 fourth Thursday of September 2013\n    \u2713 fourth Thursday of October 2013\n    \u2713 fourth Friday of November 2013\n    \u2713 fourth Friday of December 2013 (1 ms)\n    \u2713 fourth Saturday of January 2013\n    \u2713 fourth Saturday of February 2013\n    \u2713 fourth Sunday of March 2013\n    \u2713 fourth Sunday of April 2013\n    \u2713 last Monday of March 2013\n    \u2713 last Monday of April 2013\n    \u2713 last Tuesday of May 2013\n    \u2713 last Tuesday of June 2013\n    \u2713 last Wednesday of July 2013\n    \u2713 last Wednesday of August 2013\n    \u2713 last Thursday of September 2013\n    \u2713 last Thursday of October 2013\n    \u2713 last Friday of November 2013\n    \u2713 last Friday of December 2013\n    \u2713 last Saturday of January 2013\n    \u2713 last Saturday of February 2013\n    \u2713 last Sunday of March 2013\n    \u2713 last Sunday of April 2013\n    \u2713 last Wednesday of February 2012\n    \u2713 last Wednesday of December 2014\n    \u2713 last Sunday of February 2015\n    \u2713 first Friday of December 2012\n\nTest Suites: 1 passed, 1 total\nTests:       95 passed, 95 total\nSnapshots:   0 total\nTime:        0.254 s\nRan all test suites matching tmp_exercises.\n"
+    },
+    {
+      "label": "generation 2: track prepare helper",
+      "command": [
+        "corepack",
+        "pnpm",
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { prepare } from './scripts/helpers.mjs'; prepare('practice/meetup');"
+      ],
+      "return_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "generation 2: actual track CI entry point",
+      "command": ["corepack", "pnpm", "node", "scripts/ci.mjs"],
+      "return_code": 0,
+      "stdout": "Running tests for practice/meetup\n[Success] Tests passed for practice/meetup\n",
+      "stderr": "PASS tmp_exercises/practice/meetup/meetup.spec.js\n  Meetup\n    \u2713 monteenth of May 2013 (2 ms)\n    \u2713 monteenth of August 2013\n    \u2713 monteenth of September 2013\n    \u2713 tuesteenth of March 2013 (1 ms)\n    \u2713 tuesteenth of April 2013\n    \u2713 tuesteenth of August 2013\n    \u2713 wednesteenth of January 2013 (1 ms)\n    \u2713 wednesteenth of February 2013\n    \u2713 wednesteenth of June 2013\n    \u2713 thursteenth of May 2013\n    \u2713 thursteenth of June 2013\n    \u2713 thursteenth of September 2013\n    \u2713 friteenth of April 2013\n    \u2713 friteenth of August 2013\n    \u2713 friteenth of September 2013\n    \u2713 saturteenth of February 2013\n    \u2713 saturteenth of April 2013\n    \u2713 saturteenth of October 2013\n    \u2713 sunteenth of May 2013\n    \u2713 sunteenth of June 2013\n    \u2713 sunteenth of October 2013\n    \u2713 first Monday of March 2013\n    \u2713 first Monday of April 2013\n    \u2713 first Tuesday of May 2013\n    \u2713 first Tuesday of June 2013\n    \u2713 first Wednesday of July 2013\n    \u2713 first Wednesday of August 2013\n    \u2713 first Thursday of September 2013\n    \u2713 first Thursday of October 2013\n    \u2713 first Friday of November 2013\n    \u2713 first Friday of December 2013\n    \u2713 first Saturday of January 2013\n    \u2713 first Saturday of February 2013\n    \u2713 first Sunday of March 2013\n    \u2713 first Sunday of April 2013\n    \u2713 second Monday of March 2013\n    \u2713 second Monday of April 2013\n    \u2713 second Tuesday of May 2013\n    \u2713 second Tuesday of June 2013\n    \u2713 second Wednesday of July 2013\n    \u2713 second Wednesday of August 2013\n    \u2713 second Thursday of September 2013 (1 ms)\n    \u2713 second Thursday of October 2013\n    \u2713 second Friday of November 2013\n    \u2713 second Friday of December 2013\n    \u2713 second Saturday of January 2013\n    \u2713 second Saturday of February 2013\n    \u2713 second Sunday of March 2013\n    \u2713 second Sunday of April 2013\n    \u2713 third Monday of March 2013\n    \u2713 third Monday of April 2013\n    \u2713 third Tuesday of May 2013\n    \u2713 third Tuesday of June 2013\n    \u2713 third Wednesday of July 2013\n    \u2713 third Wednesday of August 2013\n    \u2713 third Thursday of September 2013 (1 ms)\n    \u2713 third Thursday of October 2013\n    \u2713 third Friday of November 2013\n    \u2713 third Friday of December 2013\n    \u2713 third Saturday of January 2013\n    \u2713 third Saturday of February 2013\n    \u2713 third Sunday of March 2013\n    \u2713 third Sunday of April 2013\n    \u2713 fourth Monday of March 2013\n    \u2713 fourth Monday of April 2013\n    \u2713 fourth Tuesday of May 2013\n    \u2713 fourth Tuesday of June 2013\n    \u2713 fourth Wednesday of July 2013\n    \u2713 fourth Wednesday of August 2013\n    \u2713 fourth Thursday of September 2013\n    \u2713 fourth Thursday of October 2013\n    \u2713 fourth Friday of November 2013\n    \u2713 fourth Friday of December 2013\n    \u2713 fourth Saturday of January 2013\n    \u2713 fourth Saturday of February 2013\n    \u2713 fourth Sunday of March 2013\n    \u2713 fourth Sunday of April 2013\n    \u2713 last Monday of March 2013\n    \u2713 last Monday of April 2013\n    \u2713 last Tuesday of May 2013\n    \u2713 last Tuesday of June 2013\n    \u2713 last Wednesday of July 2013\n    \u2713 last Wednesday of August 2013\n    \u2713 last Thursday of September 2013\n    \u2713 last Thursday of October 2013\n    \u2713 last Friday of November 2013\n    \u2713 last Friday of December 2013\n    \u2713 last Saturday of January 2013\n    \u2713 last Saturday of February 2013\n    \u2713 last Sunday of March 2013\n    \u2713 last Sunday of April 2013\n    \u2713 last Wednesday of February 2012\n    \u2713 last Wednesday of December 2014\n    \u2713 last Sunday of February 2015\n    \u2713 first Friday of December 2012\n\nTest Suites: 1 passed, 1 total\nTests:       95 passed, 95 total\nSnapshots:   0 total\nTime:        0.262 s\nRan all test suites matching tmp_exercises.\n"
+    }
+  ]
+}
