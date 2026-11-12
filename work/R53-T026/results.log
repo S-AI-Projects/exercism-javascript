@@ -1,0 +1,33 @@
+=== REFERENCE (BITWISE BASE-2) JEST RUN ===
+
+PASS ./square-root.spec.js
+  Square root
+    ✓ root of 1
+    ✓ root of 4
+    ✓ root of 5
+    ✓ root of 81
+    ✓ root of 196
+    ✓ root of 65025
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.284 s
+Ran all test suites.
+
+=== ALTERNATIVE (INTERVAL BINARY SEARCH) JEST RUN ===
+
+PASS ./square-root.spec.js
+  Square root
+    ✓ root of 1 (1 ms)
+    ✓ root of 4
+    ✓ root of 5
+    ✓ root of 81
+    ✓ root of 196
+    ✓ root of 65025
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        0.158 s
+Ran all test suites.
