@@ -1,0 +1,86 @@
+=== JEST SUITE RUN ===
+
+PASS ./resistor-color-duo.spec.js
+  Resistor Colors
+    ✓ Brown and black (1 ms)
+    ✓ Blue and grey
+    ✓ Yellow and violet
+    ✓ White and red
+    ✓ Orange and orange
+    ✓ Ignore additional colors (1 ms)
+    ✓ Black and brown, one-digit
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.267 s
+Ran all test suites.
+
+=== OPERATION & MEDIAN TIMING MEASUREMENTS ===
+[
+  {
+    "label": "2-bands-low",
+    "input": [
+      "brown",
+      "black"
+    ],
+    "input_length": 2,
+    "expected": 10,
+    "actual": 10,
+    "tens_comparisons": 2,
+    "ones_comparisons": 1,
+    "total_indexOf_comparisons": 3,
+    "ignored_elements": 0,
+    "repetitions": 7,
+    "median_ns_per_call": 24.77
+  },
+  {
+    "label": "2-bands-high",
+    "input": [
+      "blue",
+      "grey"
+    ],
+    "input_length": 2,
+    "expected": 68,
+    "actual": 68,
+    "tens_comparisons": 7,
+    "ones_comparisons": 9,
+    "total_indexOf_comparisons": 16,
+    "ignored_elements": 0,
+    "repetitions": 7,
+    "median_ns_per_call": 16.86
+  },
+  {
+    "label": "3-bands-ignored-extra",
+    "input": [
+      "green",
+      "brown",
+      "orange"
+    ],
+    "input_length": 3,
+    "expected": 51,
+    "actual": 51,
+    "tens_comparisons": 6,
+    "ones_comparisons": 2,
+    "total_indexOf_comparisons": 8,
+    "ignored_elements": 1,
+    "repetitions": 7,
+    "median_ns_per_call": 12.62
+  },
+  {
+    "label": "2-bands-worst-case",
+    "input": [
+      "white",
+      "white"
+    ],
+    "input_length": 2,
+    "expected": 99,
+    "actual": 99,
+    "tens_comparisons": 10,
+    "ones_comparisons": 10,
+    "total_indexOf_comparisons": 20,
+    "ignored_elements": 0,
+    "repetitions": 7,
+    "median_ns_per_call": 18.15
+  }
+]
