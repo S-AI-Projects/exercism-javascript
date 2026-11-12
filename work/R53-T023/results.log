@@ -1,0 +1,40 @@
+=== ORIGINAL REFERENCE RUN ===
+
+PASS ./hello-world.spec.js
+  Hello World
+    ✓ Say Hi! (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.254 s
+Ran all test suites.
+
+=== MUTATED REFERENCE RUN ===
+
+FAIL ./hello-world.spec.js
+  Hello World
+    ✕ Say Hi! (1 ms)
+
+  ● Hello World › Say Hi!
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Hello, World!"
+    Received: "Hello, World"
+
+    [0m [90m 4 |[39m describe([32m'Hello World'[39m[33m,[39m () [33m=>[39m {
+     [90m 5 |[39m   test([32m'Say Hi!'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 6 |[39m     expect(hello())[33m.[39mtoEqual([32m'Hello, World!'[39m)[33m;[39m
+     [90m   |[39m                     [31m[1m^[22m[39m
+     [90m 7 |[39m   })[33m;[39m
+     [90m 8 |[39m })[33m;[39m
+     [90m 9 |[39m[0m
+
+      at Object.toEqual (hello-world.spec.js:6:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.155 s
+Ran all test suites.

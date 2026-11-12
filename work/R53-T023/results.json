@@ -1,0 +1,27 @@
+{
+  "task_id": "R53-T023",
+  "exercise": "hello-world",
+  "package_json_test_script": "corepack pnpm jest",
+  "minimal_input": "hello()",
+  "expected_output": "Hello, World!",
+  "mutant_output": "Hello, World",
+  "rejecting_test_id": "af9ffe10-dc13-42d8-a742-e7bdafac449d",
+  "rejecting_test_name": "Say Hi!",
+  "original_reference": {
+    "exit_code": 0,
+    "executed_passed_tests": 1,
+    "status": "PASSED"
+  },
+  "mutated_reference": {
+    "exit_code": 1,
+    "executed_passed_tests": 0,
+    "status": "REJECTED_AS_EXPECTED"
+  },
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
