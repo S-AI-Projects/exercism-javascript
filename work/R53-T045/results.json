@@ -1,0 +1,787 @@
+{
+  "exercise": "scale-generator",
+  "test_counts": {
+    "total": 19,
+    "passed": 19,
+    "failed": 0
+  },
+  "required_cases": {
+    "Chromatic scale with sharps": {
+      "input": {
+        "tonic": "C",
+        "method": "chromatic",
+        "intervals": null
+      },
+      "expected": [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B"
+      ],
+      "actual": [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B"
+      ],
+      "match": true
+    },
+    "Chromatic scale with flats": {
+      "input": {
+        "tonic": "F",
+        "method": "chromatic",
+        "intervals": null
+      },
+      "expected": [
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db",
+        "D",
+        "Eb",
+        "E"
+      ],
+      "actual": [
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db",
+        "D",
+        "Eb",
+        "E"
+      ],
+      "match": true
+    },
+    "Chromatic scale with sharps from D": {
+      "input": {
+        "tonic": "D",
+        "method": "chromatic",
+        "intervals": null
+      },
+      "expected": [
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+        "C",
+        "C#"
+      ],
+      "actual": [
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+        "C",
+        "C#"
+      ],
+      "match": true
+    }
+  },
+  "all_cases_verified": [
+    {
+      "name": "Chromatic scale with sharps",
+      "tonic": "C",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B"
+      ],
+      "actual": [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B"
+      ],
+      "match": true
+    },
+    {
+      "name": "Chromatic scale with flats",
+      "tonic": "F",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db",
+        "D",
+        "Eb",
+        "E"
+      ],
+      "actual": [
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db",
+        "D",
+        "Eb",
+        "E"
+      ],
+      "match": true
+    },
+    {
+      "name": "Chromatic scale with sharps from D",
+      "tonic": "D",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+        "C",
+        "C#"
+      ],
+      "actual": [
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+        "C",
+        "C#"
+      ],
+      "match": true
+    },
+    {
+      "name": "Chromatic scale with flats from D",
+      "tonic": "d",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "D",
+        "Eb",
+        "E",
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db"
+      ],
+      "actual": [
+        "D",
+        "Eb",
+        "E",
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db"
+      ],
+      "match": true
+    },
+    {
+      "name": "Simple major scale",
+      "tonic": "C",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C"
+      ],
+      "actual": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C"
+      ],
+      "match": true
+    },
+    {
+      "name": "Major scale with sharps",
+      "tonic": "G",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F#",
+        "G"
+      ],
+      "actual": [
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F#",
+        "G"
+      ],
+      "match": true
+    },
+    {
+      "name": "Major scale with flats",
+      "tonic": "F",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "actual": [
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "match": true
+    },
+    {
+      "name": "Minor scale with sharps",
+      "tonic": "f#",
+      "method": "interval",
+      "intervals": "MmMMmMM",
+      "expected": [
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C#",
+        "D",
+        "E",
+        "F#"
+      ],
+      "actual": [
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C#",
+        "D",
+        "E",
+        "F#"
+      ],
+      "match": true
+    },
+    {
+      "name": "Minor scale with flats",
+      "tonic": "bb",
+      "method": "interval",
+      "intervals": "MmMMmMM",
+      "expected": [
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "Gb",
+        "Ab",
+        "Bb"
+      ],
+      "actual": [
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "Gb",
+        "Ab",
+        "Bb"
+      ],
+      "match": true
+    },
+    {
+      "name": "Dorian mode",
+      "tonic": "d",
+      "method": "interval",
+      "intervals": "MmMMMmM",
+      "expected": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "actual": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "match": true
+    },
+    {
+      "name": "Phrygian mode",
+      "tonic": "e",
+      "method": "interval",
+      "intervals": "mMMMmMM",
+      "expected": [
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "actual": [
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "match": true
+    },
+    {
+      "name": "Lydian mode",
+      "tonic": "a",
+      "method": "interval",
+      "intervals": "MMMmMMm",
+      "expected": [
+        "A",
+        "B",
+        "C#",
+        "D#",
+        "E",
+        "F#",
+        "G#",
+        "A"
+      ],
+      "actual": [
+        "A",
+        "B",
+        "C#",
+        "D#",
+        "E",
+        "F#",
+        "G#",
+        "A"
+      ],
+      "match": true
+    },
+    {
+      "name": "Mixolydian mode",
+      "tonic": "Eb",
+      "method": "interval",
+      "intervals": "MMmMMmM",
+      "expected": [
+        "Eb",
+        "F",
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb"
+      ],
+      "actual": [
+        "Eb",
+        "F",
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb"
+      ],
+      "match": true
+    },
+    {
+      "name": "Locrian mode",
+      "tonic": "g",
+      "method": "interval",
+      "intervals": "mMMmMMM",
+      "expected": [
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "G"
+      ],
+      "actual": [
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "G"
+      ],
+      "match": true
+    },
+    {
+      "name": "Harmonic minor",
+      "tonic": "d",
+      "method": "interval",
+      "intervals": "MmMMmAm",
+      "expected": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "Db",
+        "D"
+      ],
+      "actual": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "Db",
+        "D"
+      ],
+      "match": true
+    },
+    {
+      "name": "Octatonic",
+      "tonic": "C",
+      "method": "interval",
+      "intervals": "MmMmMmMm",
+      "expected": [
+        "C",
+        "D",
+        "D#",
+        "F",
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C"
+      ],
+      "actual": [
+        "C",
+        "D",
+        "D#",
+        "F",
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C"
+      ],
+      "match": true
+    },
+    {
+      "name": "Hexatonic",
+      "tonic": "Db",
+      "method": "interval",
+      "intervals": "MMMMMM",
+      "expected": [
+        "Db",
+        "Eb",
+        "F",
+        "G",
+        "A",
+        "B",
+        "Db"
+      ],
+      "actual": [
+        "Db",
+        "Eb",
+        "F",
+        "G",
+        "A",
+        "B",
+        "Db"
+      ],
+      "match": true
+    },
+    {
+      "name": "Pentatonic",
+      "tonic": "A",
+      "method": "interval",
+      "intervals": "MMAMA",
+      "expected": [
+        "A",
+        "B",
+        "C#",
+        "E",
+        "F#",
+        "A"
+      ],
+      "actual": [
+        "A",
+        "B",
+        "C#",
+        "E",
+        "F#",
+        "A"
+      ],
+      "match": true
+    },
+    {
+      "name": "Enigmatic",
+      "tonic": "G",
+      "method": "interval",
+      "intervals": "mAMMMmm",
+      "expected": [
+        "G",
+        "G#",
+        "B",
+        "C#",
+        "D#",
+        "F",
+        "F#",
+        "G"
+      ],
+      "actual": [
+        "G",
+        "G#",
+        "B",
+        "C#",
+        "D#",
+        "F",
+        "F#",
+        "G"
+      ],
+      "match": true
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "Pentatonic (m=5)",
+      "m": 5,
+      "tonic": "A",
+      "intervals": "MMAMA",
+      "expected_notes_count": 6,
+      "iterations_per_repetition": 50000,
+      "repetitions": 10,
+      "repetition_times_ns": [
+        129.55583999999993,
+        131.49916,
+        108.74250000000004,
+        130.28415999999993,
+        110.59584000000002,
+        105.34999999999997,
+        102.12665999999999,
+        103.99167999999989,
+        102.76416000000012,
+        104.72499999999997
+      ],
+      "median_time_ns": 108.74250000000004,
+      "median_time_us": 0.10874250000000003
+    },
+    {
+      "name": "Major Diatonic (m=7)",
+      "m": 7,
+      "tonic": "C",
+      "intervals": "MMmMMMm",
+      "expected_notes_count": 8,
+      "iterations_per_repetition": 50000,
+      "repetitions": 10,
+      "repetition_times_ns": [
+        155.7575,
+        126.64750000000026,
+        122.31500000000011,
+        123.91165999999998,
+        118.94750000000016,
+        118.97999999999996,
+        118.53331999999995,
+        123.09915999999987,
+        122.79665999999993,
+        121.27331999999967
+      ],
+      "median_time_ns": 122.79665999999993,
+      "median_time_us": 0.12279665999999993
+    },
+    {
+      "name": "Chromatic (m=11)",
+      "m": 11,
+      "tonic": "C",
+      "intervals": null,
+      "expected_notes_count": 12,
+      "iterations_per_repetition": 50000,
+      "repetitions": 10,
+      "repetition_times_ns": [
+        202.86084000000014,
+        161.03081999999972,
+        149.98582,
+        148.5499999999996,
+        147.91166000000032,
+        151.06416000000024,
+        148.73500000000035,
+        147.97750000000008,
+        150.23915999999986,
+        148.23166000000015
+      ],
+      "median_time_ns": 149.98582,
+      "median_time_us": 0.14998582
+    }
+  ],
+  "operation_counts": {
+    "fixed_domain_explanation": "In Western 12-tone equal temperament (12-TET), an octave contains exactly 12 semitones. Under the exercise specification, valid interval sequences have lengths m in {5, 6, 7, 8, 11}. Because the input domain length is bounded by m <= 11 and tonic keys are drawn from a finite set of 26 recognized pitch strings, the total operation count has a defensible fixed upper bound.",
+    "constructor_operations": {
+      "property_assignments": 3,
+      "literal_allocations": 4,
+      "string_title_casing": 4,
+      "membership_search_max_comparisons": 14,
+      "indexOf_pitch_max_comparisons": 12,
+      "maximum_constructor_operations": 35
+    },
+    "generate_scale_operations_formula": "5 * m + 2",
+    "generate_scale_operations_breakdown": {
+      "initial_tonic_lookup_and_array_init": 2,
+      "string_split": "m character string allocations",
+      "per_interval_step_lookup": "m dictionary accesses (this.steps[i])",
+      "per_interval_addition": "m integer additions (this.index += step)",
+      "per_interval_modulo": "m integer modulo reductions ((this.index) % 12)",
+      "per_interval_pitch_lookup": "m array index reads (this.accidental[...])",
+      "final_array_concatenation": "allocates array of m + 1 elements"
+    },
+    "sample_sizes_operation_counts": {
+      "pentatonic_m_5": {
+        "m": 5,
+        "generateScale_ops": 27,
+        "total_ops_with_constructor": 62
+      },
+      "hexatonic_m_6": {
+        "m": 6,
+        "generateScale_ops": 32,
+        "total_ops_with_constructor": 67
+      },
+      "major_diatonic_m_7": {
+        "m": 7,
+        "generateScale_ops": 37,
+        "total_ops_with_constructor": 72
+      },
+      "octatonic_m_8": {
+        "m": 8,
+        "generateScale_ops": 42,
+        "total_ops_with_constructor": 77
+      },
+      "chromatic_m_11": {
+        "m": 11,
+        "generateScale_ops": 57,
+        "total_ops_with_constructor": 92
+      }
+    },
+    "defensible_upper_bound_operations": 95,
+    "theoretical_complexity": {
+      "fixed_domain_time": "O(1)",
+      "fixed_domain_auxiliary_space": "O(1)",
+      "parameterized_time": "O(m)",
+      "parameterized_auxiliary_space": "O(m)"
+    }
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "exercise": "scale-generator",
+  "total_cases": 19,
+  "cases": [
+    {
+      "name": "Chromatic scale with sharps",
+      "tonic": "C",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "C",
+        "C#",
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B"
+      ],
+      "enabled_in_learner_suite": true,
+      "intervals_length": 11,
+      "notes_count": 12
+    },
+    {
+      "name": "Chromatic scale with flats",
+      "tonic": "F",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db",
+        "D",
+        "Eb",
+        "E"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 11,
+      "notes_count": 12
+    },
+    {
+      "name": "Chromatic scale with sharps from D",
+      "tonic": "D",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "D",
+        "D#",
+        "E",
+        "F",
+        "F#",
+        "G",
+        "G#",
+        "A",
+        "A#",
+        "B",
+        "C",
+        "C#"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 11,
+      "notes_count": 12
+    },
+    {
+      "name": "Chromatic scale with flats from D",
+      "tonic": "d",
+      "method": "chromatic",
+      "intervals": null,
+      "expected": [
+        "D",
+        "Eb",
+        "E",
+        "F",
+        "Gb",
+        "G",
+        "Ab",
+        "A",
+        "Bb",
+        "B",
+        "C",
+        "Db"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 11,
+      "notes_count": 12
+    },
+    {
+      "name": "Simple major scale",
+      "tonic": "C",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Major scale with sharps",
+      "tonic": "G",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F#",
+        "G"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Major scale with flats",
+      "tonic": "F",
+      "method": "interval",
+      "intervals": "MMmMMMm",
+      "expected": [
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Minor scale with sharps",
+      "tonic": "f#",
+      "method": "interval",
+      "intervals": "MmMMmMM",
+      "expected": [
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C#",
+        "D",
+        "E",
+        "F#"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Minor scale with flats",
+      "tonic": "bb",
+      "method": "interval",
+      "intervals": "MmMMmMM",
+      "expected": [
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "Gb",
+        "Ab",
+        "Bb"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Dorian mode",
+      "tonic": "d",
+      "method": "interval",
+      "intervals": "MmMMMmM",
+      "expected": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Phrygian mode",
+      "tonic": "e",
+      "method": "interval",
+      "intervals": "mMMMmMM",
+      "expected": [
+        "E",
+        "F",
+        "G",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Lydian mode",
+      "tonic": "a",
+      "method": "interval",
+      "intervals": "MMMmMMm",
+      "expected": [
+        "A",
+        "B",
+        "C#",
+        "D#",
+        "E",
+        "F#",
+        "G#",
+        "A"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Mixolydian mode",
+      "tonic": "Eb",
+      "method": "interval",
+      "intervals": "MMmMMmM",
+      "expected": [
+        "Eb",
+        "F",
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Locrian mode",
+      "tonic": "g",
+      "method": "interval",
+      "intervals": "mMMmMMM",
+      "expected": [
+        "G",
+        "Ab",
+        "Bb",
+        "C",
+        "Db",
+        "Eb",
+        "F",
+        "G"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Harmonic minor",
+      "tonic": "d",
+      "method": "interval",
+      "intervals": "MmMMmAm",
+      "expected": [
+        "D",
+        "E",
+        "F",
+        "G",
+        "A",
+        "Bb",
+        "Db",
+        "D"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    },
+    {
+      "name": "Octatonic",
+      "tonic": "C",
+      "method": "interval",
+      "intervals": "MmMmMmMm",
+      "expected": [
+        "C",
+        "D",
+        "D#",
+        "F",
+        "F#",
+        "G#",
+        "A",
+        "B",
+        "C"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 8,
+      "notes_count": 9
+    },
+    {
+      "name": "Hexatonic",
+      "tonic": "Db",
+      "method": "interval",
+      "intervals": "MMMMMM",
+      "expected": [
+        "Db",
+        "Eb",
+        "F",
+        "G",
+        "A",
+        "B",
+        "Db"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 6,
+      "notes_count": 7
+    },
+    {
+      "name": "Pentatonic",
+      "tonic": "A",
+      "method": "interval",
+      "intervals": "MMAMA",
+      "expected": [
+        "A",
+        "B",
+        "C#",
+        "E",
+        "F#",
+        "A"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 5,
+      "notes_count": 6
+    },
+    {
+      "name": "Enigmatic",
+      "tonic": "G",
+      "method": "interval",
+      "intervals": "mAMMMmm",
+      "expected": [
+        "G",
+        "G#",
+        "B",
+        "C#",
+        "D#",
+        "F",
+        "F#",
+        "G"
+      ],
+      "enabled_in_learner_suite": false,
+      "intervals_length": 7,
+      "notes_count": 8
+    }
+  ]
+}
