@@ -1,0 +1,495 @@
+{
+  "task": "R53-T044",
+  "success": true,
+  "inputs": {
+    "exercise_config": "exercises/practice/armstrong-numbers/.meta/config.json",
+    "configured_paths": {
+      "solution": ["armstrong-numbers.js"],
+      "test": ["armstrong-numbers.spec.js"],
+      "example": [".meta/proof.ci.js"]
+    },
+    "test_script": "corepack pnpm jest",
+    "canonical_case_count": 11,
+    "enabled_before_track_promotion": 1,
+    "cases": [
+      {
+        "name": "Zero is an Armstrong number",
+        "input": "0",
+        "expected": true,
+        "enabled_in_learner_suite": true
+      },
+      {
+        "name": "Single-digit numbers are Armstrong numbers",
+        "input": "5",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "There are no two-digit Armstrong numbers",
+        "input": "10",
+        "expected": false,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Three-digit number that is an Armstrong number",
+        "input": "153",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Three-digit number that is not an Armstrong number",
+        "input": "100",
+        "expected": false,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Four-digit number that is an Armstrong number",
+        "input": "9474",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Four-digit number that is not an Armstrong number",
+        "input": "9475",
+        "expected": false,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Seven-digit number that is an Armstrong number",
+        "input": "9926315",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Seven-digit number that is not an Armstrong number",
+        "input": "9926314",
+        "expected": false,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "Armstrong number containing seven zeroes",
+        "input": "186709961001538790100634132976990n",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      },
+      {
+        "name": "The largest and last Armstrong number",
+        "input": "115132219018763992565095597973971522401n",
+        "expected": true,
+        "enabled_in_learner_suite": false
+      }
+    ],
+    "requested_traces": [
+      {
+        "input": "0",
+        "digits": [0],
+        "digit_count_exponent": 1,
+        "powered_digits": [0],
+        "sum": 0,
+        "is_armstrong": true
+      },
+      {
+        "input": "5",
+        "digits": [5],
+        "digit_count_exponent": 1,
+        "powered_digits": [5],
+        "sum": 5,
+        "is_armstrong": true
+      },
+      {
+        "input": "10",
+        "digits": [1, 0],
+        "digit_count_exponent": 2,
+        "powered_digits": [1, 0],
+        "sum": 1,
+        "is_armstrong": false
+      }
+    ],
+    "reference_snapshot": {
+      "path": "work/R53-T044/proof.ci.before.js",
+      "sha256": "6b44abd842c1d883fdca341e239d8c3f8dec7f1b1befd5a4c419e28e3e3b957d"
+    }
+  },
+  "before": {
+    "label": "before",
+    "test_command": [
+      "corepack",
+      "pnpm",
+      "--dir",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before",
+      "run",
+      "test",
+      "--runInBand",
+      "--watch=false",
+      "--runTestsByPath",
+      "armstrong-numbers.spec.js",
+      "--json",
+      "--outputFile",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-jest.json"
+    ],
+    "test_return_code": 0,
+    "test_counts": {
+      "executed": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "test_statuses": {
+      "Zero is an Armstrong number": "passed",
+      "Single-digit numbers are Armstrong numbers": "passed",
+      "There are no two-digit Armstrong numbers": "passed",
+      "Three-digit number that is an Armstrong number": "passed",
+      "Three-digit number that is not an Armstrong number": "passed",
+      "Four-digit number that is an Armstrong number": "passed",
+      "Four-digit number that is not an Armstrong number": "passed",
+      "Seven-digit number that is an Armstrong number": "passed",
+      "Seven-digit number that is not an Armstrong number": "passed",
+      "Armstrong number containing seven zeroes": "passed",
+      "The largest and last Armstrong number": "passed"
+    },
+    "exercise_file_count_copied": 14,
+    "probe_command": [
+      "corepack",
+      "pnpm",
+      "--dir",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before",
+      "run",
+      "test",
+      "--runInBand",
+      "--watch=false",
+      "--runTestsByPath",
+      "armstrong-reference-probe.spec.js",
+      "--json",
+      "--outputFile",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-probe-jest.json"
+    ],
+    "probe_return_code": 0,
+    "probe_counts": {
+      "executed": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "outputs": [
+      {
+        "name": "Zero is an Armstrong number",
+        "input": "0",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Single-digit numbers are Armstrong numbers",
+        "input": "5",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "There are no two-digit Armstrong numbers",
+        "input": "10",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Three-digit number that is an Armstrong number",
+        "input": "153",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Three-digit number that is not an Armstrong number",
+        "input": "100",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Four-digit number that is an Armstrong number",
+        "input": "9474",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Four-digit number that is not an Armstrong number",
+        "input": "9475",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Seven-digit number that is an Armstrong number",
+        "input": "9926315",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Seven-digit number that is not an Armstrong number",
+        "input": "9926314",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Armstrong number containing seven zeroes",
+        "input": "186709961001538790100634132976990n",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "The largest and last Armstrong number",
+        "input": "115132219018763992565095597973971522401n",
+        "expected": true,
+        "actual": true
+      }
+    ]
+  },
+  "after": {
+    "label": "after",
+    "test_command": [
+      "corepack",
+      "pnpm",
+      "--dir",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after",
+      "run",
+      "test",
+      "--runInBand",
+      "--watch=false",
+      "--runTestsByPath",
+      "armstrong-numbers.spec.js",
+      "--json",
+      "--outputFile",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-jest.json"
+    ],
+    "test_return_code": 0,
+    "test_counts": {
+      "executed": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "test_statuses": {
+      "Zero is an Armstrong number": "passed",
+      "Single-digit numbers are Armstrong numbers": "passed",
+      "There are no two-digit Armstrong numbers": "passed",
+      "Three-digit number that is an Armstrong number": "passed",
+      "Three-digit number that is not an Armstrong number": "passed",
+      "Four-digit number that is an Armstrong number": "passed",
+      "Four-digit number that is not an Armstrong number": "passed",
+      "Seven-digit number that is an Armstrong number": "passed",
+      "Seven-digit number that is not an Armstrong number": "passed",
+      "Armstrong number containing seven zeroes": "passed",
+      "The largest and last Armstrong number": "passed"
+    },
+    "exercise_file_count_copied": 14,
+    "probe_command": [
+      "corepack",
+      "pnpm",
+      "--dir",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after",
+      "run",
+      "test",
+      "--runInBand",
+      "--watch=false",
+      "--runTestsByPath",
+      "armstrong-reference-probe.spec.js",
+      "--json",
+      "--outputFile",
+      "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-probe-jest.json"
+    ],
+    "probe_return_code": 0,
+    "probe_counts": {
+      "executed": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "outputs": [
+      {
+        "name": "Zero is an Armstrong number",
+        "input": "0",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Single-digit numbers are Armstrong numbers",
+        "input": "5",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "There are no two-digit Armstrong numbers",
+        "input": "10",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Three-digit number that is an Armstrong number",
+        "input": "153",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Three-digit number that is not an Armstrong number",
+        "input": "100",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Four-digit number that is an Armstrong number",
+        "input": "9474",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Four-digit number that is not an Armstrong number",
+        "input": "9475",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Seven-digit number that is an Armstrong number",
+        "input": "9926315",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "Seven-digit number that is not an Armstrong number",
+        "input": "9926314",
+        "expected": false,
+        "actual": false
+      },
+      {
+        "name": "Armstrong number containing seven zeroes",
+        "input": "186709961001538790100634132976990n",
+        "expected": true,
+        "actual": true
+      },
+      {
+        "name": "The largest and last Armstrong number",
+        "input": "115132219018763992565095597973971522401n",
+        "expected": true,
+        "actual": true
+      }
+    ]
+  },
+  "comparison": {
+    "actual_outputs_match_for_every_case": true,
+    "test_statuses_match_for_every_case": true,
+    "test_count_before": 11,
+    "test_count_after": 11,
+    "learner_hash_unchanged": true,
+    "spec_hash_unchanged": true,
+    "reference_hash_unchanged_during_check": true,
+    "check_guard_self_tests": {
+      "zero_tests_rejected": true,
+      "assertion_failure_rejected": true,
+      "missing_test_count_rejected": true
+    }
+  },
+  "processes": [
+    {
+      "label": "node version",
+      "command": ["node", "--version"],
+      "return_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "label": "pnpm version",
+      "command": ["corepack", "pnpm", "--version"],
+      "return_code": 0,
+      "stdout": "9.15.2\n",
+      "stderr": ""
+    },
+    {
+      "label": "before exercise test script",
+      "command": [
+        "corepack",
+        "pnpm",
+        "--dir",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before",
+        "run",
+        "test",
+        "--runInBand",
+        "--watch=false",
+        "--runTestsByPath",
+        "armstrong-numbers.spec.js",
+        "--json",
+        "--outputFile",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-jest.json"
+      ],
+      "return_code": 0,
+      "stdout": "\n> @exercism/javascript-armstrong-numbers@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"armstrong-numbers.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-jest.json\"\n\n",
+      "stderr": "PASS ./armstrong-numbers.spec.js\n  Armstrong Numbers\n    \u2713 Zero is an Armstrong number (1 ms)\n    \u2713 Single-digit numbers are Armstrong numbers\n    \u2713 There are no two-digit Armstrong numbers\n    \u2713 Three-digit number that is an Armstrong number\n    \u2713 Three-digit number that is not an Armstrong number\n    \u2713 Four-digit number that is an Armstrong number\n    \u2713 Four-digit number that is not an Armstrong number\n    \u2713 Seven-digit number that is an Armstrong number (1 ms)\n    \u2713 Seven-digit number that is not an Armstrong number\n    \u2713 Armstrong number containing seven zeroes\n    \u2713 The largest and last Armstrong number\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.334 s\nRan all test suites within paths \"armstrong-numbers.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-jest.json\n"
+    },
+    {
+      "label": "before output probe",
+      "command": [
+        "corepack",
+        "pnpm",
+        "--dir",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before",
+        "run",
+        "test",
+        "--runInBand",
+        "--watch=false",
+        "--runTestsByPath",
+        "armstrong-reference-probe.spec.js",
+        "--json",
+        "--outputFile",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-probe-jest.json"
+      ],
+      "return_code": 0,
+      "stdout": "\n> @exercism/javascript-armstrong-numbers@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"armstrong-reference-probe.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-probe-jest.json\"\n\n",
+      "stderr": "PASS ./armstrong-reference-probe.spec.js\n  \u2713 capture actual Armstrong outputs (1 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       1 passed, 1 total\nSnapshots:   0 total\nTime:        0.212 s\nRan all test suites within paths \"armstrong-reference-probe.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/before-probe-jest.json\n"
+    },
+    {
+      "label": "after exercise test script",
+      "command": [
+        "corepack",
+        "pnpm",
+        "--dir",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after",
+        "run",
+        "test",
+        "--runInBand",
+        "--watch=false",
+        "--runTestsByPath",
+        "armstrong-numbers.spec.js",
+        "--json",
+        "--outputFile",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-jest.json"
+      ],
+      "return_code": 0,
+      "stdout": "\n> @exercism/javascript-armstrong-numbers@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"armstrong-numbers.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-jest.json\"\n\n",
+      "stderr": "PASS ./armstrong-numbers.spec.js\n  Armstrong Numbers\n    \u2713 Zero is an Armstrong number\n    \u2713 Single-digit numbers are Armstrong numbers (1 ms)\n    \u2713 There are no two-digit Armstrong numbers\n    \u2713 Three-digit number that is an Armstrong number\n    \u2713 Three-digit number that is not an Armstrong number\n    \u2713 Four-digit number that is an Armstrong number\n    \u2713 Four-digit number that is not an Armstrong number\n    \u2713 Seven-digit number that is an Armstrong number\n    \u2713 Seven-digit number that is not an Armstrong number\n    \u2713 Armstrong number containing seven zeroes (1 ms)\n    \u2713 The largest and last Armstrong number\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.226 s\nRan all test suites within paths \"armstrong-numbers.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-jest.json\n"
+    },
+    {
+      "label": "after output probe",
+      "command": [
+        "corepack",
+        "pnpm",
+        "--dir",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after",
+        "run",
+        "test",
+        "--runInBand",
+        "--watch=false",
+        "--runTestsByPath",
+        "armstrong-reference-probe.spec.js",
+        "--json",
+        "--outputFile",
+        "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-probe-jest.json"
+      ],
+      "return_code": 0,
+      "stdout": "\n> @exercism/javascript-armstrong-numbers@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"armstrong-reference-probe.spec.js\" \"--json\" \"--outputFile\" \"/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-probe-jest.json\"\n\n",
+      "stderr": "PASS ./armstrong-reference-probe.spec.js\n  \u2713 capture actual Armstrong outputs\n\nTest Suites: 1 passed, 1 total\nTests:       1 passed, 1 total\nSnapshots:   0 total\nTime:        0.208 s\nRan all test suites within paths \"armstrong-reference-probe.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/armstrong-r53-t044-042zz8pk/after-probe-jest.json\n"
+    }
+  ],
+  "tool_versions": {
+    "node": "v24.19.0",
+    "pnpm": "9.15.2",
+    "python": "3.9.6"
+  },
+  "guard_self_tests": {},
+  "working_tree_hashes": {
+    "learner_before": "1ad001db5fb6c8d7d918062ed22af92e51ed1d8158079b3610cb5a12f5f711f5",
+    "learner_after": "1ad001db5fb6c8d7d918062ed22af92e51ed1d8158079b3610cb5a12f5f711f5",
+    "spec_before": "74f44633814b1303fafe90c9b4eed7bb7ca7e8493982d5424fd1d3111d6f1cc0",
+    "spec_after": "74f44633814b1303fafe90c9b4eed7bb7ca7e8493982d5424fd1d3111d6f1cc0",
+    "reference_before_check": "0319b36993b7611dd5e4fcc652a9673802192809442fcd5bdad7ac45363fb7a9",
+    "reference_after_check": "0319b36993b7611dd5e4fcc652a9673802192809442fcd5bdad7ac45363fb7a9"
+  }
+}
