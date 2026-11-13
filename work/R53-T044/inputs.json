@@ -1,0 +1,109 @@
+{
+  "exercise_config": "exercises/practice/armstrong-numbers/.meta/config.json",
+  "configured_paths": {
+    "solution": ["armstrong-numbers.js"],
+    "test": ["armstrong-numbers.spec.js"],
+    "example": [".meta/proof.ci.js"]
+  },
+  "test_script": "corepack pnpm jest",
+  "canonical_case_count": 11,
+  "enabled_before_track_promotion": 1,
+  "cases": [
+    {
+      "name": "Zero is an Armstrong number",
+      "input": "0",
+      "expected": true,
+      "enabled_in_learner_suite": true
+    },
+    {
+      "name": "Single-digit numbers are Armstrong numbers",
+      "input": "5",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "There are no two-digit Armstrong numbers",
+      "input": "10",
+      "expected": false,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Three-digit number that is an Armstrong number",
+      "input": "153",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Three-digit number that is not an Armstrong number",
+      "input": "100",
+      "expected": false,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Four-digit number that is an Armstrong number",
+      "input": "9474",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Four-digit number that is not an Armstrong number",
+      "input": "9475",
+      "expected": false,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Seven-digit number that is an Armstrong number",
+      "input": "9926315",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Seven-digit number that is not an Armstrong number",
+      "input": "9926314",
+      "expected": false,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "Armstrong number containing seven zeroes",
+      "input": "186709961001538790100634132976990n",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "The largest and last Armstrong number",
+      "input": "115132219018763992565095597973971522401n",
+      "expected": true,
+      "enabled_in_learner_suite": false
+    }
+  ],
+  "requested_traces": [
+    {
+      "input": "0",
+      "digits": [0],
+      "digit_count_exponent": 1,
+      "powered_digits": [0],
+      "sum": 0,
+      "is_armstrong": true
+    },
+    {
+      "input": "5",
+      "digits": [5],
+      "digit_count_exponent": 1,
+      "powered_digits": [5],
+      "sum": 5,
+      "is_armstrong": true
+    },
+    {
+      "input": "10",
+      "digits": [1, 0],
+      "digit_count_exponent": 2,
+      "powered_digits": [1, 0],
+      "sum": 1,
+      "is_armstrong": false
+    }
+  ],
+  "reference_snapshot": {
+    "path": "work/R53-T044/proof.ci.before.js",
+    "sha256": "6b44abd842c1d883fdca341e239d8c3f8dec7f1b1befd5a4c419e28e3e3b957d"
+  }
+}
