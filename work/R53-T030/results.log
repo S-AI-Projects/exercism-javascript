@@ -1,0 +1,23 @@
+
+PASS ./killer-sudoku-helper.spec.js
+  Trivial 1-digit cages
+    ✓ 1 (1 ms)
+    ✓ 2
+    ✓ 3
+    ✓ 4
+    ✓ 5 (1 ms)
+    ✓ 6
+    ✓ 7
+    ✓ 8
+    ✓ 9
+  Other cages
+    ✓ Cage with sum 45 contains all digits 1:9
+    ✓ Cage with only 1 possible combination (1 ms)
+    ✓ Cage with several combinations
+    ✓ Cage with several combinations that is restricted
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        0.231 s
+Ran all test suites.
