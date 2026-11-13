@@ -1,0 +1,78 @@
+{
+  "task_id": "R53-T030",
+  "exercise": "killer-sudoku-helper",
+  "named_cases_verified": [
+    "1",
+    "2",
+    "3"
+  ],
+  "canonical_case_count": 13,
+  "reproduced_selected_cases": [
+    {
+      "name": "1",
+      "input": {
+        "sum": 1,
+        "size": 1,
+        "exclude": []
+      },
+      "expected": [
+        [
+          1
+        ]
+      ],
+      "actual": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "2",
+      "input": {
+        "sum": 2,
+        "size": 1,
+        "exclude": []
+      },
+      "expected": [
+        [
+          2
+        ]
+      ],
+      "actual": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "3",
+      "input": {
+        "sum": 3,
+        "size": 1,
+        "exclude": []
+      },
+      "expected": [
+        [
+          3
+        ]
+      ],
+      "actual": [
+        [
+          3
+        ]
+      ]
+    }
+  ],
+  "jest_suite": {
+    "exit_code": 0,
+    "executed_passed_tests": 13,
+    "status": "PASSED"
+  },
+  "learner_stub_status": "UNSOLVED",
+  "tool_versions": {
+    "node": "v26.13.0",
+    "npm": "11.20.0",
+    "python": "3.15.2"
+  },
+  "status": "PASSED"
+}
