@@ -1,0 +1,193 @@
+{
+  "exercise": "flower-field",
+  "demonstrated_construct": "Property accessor (bracket notation array indexing) and out-of-bounds falsy evaluation",
+  "micro_example_inputs": [
+    [
+      "A",
+      "B"
+    ],
+    [
+      "C",
+      "D"
+    ]
+  ],
+  "total_exercise_cases": 13,
+  "exercise_cases": [
+    {
+      "name": "handles no rows",
+      "input": [],
+      "expected": [],
+      "enabled_in_learner_suite": true
+    },
+    {
+      "name": "handles no columns",
+      "input": [
+        ""
+      ],
+      "expected": [
+        ""
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles no flowers",
+      "input": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "expected": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles garden full of flowers",
+      "input": [
+        "***",
+        "***",
+        "***"
+      ],
+      "expected": [
+        "***",
+        "***",
+        "***"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles flower surrounded by spaces",
+      "input": [
+        "   ",
+        " * ",
+        "   "
+      ],
+      "expected": [
+        "111",
+        "1*1",
+        "111"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles space surrounded by flowers",
+      "input": [
+        "***",
+        "* *",
+        "***"
+      ],
+      "expected": [
+        "***",
+        "*8*",
+        "***"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles horizontal line",
+      "input": [
+        " * * "
+      ],
+      "expected": [
+        "1*2*1"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles horizontal line, flowers at edges",
+      "input": [
+        "*   *"
+      ],
+      "expected": [
+        "*1 1*"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles vertical line",
+      "input": [
+        " ",
+        "*",
+        " ",
+        "*",
+        " "
+      ],
+      "expected": [
+        "1",
+        "*",
+        "2",
+        "*",
+        "1"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles vertical line, flowers at edges",
+      "input": [
+        "*",
+        " ",
+        " ",
+        " ",
+        "*"
+      ],
+      "expected": [
+        "*",
+        "1",
+        " ",
+        "1",
+        "*"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles cross",
+      "input": [
+        "  *  ",
+        "  *  ",
+        "*****",
+        "  *  ",
+        "  *  "
+      ],
+      "expected": [
+        " 2*2 ",
+        "25*52",
+        "*****",
+        "25*52",
+        " 2*2 "
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "handles large garden",
+      "input": [
+        " *  * ",
+        "  *   ",
+        "    * ",
+        "   * *",
+        " *  * ",
+        "      "
+      ],
+      "expected": [
+        "1*22*1",
+        "12*322",
+        " 123*2",
+        "112*4*",
+        "1*22*2",
+        "111111"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "multiple adjacent flowers",
+      "input": [
+        " ** "
+      ],
+      "expected": [
+        "1**1"
+      ],
+      "enabled_in_learner_suite": false
+    }
+  ]
+}
