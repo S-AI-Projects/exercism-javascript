@@ -1,0 +1,113 @@
+{
+  "exercise": "eliuds-eggs",
+  "reference": {
+    "name": "Binary String & Array Reduce",
+    "test_counts": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "cases": [
+      {
+        "name": "0 eggs",
+        "input": 0,
+        "binary": "0",
+        "expected": 0,
+        "actual": 0,
+        "match": true
+      },
+      {
+        "name": "1 egg",
+        "input": 16,
+        "binary": "10000",
+        "expected": 1,
+        "actual": 1,
+        "match": true
+      },
+      {
+        "name": "4 eggs",
+        "input": 89,
+        "binary": "1011001",
+        "expected": 4,
+        "actual": 4,
+        "match": true
+      },
+      {
+        "name": "13 eggs",
+        "input": 2000000000,
+        "binary": "1110111001101011001010000000000",
+        "expected": 13,
+        "actual": 13,
+        "match": true
+      }
+    ]
+  },
+  "alternative": {
+    "name": "32-bit Numeric Bitwise Masking & Shift",
+    "test_counts": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "cases": [
+      {
+        "name": "0 eggs",
+        "input": 0,
+        "binary": "0",
+        "expected": 0,
+        "actual": 0,
+        "match": true
+      },
+      {
+        "name": "1 egg",
+        "input": 16,
+        "binary": "10000",
+        "expected": 1,
+        "actual": 1,
+        "match": true
+      },
+      {
+        "name": "4 eggs",
+        "input": 89,
+        "binary": "1011001",
+        "expected": 4,
+        "actual": 4,
+        "match": true
+      },
+      {
+        "name": "13 eggs",
+        "input": 2000000000,
+        "binary": "1110111001101011001010000000000",
+        "expected": 13,
+        "actual": 13,
+        "match": true
+      }
+    ]
+  },
+  "required_named_cases": {
+    "0 eggs": {
+      "input": 0,
+      "binary": "0",
+      "expected": 0,
+      "reference_actual": 0,
+      "alternative_actual": 0,
+      "match": true
+    },
+    "1 egg": {
+      "input": 16,
+      "binary": "10000",
+      "expected": 1,
+      "reference_actual": 1,
+      "alternative_actual": 1,
+      "match": true
+    },
+    "4 eggs": {
+      "input": 89,
+      "binary": "1011001",
+      "expected": 4,
+      "reference_actual": 4,
+      "alternative_actual": 4,
+      "match": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "task": "R53-T046",
+  "exercise": "eliuds-eggs",
+  "timestamp_utc": "2026-11-16T05:43:18Z",
+  "tool_versions": {
+    "node": "v24.19.0",
+    "corepack": "0.35.0",
+    "pnpm": "9.15.2",
+    "python": "3.9.6",
+    "platform": "macOS-27.2-arm64-arm-64bit"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "4c7a9c2495c81859fb8f045e851fb5cf37dfa90f220176a2f39a7079fbce91d7",
+    "reference_implementation_sha256": "d62088a8c7450eefffa34486e6337e44dca6e812d5f364cda5e5a7c75ebfcec8",
+    "test_spec_sha256": "14de793915172386f542e259d80ba0affe8ee397683740c7e4ea23b508a61185",
+    "learner_stub_unchanged": true,
+    "reference_unchanged": true
+  },
+  "test_execution": {
+    "test_script": "corepack pnpm jest",
+    "total_cases_in_spec": 4,
+    "reference_executed": 4,
+    "reference_passed": 4,
+    "reference_failed": 0,
+    "alternative_executed": 4,
+    "alternative_passed": 4,
+    "alternative_failed": 0
+  },
+  "required_named_cases": {
+    "0 eggs": {
+      "input": 0,
+      "binary": "0",
+      "expected": 0,
+      "reference_actual": 0,
+      "alternative_actual": 0,
+      "match": true
+    },
+    "1 egg": {
+      "input": 16,
+      "binary": "10000",
+      "expected": 1,
+      "reference_actual": 1,
+      "alternative_actual": 1,
+      "match": true
+    },
+    "4 eggs": {
+      "input": 89,
+      "binary": "1011001",
+      "expected": 4,
+      "reference_actual": 4,
+      "alternative_actual": 4,
+      "match": true
+    }
+  },
+  "guard_verification": {
+    "zero_tests_rejected": true,
+    "assertion_failure_rejected": true,
+    "missing_test_count_rejected": true
+  },
+  "subprocess_count": 7
+}

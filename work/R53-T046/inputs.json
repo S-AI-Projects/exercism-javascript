@@ -1,0 +1,38 @@
+{
+  "exercise": "eliuds-eggs",
+  "total_cases": 4,
+  "cases": [
+    {
+      "name": "0 eggs",
+      "input": 0,
+      "expected": 0,
+      "binary_representation": "0",
+      "bit_length": 1,
+      "enabled_in_learner_suite": true
+    },
+    {
+      "name": "1 egg",
+      "input": 16,
+      "expected": 1,
+      "binary_representation": "10000",
+      "bit_length": 5,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "4 eggs",
+      "input": 89,
+      "expected": 4,
+      "binary_representation": "1011001",
+      "bit_length": 7,
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "13 eggs",
+      "input": 2000000000,
+      "expected": 13,
+      "binary_representation": "1110111001101011001010000000000",
+      "bit_length": 31,
+      "enabled_in_learner_suite": false
+    }
+  ]
+}
