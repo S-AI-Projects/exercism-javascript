@@ -1,0 +1,18 @@
+{
+  "temp_dir": "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_guqi761p",
+  "executed_tests": 29,
+  "passed_tests": 29,
+  "failed_tests": 0,
+  "pending_tests": 0,
+  "named_cases": {
+    "Empty RNA sequence results in no proteins": "passed",
+    "Methionine RNA sequence": "passed",
+    "Phenylalanine RNA sequence 1": "passed"
+  },
+  "return_code": 0,
+  "error": null,
+  "stdout": "\n> @exercism/javascript-protein-translation@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_guqi761p/exercise\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"protein-translation.spec.js\" \"--json\" \"--outputFile=/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_guqi761p/exercise/jest-test-result.json\"\n\n",
+  "stderr": "\u2009WARN\u2009 Issue while reading \"/Users/anuradhagaur/.npmrc\". EPERM: operation not permitted, open '/Users/anuradhagaur/.npmrc'\n\u2009WARN\u2009 Issue while reading \"/Users/anuradhagaur/.npmrc\". EPERM: operation not permitted, open '/Users/anuradhagaur/.npmrc'\nPASS ./protein-translation.spec.js\n  ProteinTranslation\n    \u2713 Empty RNA sequence results in no proteins (1 ms)\n    Single codons\n      \u2713 Methionine RNA sequence\n      \u2713 Phenylalanine RNA sequence 1\n      \u2713 Phenylalanine RNA sequence 2\n      \u2713 Leucine RNA sequence 1\n      \u2713 Leucine RNA sequence 2\n      \u2713 Serine RNA sequence 1\n      \u2713 Serine RNA sequence 2\n      \u2713 Serine RNA sequence 3\n      \u2713 Serine RNA sequence 4\n      \u2713 Tyrosine RNA sequence 1\n      \u2713 Tyrosine RNA sequence 2 (1 ms)\n      \u2713 Cysteine RNA sequence 1\n      \u2713 Cysteine RNA sequence 2\n      \u2713 Tryptophan RNA sequence\n      \u2713 STOP codon RNA sequence 1\n      \u2713 STOP codon RNA sequence 2\n      \u2713 STOP codon RNA sequence 3\n    Multiple codons\n      \u2713 Sequence of two protein codons translates into proteins\n      \u2713 Sequence of two different protein codons translates into proteins\n      \u2713 Translate RNA strand into correct protein list\n      \u2713 Translation stops if STOP codon at beginning of sequence\n      \u2713 Translation stops if STOP codon at end of three-codon sequence\n      \u2713 Translation stops if STOP codon in middle of three-codon sequence\n      \u2713 Translation stops if STOP codon in middle of six-codon sequence (1 ms)\n      \u2713 Sequence of two non-STOP codons does not translate to a STOP codon\n    Unexpected strands\n      \u2713 Unknown amino acids, not part of a codon, can't translate (2 ms)\n      \u2713 Incomplete RNA sequence can't translate\n      \u2713 Incomplete RNA sequence can translate if valid until a STOP codon\n\nTest Suites: 1 passed, 1 total\nTests:       29 passed, 29 total\nSnapshots:   0 total\nTime:        0.367 s\nRan all test suites within paths \"protein-translation.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_guqi761p/exercise/jest-test-result.json\n",
+  "total_tests": 29,
+  "exit_status": 0
+}
