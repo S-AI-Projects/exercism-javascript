@@ -1,0 +1,14 @@
+{
+  "temp_dir": "/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_c2obypl6",
+  "executed_tests": 0,
+  "passed_tests": 0,
+  "failed_tests": 0,
+  "pending_tests": 0,
+  "named_cases": {},
+  "return_code": 1,
+  "error": "Zero tests executed (total: 0, passed: 0, failed: 0, pending: 0). Guard triggered.",
+  "stdout": "\n> @exercism/javascript-protein-translation@ test /private/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_c2obypl6/exercise\n> corepack pnpm jest \"--runInBand\" \"--watch=false\" \"--runTestsByPath\" \"protein-translation.spec.js\" \"--json\" \"--outputFile=/var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_c2obypl6/exercise/jest-test-result.json\"\n\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n\u2009WARN\u2009  Local package.json exists, but node_modules missing, did you mean to install?\n",
+  "stderr": "\u2009WARN\u2009 Issue while reading \"/Users/anuradhagaur/.npmrc\". EPERM: operation not permitted, open '/Users/anuradhagaur/.npmrc'\n\u2009WARN\u2009 Issue while reading \"/Users/anuradhagaur/.npmrc\". EPERM: operation not permitted, open '/Users/anuradhagaur/.npmrc'\nFAIL ./protein-translation.spec.js\n  \u25cf Test suite failed to run\n\n    Your test suite must contain at least one test.\n\n      at onResult (../../../../../../../../Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/node_modules/.pnpm/@jest+core@30.2.0/node_modules/@jest/core/build/index.js:1057:18)\n      at ../../../../../../../../Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/node_modules/.pnpm/@jest+core@30.2.0/node_modules/@jest/core/build/index.js:1127:165\n      at ../../../../../../../../Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/node_modules/.pnpm/emittery@0.13.1/node_modules/emittery/index.js:363:13\n          at Array.map (<anonymous>)\n      at Emittery.emit (../../../../../../../../Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/node_modules/.pnpm/emittery@0.13.1/node_modules/emittery/index.js:361:23)\n\nTest Suites: 1 failed, 1 total\nTests:       0 total\nSnapshots:   0 total\nTime:        0.221 s\nRan all test suites within paths \"protein-translation.spec.js\".\nTest results written to: ../../../../../../../../var/folders/w2/d5b3dsd90lx38mzlkhrnrml80000gn/T/r53_t049_protein_c2obypl6/exercise/jest-test-result.json\n",
+  "total_tests": 0,
+  "exit_status": 2
+}
