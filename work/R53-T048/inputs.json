@@ -1,0 +1,446 @@
+{
+  "exercise": "poker",
+  "metadata_configuration": {
+    "files": {
+      "solution": [
+        "poker.js"
+      ],
+      "test": [
+        "poker.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Pick the best hand(s) from a list of poker hands.",
+    "source": "Inspired by the training course from Udacity.",
+    "source_url": "https://www.udacity.com/course/design-of-computer-programs--cs212"
+  },
+  "invalid_fixtures": {
+    "missing_reference_path": {
+      "description": "A missing-reference path ('files.example')",
+      "expected_error_substring": "Missing reference implementation: declared path '.meta/nonexistent-proof.ci.js'"
+    },
+    "missing_test_path": {
+      "description": "A missing-test path ('files.test')",
+      "expected_error_substring": "Missing test file: declared path 'nonexistent-poker.spec.js'"
+    },
+    "outside_exercise_path": {
+      "description": "An outside-exercise path attempting parent directory traversal",
+      "expected_error_substring": "Parent-directory traversal rejected"
+    }
+  },
+  "total_exercise_cases": 37,
+  "exercise_cases": [
+    {
+      "name": "single hand always wins",
+      "input": [
+        "4S 5S 7H 8D JC"
+      ],
+      "expected": [
+        "4S 5S 7H 8D JC"
+      ],
+      "enabled_in_learner_suite": true
+    },
+    {
+      "name": "highest card out of all hands wins",
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "a tie has multiple winners",
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "multiple hands with the same high cards, tie compares next highest ranked, down to last card",
+      "input": [
+        "3S 5H 6S 8D 7H",
+        "2S 5D 6D 8C 7S"
+      ],
+      "expected": [
+        "3S 5H 6S 8D 7H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "winning high card hand also has the lowest card",
+      "input": [
+        "2S 5H 6S 8D 7H",
+        "3S 4D 6D 8C 7S"
+      ],
+      "expected": [
+        "2S 5H 6S 8D 7H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "one pair beats high card",
+      "input": [
+        "4S 5H 6C 8D KH",
+        "2S 4H 6S 4D JH"
+      ],
+      "expected": [
+        "2S 4H 6S 4D JH"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "highest pair wins",
+      "input": [
+        "4S 2H 6S 2D JH",
+        "2S 4H 6C 4D JD"
+      ],
+      "expected": [
+        "2S 4H 6C 4D JD"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have the same pair, high card wins",
+      "input": [
+        "4H 4S AH JC 3D",
+        "4C 4D AS 5D 6C"
+      ],
+      "expected": [
+        "4H 4S AH JC 3D"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "two pairs beats one pair",
+      "input": [
+        "2S 8H 6S 8D JH",
+        "4S 5H 4C 8C 5C"
+      ],
+      "expected": [
+        "4S 5H 4C 8C 5C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have two pairs, highest ranked pair wins",
+      "input": [
+        "2S 8H 2D 8D 3H",
+        "4S 5H 4C 8S 5D"
+      ],
+      "expected": [
+        "2S 8H 2D 8D 3H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have two pairs, with the same highest ranked pair, tie goes to low pair",
+      "input": [
+        "2S QS 2C QD JH",
+        "JD QH JS 8D QC"
+      ],
+      "expected": [
+        "JD QH JS 8D QC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have two identically ranked pairs, tie goes to remaining card (kicker)",
+      "input": [
+        "JD QH JS 8D QC",
+        "JS QS JC 2D QD"
+      ],
+      "expected": [
+        "JD QH JS 8D QC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have two pairs that add to the same value, win goes to highest pair",
+      "input": [
+        "6S 6H 3S 3H AS",
+        "7H 7S 2H 2S AC"
+      ],
+      "expected": [
+        "7H 7S 2H 2S AC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "two pairs first ranked by largest pair",
+      "input": [
+        "5C 2S 5S 4H 4C",
+        "6S 2S 6H 7C 2C"
+      ],
+      "expected": [
+        "6S 2S 6H 7C 2C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "three of a kind beats two pair",
+      "input": [
+        "2S 8H 2H 8D JH",
+        "4S 5H 4C 8S 4H"
+      ],
+      "expected": [
+        "4S 5H 4C 8S 4H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have three of a kind, tie goes to highest ranked triplet",
+      "input": [
+        "2S 2H 2C 8D JH",
+        "4S AH AS 8C AD"
+      ],
+      "expected": [
+        "4S AH AS 8C AD"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "with multiple decks, two players can have same three of a kind, ties go to highest remaining cards",
+      "input": [
+        "5S AH AS 7C AD",
+        "4S AH AS 8C AD"
+      ],
+      "expected": [
+        "4S AH AS 8C AD"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "a straight beats three of a kind",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "3S 4D 2S 6D 5C"
+      ],
+      "expected": [
+        "3S 4D 2S 6D 5C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces can end a straight (10 J Q K A)",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "10D JH QS KD AC"
+      ],
+      "expected": [
+        "10D JH QS KD AC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces can start a straight (A 2 3 4 5)",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "4D AH 3S 2D 5C"
+      ],
+      "expected": [
+        "4D AH 3S 2D 5C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces cannot be in the middle of a straight (Q K A 2 3)",
+      "input": [
+        "2C 3D 7H 5H 2S",
+        "QS KH AC 2D 3S"
+      ],
+      "expected": [
+        "2C 3D 7H 5H 2S"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands with a straight, tie goes to highest ranked card",
+      "input": [
+        "4S 6C 7S 8D 5H",
+        "5S 7H 8S 9D 6H"
+      ],
+      "expected": [
+        "5S 7H 8S 9D 6H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "even though an ace is usually high, a 5-high straight is the lowest-scoring straight",
+      "input": [
+        "2H 3C 4D 5D 6H",
+        "4S AH 3S 2D 5H"
+      ],
+      "expected": [
+        "2H 3C 4D 5D 6H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "flush beats a straight",
+      "input": [
+        "4C 6H 7D 8D 5H",
+        "2S 4S 5S 6S 7S"
+      ],
+      "expected": [
+        "2S 4S 5S 6S 7S"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have a flush, tie goes to high card, down to the last one if necessary",
+      "input": [
+        "2H 7H 8H 9H 6H",
+        "3S 5S 6S 7S 8S"
+      ],
+      "expected": [
+        "2H 7H 8H 9H 6H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "full house beats a flush",
+      "input": [
+        "3H 6H 7H 8H 5H",
+        "4S 5H 4C 5D 4H"
+      ],
+      "expected": [
+        "4S 5H 4C 5D 4H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have a full house, tie goes to highest-ranked triplet",
+      "input": [
+        "4H 4S 4D 9S 9D",
+        "5H 5S 5D 8S 8D"
+      ],
+      "expected": [
+        "5H 5S 5D 8S 8D"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "with multiple decks, both hands have a full house with the same triplet, tie goes to the pair",
+      "input": [
+        "5H 5S 5D 9S 9D",
+        "5H 5S 5D 8S 8D"
+      ],
+      "expected": [
+        "5H 5S 5D 9S 9D"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "four of a kind beats a full house",
+      "input": [
+        "4S 5H 4D 5D 4H",
+        "3S 3H 2S 3D 3C"
+      ],
+      "expected": [
+        "3S 3H 2S 3D 3C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have four of a kind, tie goes to high quad",
+      "input": [
+        "2S 2H 2C 8D 2D",
+        "4S 5H 5S 5D 5C"
+      ],
+      "expected": [
+        "4S 5H 5S 5D 5C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "with multiple decks, both hands with identical four of a kind, tie determined by kicker",
+      "input": [
+        "3S 3H 2S 3D 3C",
+        "3S 3H 4S 3D 3C"
+      ],
+      "expected": [
+        "3S 3H 4S 3D 3C"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "straight flush beats four of a kind",
+      "input": [
+        "4S 5H 5S 5D 5C",
+        "7S 8S 9S 6S 10S"
+      ],
+      "expected": [
+        "7S 8S 9S 6S 10S"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces can end a straight flush (10 J Q K A)",
+      "input": [
+        "KC AH AS AD AC",
+        "10C JC QC KC AC"
+      ],
+      "expected": [
+        "10C JC QC KC AC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces can start a straight flush (A 2 3 4 5)",
+      "input": [
+        "KS AH AS AD AC",
+        "4H AH 3H 2H 5H"
+      ],
+      "expected": [
+        "4H AH 3H 2H 5H"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "aces cannot be in the middle of a straight flush (Q K A 2 3)",
+      "input": [
+        "2C AC QC 10C KC",
+        "QH KH AH 2H 3H"
+      ],
+      "expected": [
+        "2C AC QC 10C KC"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "both hands have straight flush, tie goes to highest-ranked card",
+      "input": [
+        "4H 6H 7H 8H 5H",
+        "5S 7S 8S 9S 6S"
+      ],
+      "expected": [
+        "5S 7S 8S 9S 6S"
+      ],
+      "enabled_in_learner_suite": false
+    },
+    {
+      "name": "even though an ace is usually high, a 5-high straight flush is the lowest-scoring straight flush",
+      "input": [
+        "2H 3H 4H 5H 6H",
+        "4D AD 3D 2D 5D"
+      ],
+      "expected": [
+        "2H 3H 4H 5H 6H"
+      ],
+      "enabled_in_learner_suite": false
+    }
+  ]
+}

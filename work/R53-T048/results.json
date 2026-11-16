@@ -1,0 +1,625 @@
+{
+  "exercise": "poker",
+  "metadata_validation": {
+    "real_config": {
+      "valid": true,
+      "resolved_files": {
+        "solution": [
+          {
+            "relative": "poker.js",
+            "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/poker.js"
+          }
+        ],
+        "test": [
+          {
+            "relative": "poker.spec.js",
+            "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/poker.spec.js"
+          }
+        ],
+        "example": [
+          {
+            "relative": ".meta/proof.ci.js",
+            "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/.meta/proof.ci.js"
+          }
+        ]
+      }
+    },
+    "invalid_fixtures": {
+      "missing_reference_path": {
+        "fixture": "missing_reference_path",
+        "description": "A missing-reference path ('files.example')",
+        "passed": true,
+        "expected_error_substring": "Missing reference implementation: declared path '.meta/nonexistent-proof.ci.js'",
+        "actual_error": "Missing reference implementation: declared path '.meta/nonexistent-proof.ci.js' in 'files.example' does not exist at '/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/.meta/nonexistent-proof.ci.js'"
+      },
+      "missing_test_path": {
+        "fixture": "missing_test_path",
+        "description": "A missing-test path ('files.test')",
+        "passed": true,
+        "expected_error_substring": "Missing test file: declared path 'nonexistent-poker.spec.js'",
+        "actual_error": "Missing test file: declared path 'nonexistent-poker.spec.js' in 'files.test' does not exist at '/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/nonexistent-poker.spec.js'"
+      },
+      "outside_exercise_path": {
+        "fixture": "outside_exercise_path",
+        "description": "An outside-exercise path attempting parent directory traversal",
+        "passed": true,
+        "expected_error_substring": "Parent-directory traversal rejected",
+        "actual_error": "Parent-directory traversal rejected: path '../../outside.js' in 'files.solution' contains '..'"
+      }
+    }
+  },
+  "test_counts": {
+    "total": 37,
+    "passed": 37,
+    "failed": 0
+  },
+  "required_named_cases": {
+    "single hand always wins": {
+      "input": [
+        "4S 5S 7H 8D JC"
+      ],
+      "expected": [
+        "4S 5S 7H 8D JC"
+      ],
+      "actual": [
+        "4S 5S 7H 8D JC"
+      ],
+      "match": true
+    },
+    "highest card out of all hands wins": {
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH"
+      ],
+      "match": true
+    },
+    "a tie has multiple winners": {
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "match": true
+    }
+  },
+  "all_cases": [
+    {
+      "name": "single hand always wins",
+      "input": [
+        "4S 5S 7H 8D JC"
+      ],
+      "expected": [
+        "4S 5S 7H 8D JC"
+      ],
+      "actual": [
+        "4S 5S 7H 8D JC"
+      ],
+      "match": true
+    },
+    {
+      "name": "highest card out of all hands wins",
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH"
+      ],
+      "match": true
+    },
+    {
+      "name": "a tie has multiple winners",
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "match": true
+    },
+    {
+      "name": "multiple hands with the same high cards, tie compares next highest ranked, down to last card",
+      "input": [
+        "3S 5H 6S 8D 7H",
+        "2S 5D 6D 8C 7S"
+      ],
+      "expected": [
+        "3S 5H 6S 8D 7H"
+      ],
+      "actual": [
+        "3S 5H 6S 8D 7H"
+      ],
+      "match": true
+    },
+    {
+      "name": "winning high card hand also has the lowest card",
+      "input": [
+        "2S 5H 6S 8D 7H",
+        "3S 4D 6D 8C 7S"
+      ],
+      "expected": [
+        "2S 5H 6S 8D 7H"
+      ],
+      "actual": [
+        "2S 5H 6S 8D 7H"
+      ],
+      "match": true
+    },
+    {
+      "name": "one pair beats high card",
+      "input": [
+        "4S 5H 6C 8D KH",
+        "2S 4H 6S 4D JH"
+      ],
+      "expected": [
+        "2S 4H 6S 4D JH"
+      ],
+      "actual": [
+        "2S 4H 6S 4D JH"
+      ],
+      "match": true
+    },
+    {
+      "name": "highest pair wins",
+      "input": [
+        "4S 2H 6S 2D JH",
+        "2S 4H 6C 4D JD"
+      ],
+      "expected": [
+        "2S 4H 6C 4D JD"
+      ],
+      "actual": [
+        "2S 4H 6C 4D JD"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have the same pair, high card wins",
+      "input": [
+        "4H 4S AH JC 3D",
+        "4C 4D AS 5D 6C"
+      ],
+      "expected": [
+        "4H 4S AH JC 3D"
+      ],
+      "actual": [
+        "4H 4S AH JC 3D"
+      ],
+      "match": true
+    },
+    {
+      "name": "two pairs beats one pair",
+      "input": [
+        "2S 8H 6S 8D JH",
+        "4S 5H 4C 8C 5C"
+      ],
+      "expected": [
+        "4S 5H 4C 8C 5C"
+      ],
+      "actual": [
+        "4S 5H 4C 8C 5C"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have two pairs, highest ranked pair wins",
+      "input": [
+        "2S 8H 2D 8D 3H",
+        "4S 5H 4C 8S 5D"
+      ],
+      "expected": [
+        "2S 8H 2D 8D 3H"
+      ],
+      "actual": [
+        "2S 8H 2D 8D 3H"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have two pairs, with the same highest ranked pair, tie goes to low pair",
+      "input": [
+        "2S QS 2C QD JH",
+        "JD QH JS 8D QC"
+      ],
+      "expected": [
+        "JD QH JS 8D QC"
+      ],
+      "actual": [
+        "JD QH JS 8D QC"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have two identically ranked pairs, tie goes to remaining card (kicker)",
+      "input": [
+        "JD QH JS 8D QC",
+        "JS QS JC 2D QD"
+      ],
+      "expected": [
+        "JD QH JS 8D QC"
+      ],
+      "actual": [
+        "JD QH JS 8D QC"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have two pairs that add to the same value, win goes to highest pair",
+      "input": [
+        "6S 6H 3S 3H AS",
+        "7H 7S 2H 2S AC"
+      ],
+      "expected": [
+        "7H 7S 2H 2S AC"
+      ],
+      "actual": [
+        "7H 7S 2H 2S AC"
+      ],
+      "match": true
+    },
+    {
+      "name": "two pairs first ranked by largest pair",
+      "input": [
+        "5C 2S 5S 4H 4C",
+        "6S 2S 6H 7C 2C"
+      ],
+      "expected": [
+        "6S 2S 6H 7C 2C"
+      ],
+      "actual": [
+        "6S 2S 6H 7C 2C"
+      ],
+      "match": true
+    },
+    {
+      "name": "three of a kind beats two pair",
+      "input": [
+        "2S 8H 2H 8D JH",
+        "4S 5H 4C 8S 4H"
+      ],
+      "expected": [
+        "4S 5H 4C 8S 4H"
+      ],
+      "actual": [
+        "4S 5H 4C 8S 4H"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have three of a kind, tie goes to highest ranked triplet",
+      "input": [
+        "2S 2H 2C 8D JH",
+        "4S AH AS 8C AD"
+      ],
+      "expected": [
+        "4S AH AS 8C AD"
+      ],
+      "actual": [
+        "4S AH AS 8C AD"
+      ],
+      "match": true
+    },
+    {
+      "name": "with multiple decks, two players can have same three of a kind, ties go to highest remaining cards",
+      "input": [
+        "5S AH AS 7C AD",
+        "4S AH AS 8C AD"
+      ],
+      "expected": [
+        "4S AH AS 8C AD"
+      ],
+      "actual": [
+        "4S AH AS 8C AD"
+      ],
+      "match": true
+    },
+    {
+      "name": "a straight beats three of a kind",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "3S 4D 2S 6D 5C"
+      ],
+      "expected": [
+        "3S 4D 2S 6D 5C"
+      ],
+      "actual": [
+        "3S 4D 2S 6D 5C"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces can end a straight (10 J Q K A)",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "10D JH QS KD AC"
+      ],
+      "expected": [
+        "10D JH QS KD AC"
+      ],
+      "actual": [
+        "10D JH QS KD AC"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces can start a straight (A 2 3 4 5)",
+      "input": [
+        "4S 5H 4C 8D 4H",
+        "4D AH 3S 2D 5C"
+      ],
+      "expected": [
+        "4D AH 3S 2D 5C"
+      ],
+      "actual": [
+        "4D AH 3S 2D 5C"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces cannot be in the middle of a straight (Q K A 2 3)",
+      "input": [
+        "2C 3D 7H 5H 2S",
+        "QS KH AC 2D 3S"
+      ],
+      "expected": [
+        "2C 3D 7H 5H 2S"
+      ],
+      "actual": [
+        "2C 3D 7H 5H 2S"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands with a straight, tie goes to highest ranked card",
+      "input": [
+        "4S 6C 7S 8D 5H",
+        "5S 7H 8S 9D 6H"
+      ],
+      "expected": [
+        "5S 7H 8S 9D 6H"
+      ],
+      "actual": [
+        "5S 7H 8S 9D 6H"
+      ],
+      "match": true
+    },
+    {
+      "name": "even though an ace is usually high, a 5-high straight is the lowest-scoring straight",
+      "input": [
+        "2H 3C 4D 5D 6H",
+        "4S AH 3S 2D 5H"
+      ],
+      "expected": [
+        "2H 3C 4D 5D 6H"
+      ],
+      "actual": [
+        "2H 3C 4D 5D 6H"
+      ],
+      "match": true
+    },
+    {
+      "name": "flush beats a straight",
+      "input": [
+        "4C 6H 7D 8D 5H",
+        "2S 4S 5S 6S 7S"
+      ],
+      "expected": [
+        "2S 4S 5S 6S 7S"
+      ],
+      "actual": [
+        "2S 4S 5S 6S 7S"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have a flush, tie goes to high card, down to the last one if necessary",
+      "input": [
+        "2H 7H 8H 9H 6H",
+        "3S 5S 6S 7S 8S"
+      ],
+      "expected": [
+        "2H 7H 8H 9H 6H"
+      ],
+      "actual": [
+        "2H 7H 8H 9H 6H"
+      ],
+      "match": true
+    },
+    {
+      "name": "full house beats a flush",
+      "input": [
+        "3H 6H 7H 8H 5H",
+        "4S 5H 4C 5D 4H"
+      ],
+      "expected": [
+        "4S 5H 4C 5D 4H"
+      ],
+      "actual": [
+        "4S 5H 4C 5D 4H"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have a full house, tie goes to highest-ranked triplet",
+      "input": [
+        "4H 4S 4D 9S 9D",
+        "5H 5S 5D 8S 8D"
+      ],
+      "expected": [
+        "5H 5S 5D 8S 8D"
+      ],
+      "actual": [
+        "5H 5S 5D 8S 8D"
+      ],
+      "match": true
+    },
+    {
+      "name": "with multiple decks, both hands have a full house with the same triplet, tie goes to the pair",
+      "input": [
+        "5H 5S 5D 9S 9D",
+        "5H 5S 5D 8S 8D"
+      ],
+      "expected": [
+        "5H 5S 5D 9S 9D"
+      ],
+      "actual": [
+        "5H 5S 5D 9S 9D"
+      ],
+      "match": true
+    },
+    {
+      "name": "four of a kind beats a full house",
+      "input": [
+        "4S 5H 4D 5D 4H",
+        "3S 3H 2S 3D 3C"
+      ],
+      "expected": [
+        "3S 3H 2S 3D 3C"
+      ],
+      "actual": [
+        "3S 3H 2S 3D 3C"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have four of a kind, tie goes to high quad",
+      "input": [
+        "2S 2H 2C 8D 2D",
+        "4S 5H 5S 5D 5C"
+      ],
+      "expected": [
+        "4S 5H 5S 5D 5C"
+      ],
+      "actual": [
+        "4S 5H 5S 5D 5C"
+      ],
+      "match": true
+    },
+    {
+      "name": "with multiple decks, both hands with identical four of a kind, tie determined by kicker",
+      "input": [
+        "3S 3H 2S 3D 3C",
+        "3S 3H 4S 3D 3C"
+      ],
+      "expected": [
+        "3S 3H 4S 3D 3C"
+      ],
+      "actual": [
+        "3S 3H 4S 3D 3C"
+      ],
+      "match": true
+    },
+    {
+      "name": "straight flush beats four of a kind",
+      "input": [
+        "4S 5H 5S 5D 5C",
+        "7S 8S 9S 6S 10S"
+      ],
+      "expected": [
+        "7S 8S 9S 6S 10S"
+      ],
+      "actual": [
+        "7S 8S 9S 6S 10S"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces can end a straight flush (10 J Q K A)",
+      "input": [
+        "KC AH AS AD AC",
+        "10C JC QC KC AC"
+      ],
+      "expected": [
+        "10C JC QC KC AC"
+      ],
+      "actual": [
+        "10C JC QC KC AC"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces can start a straight flush (A 2 3 4 5)",
+      "input": [
+        "KS AH AS AD AC",
+        "4H AH 3H 2H 5H"
+      ],
+      "expected": [
+        "4H AH 3H 2H 5H"
+      ],
+      "actual": [
+        "4H AH 3H 2H 5H"
+      ],
+      "match": true
+    },
+    {
+      "name": "aces cannot be in the middle of a straight flush (Q K A 2 3)",
+      "input": [
+        "2C AC QC 10C KC",
+        "QH KH AH 2H 3H"
+      ],
+      "expected": [
+        "2C AC QC 10C KC"
+      ],
+      "actual": [
+        "2C AC QC 10C KC"
+      ],
+      "match": true
+    },
+    {
+      "name": "both hands have straight flush, tie goes to highest-ranked card",
+      "input": [
+        "4H 6H 7H 8H 5H",
+        "5S 7S 8S 9S 6S"
+      ],
+      "expected": [
+        "5S 7S 8S 9S 6S"
+      ],
+      "actual": [
+        "5S 7S 8S 9S 6S"
+      ],
+      "match": true
+    },
+    {
+      "name": "even though an ace is usually high, a 5-high straight flush is the lowest-scoring straight flush",
+      "input": [
+        "2H 3H 4H 5H 6H",
+        "4D AD 3D 2D 5D"
+      ],
+      "expected": [
+        "2H 3H 4H 5H 6H"
+      ],
+      "actual": [
+        "2H 3H 4H 5H 6H"
+      ],
+      "match": true
+    }
+  ]
+}
