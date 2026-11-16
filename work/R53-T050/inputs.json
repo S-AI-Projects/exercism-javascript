@@ -1,0 +1,60 @@
+{
+  "exercise": "nucleotide-count",
+  "selected_test_cases": [
+    {
+      "name": "empty strand",
+      "input": "",
+      "expected": "0 0 0 0",
+      "description": "Empty DNA sequence contains 0 A, 0 C, 0 G, 0 T"
+    },
+    {
+      "name": "can count one nucleotide in single-character input",
+      "input": "G",
+      "expected": "0 0 1 0",
+      "description": "Single G nucleotide maps to 0 A, 0 C, 1 G, 0 T in strict A-C-G-T order"
+    },
+    {
+      "name": "strand with repeated nucleotide",
+      "input": "GGGGGGG",
+      "expected": "0 0 7 0",
+      "description": "Seven G nucleotides map to 0 A, 0 C, 7 G, 0 T in strict A-C-G-T order"
+    }
+  ],
+  "all_spec_test_cases": [
+    {
+      "name": "empty strand",
+      "input": "",
+      "expected": "0 0 0 0",
+      "expected_error": null,
+      "is_error_case": false
+    },
+    {
+      "name": "can count one nucleotide in single-character input",
+      "input": "G",
+      "expected": "0 0 1 0",
+      "expected_error": null,
+      "is_error_case": false
+    },
+    {
+      "name": "strand with repeated nucleotide",
+      "input": "GGGGGGG",
+      "expected": "0 0 7 0",
+      "expected_error": null,
+      "is_error_case": false
+    },
+    {
+      "name": "strand with multiple nucleotides",
+      "input": "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC",
+      "expected": "20 12 17 21",
+      "expected_error": null,
+      "is_error_case": false
+    },
+    {
+      "name": "strand with invalid nucleotides",
+      "input": "AGXXACT",
+      "expected": null,
+      "expected_error": "Invalid nucleotide in strand",
+      "is_error_case": true
+    }
+  ]
+}
