@@ -1,0 +1,106 @@
+{
+  "task": "R53-T047",
+  "exercise": "flower-field",
+  "timestamp_utc": "2026-11-16T09:37:08Z",
+  "tool_versions": {
+    "node": "v24.19.0",
+    "corepack": "0.35.0",
+    "pnpm": "9.15.2",
+    "package_manager": "pnpm",
+    "python": "3.9.6",
+    "platform": "macOS-27.2-arm64-arm-64bit"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "de689df8d70f331b49f434048a6f0499379eff4d197ad2bd9ed2e8b8fcca5b87",
+    "reference_implementation_sha256": "8d25b5dc10da9c4b3d10e578818c613ddcc62dcbc7355bb6f1ff8095347fb445",
+    "test_spec_sha256": "8277515544a742d43dc68e2cfbab6d023c9902bced8297a76685bcd0cef242f0",
+    "learner_stub_unchanged": true,
+    "reference_unchanged": true
+  },
+  "demonstrated_construct": {
+    "name": "Property accessor (bracket notation array indexing) and out-of-bounds falsy evaluation",
+    "used_by": "adjacentSquareIsOnBoard(board, x, d) => board[x + d[0]]",
+    "micro_example": {
+      "input_grid": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "C",
+          "D"
+        ]
+      ],
+      "in_bounds_access": {
+        "expression": "Boolean(grid[0])",
+        "expected": true,
+        "actual": true,
+        "match": true
+      },
+      "out_of_bounds_access": {
+        "expression": "Boolean(grid[-1])",
+        "expected": false,
+        "actual": false,
+        "match": true
+      }
+    },
+    "contrasting_example": {
+      "expression": "grid[-1][0]",
+      "expected": "TypeError",
+      "actual": "TypeError",
+      "error_message": "Cannot read properties of undefined (reading '0')",
+      "match": true
+    }
+  },
+  "test_execution": {
+    "test_script": "corepack pnpm jest",
+    "total_cases_in_spec": 13,
+    "executed": 13,
+    "passed": 13,
+    "failed": 0
+  },
+  "required_named_cases": {
+    "handles no rows": {
+      "input": [],
+      "expected": [],
+      "actual": [],
+      "match": true
+    },
+    "handles no columns": {
+      "input": [
+        ""
+      ],
+      "expected": [
+        ""
+      ],
+      "actual": [
+        ""
+      ],
+      "match": true
+    },
+    "handles no flowers": {
+      "input": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "expected": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "actual": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "match": true
+    }
+  },
+  "guard_verification": {
+    "zero_tests_rejected": true,
+    "assertion_failure_rejected": true,
+    "missing_test_count_rejected": true
+  },
+  "subprocess_count": 6
+}

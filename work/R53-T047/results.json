@@ -1,0 +1,318 @@
+{
+  "exercise": "flower-field",
+  "demonstrated_construct": "Property accessor (bracket notation array indexing) and out-of-bounds falsy evaluation",
+  "micro_example_results": {
+    "input_grid": [
+      [
+        "A",
+        "B"
+      ],
+      [
+        "C",
+        "D"
+      ]
+    ],
+    "in_bounds_access": {
+      "expression": "Boolean(grid[0])",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    "out_of_bounds_access": {
+      "expression": "Boolean(grid[-1])",
+      "expected": false,
+      "actual": false,
+      "match": true
+    }
+  },
+  "contrasting_example_results": {
+    "expression": "grid[-1][0]",
+    "expected": "TypeError",
+    "actual": "TypeError",
+    "error_message": "Cannot read properties of undefined (reading '0')",
+    "match": true
+  },
+  "test_counts": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0
+  },
+  "required_named_cases": {
+    "handles no rows": {
+      "input": [],
+      "expected": [],
+      "actual": [],
+      "match": true
+    },
+    "handles no columns": {
+      "input": [
+        ""
+      ],
+      "expected": [
+        ""
+      ],
+      "actual": [
+        ""
+      ],
+      "match": true
+    },
+    "handles no flowers": {
+      "input": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "expected": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "actual": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "match": true
+    }
+  },
+  "all_cases": [
+    {
+      "name": "handles no rows",
+      "input": [],
+      "expected": [],
+      "actual": [],
+      "match": true
+    },
+    {
+      "name": "handles no columns",
+      "input": [
+        ""
+      ],
+      "expected": [
+        ""
+      ],
+      "actual": [
+        ""
+      ],
+      "match": true
+    },
+    {
+      "name": "handles no flowers",
+      "input": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "expected": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "actual": [
+        "   ",
+        "   ",
+        "   "
+      ],
+      "match": true
+    },
+    {
+      "name": "handles garden full of flowers",
+      "input": [
+        "***",
+        "***",
+        "***"
+      ],
+      "expected": [
+        "***",
+        "***",
+        "***"
+      ],
+      "actual": [
+        "***",
+        "***",
+        "***"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles flower surrounded by spaces",
+      "input": [
+        "   ",
+        " * ",
+        "   "
+      ],
+      "expected": [
+        "111",
+        "1*1",
+        "111"
+      ],
+      "actual": [
+        "111",
+        "1*1",
+        "111"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles space surrounded by flowers",
+      "input": [
+        "***",
+        "* *",
+        "***"
+      ],
+      "expected": [
+        "***",
+        "*8*",
+        "***"
+      ],
+      "actual": [
+        "***",
+        "*8*",
+        "***"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles horizontal line",
+      "input": [
+        " * * "
+      ],
+      "expected": [
+        "1*2*1"
+      ],
+      "actual": [
+        "1*2*1"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles horizontal line, flowers at edges",
+      "input": [
+        "*   *"
+      ],
+      "expected": [
+        "*1 1*"
+      ],
+      "actual": [
+        "*1 1*"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles vertical line",
+      "input": [
+        " ",
+        "*",
+        " ",
+        "*",
+        " "
+      ],
+      "expected": [
+        "1",
+        "*",
+        "2",
+        "*",
+        "1"
+      ],
+      "actual": [
+        "1",
+        "*",
+        "2",
+        "*",
+        "1"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles vertical line, flowers at edges",
+      "input": [
+        "*",
+        " ",
+        " ",
+        " ",
+        "*"
+      ],
+      "expected": [
+        "*",
+        "1",
+        " ",
+        "1",
+        "*"
+      ],
+      "actual": [
+        "*",
+        "1",
+        " ",
+        "1",
+        "*"
+      ],
+      "match": true
+    },
+    {
+      "name": "handles cross",
+      "input": [
+        "  *  ",
+        "  *  ",
+        "*****",
+        "  *  ",
+        "  *  "
+      ],
+      "expected": [
+        " 2*2 ",
+        "25*52",
+        "*****",
+        "25*52",
+        " 2*2 "
+      ],
+      "actual": [
+        " 2*2 ",
+        "25*52",
+        "*****",
+        "25*52",
+        " 2*2 "
+      ],
+      "match": true
+    },
+    {
+      "name": "handles large garden",
+      "input": [
+        " *  * ",
+        "  *   ",
+        "    * ",
+        "   * *",
+        " *  * ",
+        "      "
+      ],
+      "expected": [
+        "1*22*1",
+        "12*322",
+        " 123*2",
+        "112*4*",
+        "1*22*2",
+        "111111"
+      ],
+      "actual": [
+        "1*22*1",
+        "12*322",
+        " 123*2",
+        "112*4*",
+        "1*22*2",
+        "111111"
+      ],
+      "match": true
+    },
+    {
+      "name": "multiple adjacent flowers",
+      "input": [
+        " ** "
+      ],
+      "expected": [
+        "1**1"
+      ],
+      "actual": [
+        "1**1"
+      ],
+      "match": true
+    }
+  ]
+}
