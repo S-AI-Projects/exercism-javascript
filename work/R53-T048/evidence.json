@@ -1,0 +1,127 @@
+{
+  "task": "R53-T048",
+  "exercise": "poker",
+  "timestamp_utc": "2026-11-16T09:55:52Z",
+  "tool_versions": {
+    "node": "v24.19.0",
+    "corepack": "0.35.0",
+    "pnpm": "9.15.2",
+    "package_manager": "pnpm",
+    "python": "3.9.6",
+    "platform": "macOS-27.2-arm64-arm-64bit"
+  },
+  "metadata_validation": {
+    "config_path": "exercises/practice/poker/.meta/config.json",
+    "files_declared": {
+      "solution": [
+        "poker.js"
+      ],
+      "test": [
+        "poker.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "real_config_passed": true,
+    "resolved_files": {
+      "solution": [
+        {
+          "relative": "poker.js",
+          "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/poker.js"
+        }
+      ],
+      "test": [
+        {
+          "relative": "poker.spec.js",
+          "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/poker.spec.js"
+        }
+      ],
+      "example": [
+        {
+          "relative": ".meta/proof.ci.js",
+          "absolute": "/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/.meta/proof.ci.js"
+        }
+      ]
+    },
+    "invalid_fixtures_tested": {
+      "missing_reference_path": {
+        "passed_rejection_check": true,
+        "observed_error": "Missing reference implementation: declared path '.meta/nonexistent-proof.ci.js' in 'files.example' does not exist at '/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/.meta/nonexistent-proof.ci.js'"
+      },
+      "missing_test_path": {
+        "passed_rejection_check": true,
+        "observed_error": "Missing test file: declared path 'nonexistent-poker.spec.js' in 'files.test' does not exist at '/Users/anuradhagaur/exercism_javascript/exercism-javascript/exercism-javascript/exercises/practice/poker/nonexistent-poker.spec.js'"
+      },
+      "outside_exercise_path": {
+        "passed_rejection_check": true,
+        "observed_error": "Parent-directory traversal rejected: path '../../outside.js' in 'files.solution' contains '..'"
+      }
+    }
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "620151262e5b45a5591ae01df8ce8254929f6ec26271e9b9d88adb6ccd2359d1",
+    "reference_implementation_sha256": "f07c61e93deb98baba9ae5876f37ce687c78a1bb8a6344a5761cc8ece7c9864e",
+    "test_spec_sha256": "688f2163f84ed53afe37c45e165de45844e0942375e069d71843c678c4dcaf6d",
+    "learner_stub_unchanged": true,
+    "reference_unchanged": true
+  },
+  "test_execution": {
+    "test_script": "corepack pnpm jest",
+    "total_cases_in_spec": 37,
+    "executed": 37,
+    "passed": 37,
+    "failed": 0
+  },
+  "required_named_cases": {
+    "single hand always wins": {
+      "input": [
+        "4S 5S 7H 8D JC"
+      ],
+      "expected": [
+        "4S 5S 7H 8D JC"
+      ],
+      "actual": [
+        "4S 5S 7H 8D JC"
+      ],
+      "match": true
+    },
+    "highest card out of all hands wins": {
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH"
+      ],
+      "match": true
+    },
+    "a tie has multiple winners": {
+      "input": [
+        "4D 5S 6S 8D 3C",
+        "2S 4C 7S 9H 10H",
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "expected": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "actual": [
+        "3S 4S 5D 6H JH",
+        "3H 4H 5C 6C JD"
+      ],
+      "match": true
+    }
+  },
+  "guard_verification": {
+    "zero_tests_rejected": true,
+    "assertion_failure_rejected": true,
+    "missing_test_count_rejected": true
+  },
+  "subprocess_count": 6
+}
