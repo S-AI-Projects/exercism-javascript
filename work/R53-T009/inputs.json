@@ -1,0 +1,50 @@
+{
+  "task": "R53-T009",
+  "exercise": "list-ops",
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "ankorGH",
+      "archanid",
+      "hayashi-ay",
+      "jagdish-15",
+      "paparomeo",
+      "rchavarria",
+      "SleeplessByte",
+      "tejasbubane",
+      "xarxziux"
+    ],
+    "files": {
+      "solution": [
+        "list-ops.js"
+      ],
+      "test": [
+        "list-ops.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Implement basic list operations.",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "required_named_cases": [
+    "empty lists",
+    "list to empty list",
+    "empty list to list"
+  ],
+  "runner_script": "tools/course_checks/r53-t009.py",
+  "maintenance_doc": "docs/maintenance/list-ops.md",
+  "scenarios_tested": [
+    "real_reference",
+    "fail_reference",
+    "empty_tests"
+  ]
+}
