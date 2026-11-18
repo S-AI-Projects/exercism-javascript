@@ -1,0 +1,21 @@
+{
+  "task": "R53-T002",
+  "exercise": "gigasecond",
+  "passed_tests": 6,
+  "total_tests": 6,
+  "required_named_cases": {
+    "tells a gigasecond anniversary since midnight": {
+      "executed": true,
+      "passed": true
+    },
+    "tells another gigasecond anniversary since midnight": {
+      "executed": true,
+      "passed": true
+    },
+    "tells gigasecond anniversary since midnight, from before UNIX epoch": {
+      "executed": true,
+      "passed": true
+    }
+  },
+  "regeneration_check": "PASS"
+}

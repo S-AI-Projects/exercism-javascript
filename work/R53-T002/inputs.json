@@ -1,0 +1,20 @@
+{
+  "task": "R53-T002",
+  "exercise": "gigasecond",
+  "required_named_cases": [
+    "tells a gigasecond anniversary since midnight",
+    "tells another gigasecond anniversary since midnight",
+    "tells gigasecond anniversary since midnight, from before UNIX epoch"
+  ],
+  "metadata_files": {
+    "solution": [
+      "gigasecond.js"
+    ],
+    "test": [
+      "gigasecond.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  }
+}
