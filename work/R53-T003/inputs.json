@@ -1,0 +1,21 @@
+{
+  "task": "R53-T003",
+  "exercise": "camicia",
+  "required_named_cases": [
+    "two cards, one trick",
+    "three cards, one trick",
+    "four cards, one trick"
+  ],
+  "mutant": {
+    "description": "Sets extraTrick = 0, omitting final uncollected pile calculation",
+    "target_test": "two cards, one trick",
+    "input": {
+      "playerA": [
+        "2"
+      ],
+      "playerB": [
+        "3"
+      ]
+    }
+  }
+}

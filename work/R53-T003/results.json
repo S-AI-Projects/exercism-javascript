@@ -1,0 +1,33 @@
+{
+  "task": "R53-T003",
+  "exercise": "camicia",
+  "passed_tests": 28,
+  "total_tests": 28,
+  "required_named_cases": {
+    "two cards, one trick": {
+      "executed": true,
+      "passed": true
+    },
+    "three cards, one trick": {
+      "executed": true,
+      "passed": true
+    },
+    "four cards, one trick": {
+      "executed": true,
+      "passed": true
+    }
+  },
+  "mutant_results": {
+    "expected_correct": {
+      "status": "finished",
+      "cards": 2,
+      "tricks": 1
+    },
+    "mutant_observed": {
+      "status": "finished",
+      "tricks": 0,
+      "cards": 2
+    },
+    "rejected_by_test": true
+  }
+}
