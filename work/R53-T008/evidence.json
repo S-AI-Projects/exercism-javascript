@@ -1,0 +1,38 @@
+{
+  "task": "R53-T008",
+  "exercise": "scrabble-score",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "68caa6f7cb552916412619f08a6851d3bf87f5eff3e7a152ba51993f36a9b774",
+    "spec_sha256": "d15160b300717cb7a2ab66a67a36030a26d6e88ca2317fac004b07df35734ac7",
+    "example_sha256": "dad620bd3a10326340e36cdbe88a0b23019891425954beba96c2de4a606729ef",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 11,
+    "total": 11,
+    "named_cases": {
+      "lowercase letter": {
+        "executed": true,
+        "passed": true
+      },
+      "uppercase letter": {
+        "executed": true,
+        "passed": true
+      },
+      "valuable letter": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "metadata_check": {
+    "real_config_verified": true,
+    "invalid_fixtures_verified": true
+  }
+}
