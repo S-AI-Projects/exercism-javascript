@@ -1,0 +1,10 @@
+{
+  "task": "R53-T004",
+  "exercise": "sum-of-multiples",
+  "required_named_cases": [
+    "no multiples within limit",
+    "one factor has multiples within limit",
+    "more than one multiple within limit"
+  ],
+  "refactor_scope": "Readability refactor of sum reference implementation"
+}
