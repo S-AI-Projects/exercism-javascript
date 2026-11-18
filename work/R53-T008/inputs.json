@@ -1,0 +1,25 @@
+{
+  "task": "R53-T008",
+  "exercise": "scrabble-score",
+  "required_named_cases": [
+    "lowercase letter",
+    "uppercase letter",
+    "valuable letter"
+  ],
+  "metadata_configuration": {
+    "solution": [
+      "scrabble-score.js"
+    ],
+    "test": [
+      "scrabble-score.spec.js"
+    ],
+    "example": [
+      ".meta/proof.ci.js"
+    ]
+  },
+  "invalid_fixtures": [
+    "missing-reference: example points to non-existent proof file",
+    "missing-test: test points to non-existent spec file",
+    "outside-exercise: path attempts directory traversal with ../"
+  ]
+}
