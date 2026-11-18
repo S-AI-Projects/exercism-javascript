@@ -1,0 +1,47 @@
+{
+  "task": "R53-T010",
+  "exercise": "react",
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "Boto1",
+      "joshgoebel",
+      "PakkuDon",
+      "rchavarria",
+      "SleeplessByte"
+    ],
+    "files": {
+      "solution": [
+        "react.js"
+      ],
+      "test": [
+        "react.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Implement a basic reactive system.",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "required_named_cases": [
+    "accepts input",
+    "allows input cell value to be set",
+    "allows setting compute cells"
+  ],
+  "runner_script": "tools/course_checks/r53-t010.py",
+  "hints_doc": "exercises/practice/react/.docs/hints.md",
+  "maintenance_doc": "docs/maintenance/react.md",
+  "scenarios_tested": [
+    "real_reference",
+    "fail_reference",
+    "empty_tests"
+  ]
+}
