@@ -1,0 +1,39 @@
+{
+  "task": "R53-T004",
+  "exercise": "sum-of-multiples",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "6f0302a36904855bc577f278bea22cc698da85b5b6cf67056047cdec536ad46c",
+    "spec_sha256": "156471c03f9689dd7d1d84afa0a59a99a86623ff83ac02219c792a51c699ee7a",
+    "example_sha256": "8cd4a1c7baf8cbd1e96f24d212621cd53cc71b73e1a7ad04259431826869bddc",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 16,
+    "total": 16,
+    "named_cases": {
+      "no multiples within limit": {
+        "executed": true,
+        "passed": true
+      },
+      "one factor has multiples within limit": {
+        "executed": true,
+        "passed": true
+      },
+      "more than one multiple within limit": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "refactor_audit": {
+    "invariant_comment_present": true,
+    "public_api_unchanged": true,
+    "diff_summary": "Renamed ambiguous parameter multiples to factors; extracted candidate divisibility predicate isMultipleOfAny to clarify the filter condition; explicitly guarded against zero division; and added an invariant comment explaining set-union semantics and factor domain bounds."
+  }
+}
