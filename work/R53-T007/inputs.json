@@ -1,0 +1,10 @@
+{
+  "task": "R53-T007",
+  "exercise": "difference-of-squares",
+  "required_named_cases": [
+    "square of sum 1",
+    "square of sum 5",
+    "square of sum 100"
+  ],
+  "language_construct": "Type coercion in numeric accumulation vs string concatenation"
+}

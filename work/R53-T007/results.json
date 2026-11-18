@@ -1,0 +1,24 @@
+{
+  "task": "R53-T007",
+  "exercise": "difference-of-squares",
+  "passed_tests": 9,
+  "total_tests": 9,
+  "required_named_cases": {
+    "square of sum 1": {
+      "executed": true,
+      "passed": true
+    },
+    "square of sum 5": {
+      "executed": true,
+      "passed": true
+    },
+    "square of sum 100": {
+      "executed": true,
+      "passed": true
+    }
+  },
+  "micro_examples_outputs": {
+    "numeric_square": 225,
+    "string_concatenation": "12345"
+  }
+}
