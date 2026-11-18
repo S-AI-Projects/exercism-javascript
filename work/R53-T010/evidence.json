@@ -57,5 +57,5 @@
     }
   ],
   "all_passed": true,
-  "test_output_summary": "\n============================================================\nTask: R53-T010 | Exercise: react | Mode: normal\n============================================================\nTest results: 13 passed, 13 total\nExit code: 0\nTemporary directory cleaned up: /Users/takshita/Downloads/snai project/exercism-javascript/.react-runner-k7nn1ag_\nLearner file integrity verified: hashes unchanged.\nPASS: All 13 tests passed with the reference implementation.\n\n\n"
+  "test_output_summary": "\n============================================================\nTask: R53-T010 | Exercise: react | Mode: normal\n============================================================\nTest results: 13 passed, 13 total\nExit code: 0\nTemporary directory cleaned up: /Users/takshita/Downloads/snai project/exercism-javascript/.react-runner-ypjiwcag\nLearner file integrity verified: hashes unchanged.\nPASS: All 13 tests passed with the reference implementation.\n\n\n"
 }
