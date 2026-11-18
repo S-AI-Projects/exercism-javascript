@@ -1,0 +1,53 @@
+{
+  "task": "R53-T001",
+  "exercise": "complex-numbers",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "bf31484d5cfcc6709082a6ec92aee1ccf7b26b9006ef3fbe0a6d319a428b6f7c",
+    "spec_sha256": "b9e47e2683516230c645fa589880a81c2d260013939dc34497ffa3cd453d0d0d",
+    "example_sha256": "18299a72fd0b63e2064eb7769300be44632461ae6b62e7a80112ef13542ba644",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 40,
+    "total": 40,
+    "named_cases": {
+      "Real part of a purely real number": {
+        "executed": true,
+        "passed": true
+      },
+      "Real part of a purely imaginary number": {
+        "executed": true,
+        "passed": true
+      },
+      "Real part of a number with real and imaginary part": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "uuid_rationales": {
+    "9f98e133-eb7f-45b0-9676-cce001cd6f7a": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a purely real number\"\n# Canonical case: Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript.\ncomment = \"Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript.\""
+    },
+    "07988e20-f287-4bb7-90cf-b32c4bffe0f3": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a purely imaginary number\"\n# Canonical case: Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion.\ncomment = \"Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion.\""
+    },
+    "4a370e86-939e-43de-a895-a00ca32da60a": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a number with real and imaginary part\"\n# Canonical case: Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage.\ncomment = \"Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage.\""
+    }
+  },
+  "guard_verification": {
+    "zero_test_guard": "PASS (CheckError raised if total_tests == 0)",
+    "non_zero_exit_guard": "PASS (CheckError raised if returncode != 0)",
+    "learner_immutability_guard": "PASS (SHA-256 match asserted)"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "task": "R53-T001",
+  "exercise": "complex-numbers",
+  "target_uuids": [
+    "9f98e133-eb7f-45b0-9676-cce001cd6f7a",
+    "07988e20-f287-4bb7-90cf-b32c4bffe0f3",
+    "4a370e86-939e-43de-a895-a00ca32da60a"
+  ],
+  "required_named_cases": [
+    "Real part of a purely real number",
+    "Real part of a purely imaginary number",
+    "Real part of a number with real and imaginary part"
+  ],
+  "total_canonical_cases": 40
+}

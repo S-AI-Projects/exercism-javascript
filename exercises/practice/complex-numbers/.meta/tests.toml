@@ -11,12 +11,18 @@
 
 [9f98e133-eb7f-45b0-9676-cce001cd6f7a]
 description = "Real part -> Real part of a purely real number"
+# Canonical case: Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript.
+comment = "Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript."
 
 [07988e20-f287-4bb7-90cf-b32c4bffe0f3]
 description = "Real part -> Real part of a purely imaginary number"
+# Canonical case: Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion.
+comment = "Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion."
 
 [4a370e86-939e-43de-a895-a00ca32da60a]
 description = "Real part -> Real part of a number with real and imaginary part"
+# Canonical case: Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage.
+comment = "Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage."
 
 [9b3fddef-4c12-4a99-b8f8-e3a42c7ccef6]
 description = "Imaginary part -> Imaginary part of a purely real number"
