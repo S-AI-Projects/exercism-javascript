@@ -1,0 +1,15 @@
+{
+  "task": "R53-T005",
+  "exercise": "simple-cipher",
+  "required_named_cases": [
+    "can encode",
+    "can decode",
+    "is reversible"
+  ],
+  "input_domain_sizes": [
+    10,
+    100,
+    250
+  ],
+  "repetitions_per_size": 5
+}
