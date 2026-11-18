@@ -1,0 +1,67 @@
+{
+  "task": "R53-T006",
+  "exercise": "palindrome-products",
+  "passed_tests": 12,
+  "total_tests": 13,
+  "required_named_cases": {
+    "smallest palindrome from single digit factors": {
+      "executed": true,
+      "passed": true
+    },
+    "largest palindrome from single digit factors": {
+      "executed": true,
+      "passed": true
+    },
+    "smallest palindrome from double digit factors": {
+      "executed": true,
+      "passed": true
+    }
+  },
+  "alternative_approach_outputs": {
+    "single_digit": {
+      "smallest": {
+        "value": 1,
+        "factors": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "largest": {
+        "value": 9,
+        "factors": [
+          [
+            1,
+            9
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      }
+    },
+    "double_digit": {
+      "smallest": {
+        "value": 121,
+        "factors": [
+          [
+            11,
+            11
+          ]
+        ]
+      },
+      "largest": {
+        "value": 9009,
+        "factors": [
+          [
+            91,
+            99
+          ]
+        ]
+      }
+    }
+  },
+  "approaches_agreement": true
+}

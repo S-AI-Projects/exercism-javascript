@@ -1,0 +1,13 @@
+{
+  "task": "R53-T006",
+  "exercise": "palindrome-products",
+  "required_named_cases": [
+    "smallest palindrome from single digit factors",
+    "largest palindrome from single digit factors",
+    "smallest palindrome from double digit factors"
+  ],
+  "approaches_compared": [
+    "Approach 1: Product-space search with factor trial division (reference)",
+    "Approach 2: Factor-pair nested iteration with extreme-value tracking (alternative)"
+  ]
+}
