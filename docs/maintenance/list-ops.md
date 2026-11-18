@@ -1,5 +1,8 @@
 # Maintenance: list-ops
 
+## Mentor / Reviewer
+- Instructor / Mentor: Ankush Bisht (@ankushbisht01)
+
 ## Isolated Test Runner
 
 The `list-ops` exercise has an isolated test runner that validates the reference

@@ -4,9 +4,9 @@
   "enrollment": "E26B07F0582",
   "exercise": "list-ops",
   "tool_versions": {
-    "python": "3.15.0",
+    "python": "3.15.2",
     "node": "v26.13.1",
-    "pnpm": "9.15.2",
+    "pnpm": "12.21.0",
     "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
   },
   "checks": [
@@ -52,5 +52,5 @@
     }
   ],
   "all_passed": true,
-  "test_output_summary": "Test results: 22 passed, 22 total\nExit code: 0\nTemporary directory cleaned up: /var/folders/zg/yfvjzb9s1qn69z23m0jj19zh0000gn/T/list-ops-runner-fd_lqvyg\nLearner file integrity verified: hashes unchanged.\nPASS: All 22 tests passed with the reference implementation.\n\n"
+  "test_output_summary": "Test results: 22 passed, 22 total\nExit code: 0\nTemporary directory cleaned up: /var/folders/zg/yfvjzb9s1qn69z23m0jj19zh0000gn/T/list-ops-runner-lljptbtp\nLearner file integrity verified: hashes unchanged.\nPASS: All 22 tests passed with the reference implementation.\n\n"
 }
