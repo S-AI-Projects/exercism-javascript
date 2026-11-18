@@ -1,0 +1,38 @@
+{
+  "task": "R53-T007",
+  "exercise": "difference-of-squares",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "b2011841a2114e274d98702fde950aea5e47f395c756a905fb3225eb2851d10d",
+    "spec_sha256": "624977ac7a179d7acdc79c4ffebdc3b06ccefbd4b379aada0be219689c414d02",
+    "example_sha256": "30e331914255db5ec17a1c32677bf0053e2caef3b3a01297353d0ad9c13c2e18",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 9,
+    "total": 9,
+    "named_cases": {
+      "square of sum 1": {
+        "executed": true,
+        "passed": true
+      },
+      "square of sum 5": {
+        "executed": true,
+        "passed": true
+      },
+      "square of sum 100": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "language_guidance": {
+    "construct_analyzed": "coercion",
+    "micro_examples_verified": true
+  }
+}
