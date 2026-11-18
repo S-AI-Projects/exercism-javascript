@@ -1,0 +1,78 @@
+{
+  "task": "R53-T005",
+  "exercise": "simple-cipher",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "1d5a6e135506b925263353b70739183beafa17aa8d653f1b43bb5e0adfd48b5c",
+    "spec_sha256": "4aec52a161c5ac37e641a44a272522891ed8c8d9f40b620dca41c189ffc59092",
+    "example_sha256": "16d5d4315c08e7a095a36589faf16fc2d65dff5b3ee7a4ddedab0dd4395fb137",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 12,
+    "total": 12,
+    "named_cases": {
+      "can encode": {
+        "executed": true,
+        "passed": true
+      },
+      "can decode": {
+        "executed": true,
+        "passed": true
+      },
+      "is reversible": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "complexity_study": {
+    "comment_added": true,
+    "benchmarks": {
+      "10": {
+        "input_size": 10,
+        "correct": true,
+        "repetitions": [
+          0.00046733399999999926,
+          0.0005037500000000002,
+          0.0005112500000000004,
+          0.0006942920000000008,
+          0.0009707080000000001
+        ],
+        "median_ms": 0.0005112500000000004,
+        "median_us": 0.5112500000000004
+      },
+      "100": {
+        "input_size": 100,
+        "correct": true,
+        "repetitions": [
+          0.004689416000000001,
+          0.004807417000000001,
+          0.004847041000000004,
+          0.004875375000000002,
+          0.004931124999999998
+        ],
+        "median_ms": 0.004847041000000004,
+        "median_us": 4.847041000000004
+      },
+      "250": {
+        "input_size": 250,
+        "correct": true,
+        "repetitions": [
+          0.011703917000000005,
+          0.011809540999999996,
+          0.012100125000000005,
+          0.012160332999999994,
+          0.012396042000000001
+        ],
+        "median_ms": 0.012100125000000005,
+        "median_us": 12.100125000000006
+      }
+    }
+  }
+}
