@@ -1,0 +1,34 @@
+{
+  "task": "R53-T001",
+  "exercise": "complex-numbers",
+  "passed_tests": 40,
+  "total_tests": 40,
+  "required_named_cases": {
+    "Real part of a purely real number": {
+      "executed": true,
+      "passed": true
+    },
+    "Real part of a purely imaginary number": {
+      "executed": true,
+      "passed": true
+    },
+    "Real part of a number with real and imaginary part": {
+      "executed": true,
+      "passed": true
+    }
+  },
+  "uuid_rationales": {
+    "9f98e133-eb7f-45b0-9676-cce001cd6f7a": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a purely real number\"\n# Canonical case: Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript.\ncomment = \"Validates getter/property access for the real component of a purely real complex number (imag = 0), matching this.real property lookup in JavaScript.\""
+    },
+    "07988e20-f287-4bb7-90cf-b32c4bffe0f3": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a purely imaginary number\"\n# Canonical case: Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion.\ncomment = \"Validates getter/property access for the real component of a purely imaginary number (real = 0), ensuring zero values are preserved without JavaScript truthiness/coercion distortion.\""
+    },
+    "4a370e86-939e-43de-a895-a00ca32da60a": {
+      "found": true,
+      "content": "description = \"Real part -> Real part of a number with real and imaginary part\"\n# Canonical case: Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage.\ncomment = \"Validates getter/property access for the real component of a general complex number with non-zero real and imaginary parts, confirming independent field storage.\""
+    }
+  }
+}
