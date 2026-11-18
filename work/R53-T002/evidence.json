@@ -1,0 +1,38 @@
+{
+  "task": "R53-T002",
+  "exercise": "gigasecond",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "d56f7b0bf332bcb20ca75b3b78cdb17ff63b6d139c25719c4f49a4ea9edca50e",
+    "spec_sha256": "0af53995c1d5031fa8fcfefd10493727177b733a1f4b3a010d39bc36723ba367",
+    "example_sha256": "98b2bcea1749c7979b97a1b198fbb31b74105775b99ab0f28cca4f388f0bbbde",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 6,
+    "total": 6,
+    "named_cases": {
+      "tells a gigasecond anniversary since midnight": {
+        "executed": true,
+        "passed": true
+      },
+      "tells another gigasecond anniversary since midnight": {
+        "executed": true,
+        "passed": true
+      },
+      "tells gigasecond anniversary since midnight, from before UNIX epoch": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "reproducibility": {
+    "reproducible_check": "PASS",
+    "timestamp_normalized": true
+  }
+}
