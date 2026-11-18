@@ -1,0 +1,39 @@
+{
+  "task": "R53-T003",
+  "exercise": "camicia",
+  "tool_versions": {
+    "python": "3.15.2",
+    "node": "v26.13.1",
+    "pnpm": "9.15.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O"
+  },
+  "file_hashes": {
+    "learner_stub_sha256": "f008a5bd41e304040ced10106972c641454c1a615c3e0b0eeb6eeaaa16a22964",
+    "spec_sha256": "2584fc54b7c2877eb14d1ff8bacce30ed434ddf1d73c2353304fbaaa380f7405",
+    "example_sha256": "13c5354b9f21bcf2290564e2f66bf729885d43e523a5912592f2259eccbb596d",
+    "learner_unchanged": true
+  },
+  "tests": {
+    "passed": 28,
+    "total": 28,
+    "named_cases": {
+      "two cards, one trick": {
+        "executed": true,
+        "passed": true
+      },
+      "three cards, one trick": {
+        "executed": true,
+        "passed": true
+      },
+      "four cards, one trick": {
+        "executed": true,
+        "passed": true
+      }
+    }
+  },
+  "mutant_verification": {
+    "mutant_code": "const extraTrick = 0;",
+    "rejecting_test": "two cards, one trick",
+    "rejection_confirmed": true
+  }
+}
