@@ -1,0 +1,69 @@
+{
+  "config": {
+    "authors": [
+      "lpizzinidev"
+    ],
+    "files": {
+      "solution": [
+        "zebra-puzzle.js"
+      ],
+      "test": [
+        "zebra-puzzle.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Solve the zebra puzzle.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "solution_paths": [
+    "zebra-puzzle.js"
+  ],
+  "test_paths": [
+    "zebra-puzzle.spec.js"
+  ],
+  "example_paths": [
+    ".meta/proof.ci.js"
+  ],
+  "original_test_sources": {
+    "zebra-puzzle.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { ZebraPuzzle } from './zebra-puzzle';\n\ndescribe('Zebra puzzle', () => {\n  test('resident who drinks water', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.waterDrinker()).toEqual('Norwegian');\n  });\n  xtest('resident who owns zebra', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.zebraOwner()).toEqual('Japanese');\n  });\n});\n"
+  },
+  "canonical_cases": {
+    "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+      "description": "resident who drinks water",
+      "test_name": "resident who drinks water",
+      "method": "waterDrinker",
+      "expected": "Norwegian"
+    },
+    "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+      "description": "resident who owns zebra",
+      "test_name": "resident who owns zebra",
+      "method": "zebraOwner",
+      "expected": "Japanese"
+    }
+  },
+  "included_excluded_counts": {
+    "total": 2,
+    "included": 2,
+    "excluded": 0
+  },
+  "expected_test_names": [
+    "resident who drinks water",
+    "resident who owns zebra"
+  ],
+  "skipped_tests_to_enable": 1,
+  "original_solution_sha256": {
+    "zebra-puzzle.js": "16a330adc10bd814949c020bed5ea01635596a3d894f4e5b46361cb05877f412"
+  },
+  "original_test_sha256": {
+    "zebra-puzzle.spec.js": "822d2d50569ce13cf0176356bdb28bb4e9cc212d8f2a1ce63fe277efb394a1f5"
+  }
+}

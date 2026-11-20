@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "canonical_cases": {
+    "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+      "description": "resident who drinks water",
+      "test_name": "resident who drinks water",
+      "method": "waterDrinker",
+      "expected": "Norwegian"
+    },
+    "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+      "description": "resident who owns zebra",
+      "test_name": "resident who owns zebra",
+      "method": "zebraOwner",
+      "expected": "Japanese"
+    }
+  },
+  "metadata_entries": {
+    "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+      "description": "resident who drinks water"
+    },
+    "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+      "description": "resident who owns zebra"
+    }
+  },
+  "included_case_count": 2,
+  "excluded_case_count": 0,
+  "prepared_test_count": 2,
+  "prepared_test_names": [
+    "resident who drinks water",
+    "resident who owns zebra"
+  ],
+  "prepared_test_files_identical": true,
+  "original_test_and_solution_unchanged": true,
+  "preparation_runs": [
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { prepare } from \"file:///Users/vaibhavmehta/Desktop/projetct/exercism-javascript/scripts/helpers.mjs\"; prepare('practice/zebra-puzzle');"
+      ],
+      "return_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import { prepare } from \"file:///Users/vaibhavmehta/Desktop/projetct/exercism-javascript/scripts/helpers.mjs\"; prepare('practice/zebra-puzzle');"
+      ],
+      "return_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "prepared_test_source": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { ZebraPuzzle } from './zebra-puzzle';\n\ndescribe('Zebra puzzle', () => {\n  test('resident who drinks water', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.waterDrinker()).toEqual('Norwegian');\n  });\n  test('resident who owns zebra', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.zebraOwner()).toEqual('Japanese');\n  });\n});\n",
+  "failure_reasons": []
+}
