@@ -11,12 +11,15 @@
 
 [5d22a120-ba0c-428c-bd25-8682235d83e8]
 description = "zero"
+comment = "Included by default: zero is the lower-bound case, and say(0) returns the explicit 'zero' value. Its Jest test is active."
 
 [9b5eed77-dbf6-439d-b920-3f7eb58928f6]
 description = "one"
+comment = "Included by default: one is the smallest positive value and exercises the direct smallNumbers lookup. Its Jest xtest marker skips it locally; it is not canonically excluded."
 
 [7c499be1-612e-4096-a5e1-43b2f719406d]
 description = "fourteen"
+comment = "Included by default: fourteen exercises the direct teen entry in smallNumbers. Its Jest xtest marker skips it locally; it is not canonically excluded."
 
 [f541dd8e-f070-4329-92b4-b7ce2fcf06b4]
 description = "twenty"

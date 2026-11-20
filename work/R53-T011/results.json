@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "command": [
+    "npm",
+    "run",
+    "test",
+    "--",
+    "--watch=false",
+    "--runInBand",
+    "--json",
+    "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/say-reference-zh1rhvg3/jest-results.json"
+  ],
+  "return_code": 0,
+  "expected_test_count": 20,
+  "actual_test_count": 20,
+  "counts": {
+    "total": 20,
+    "passed": 20,
+    "failed": 0,
+    "pending": 0
+  },
+  "enabled_skipped_test_count": 19,
+  "original_solution_unchanged": true,
+  "original_solution_sha256_after": {
+    "say.js": "f75da14ee4623a3ae10f089f78b19dcac6da8ed88985d1f32e707e7f8a6fd4ce"
+  },
+  "included_excluded_counts_before_and_after": {
+    "before": {
+      "total": 19,
+      "included": 19,
+      "excluded": 0
+    },
+    "after": {
+      "total": 19,
+      "included": 19,
+      "excluded": 0
+    }
+  },
+  "actual_tests": [
+    {
+      "name": "say zero",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say fourteen",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say twenty",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say twenty-two",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say thirty",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say ninety-nine",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one hundred",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one hundred twenty-three",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say two hundred",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say nine hundred ninety-nine",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one thousand",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one thousand two hundred thirty-four",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one million",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one million two",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one million two thousand three hundred forty-five",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say one billion",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say a really big number",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say raises an error below zero",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "say raises an error above 999,999,999,999",
+      "status": "passed",
+      "failure_messages": []
+    }
+  ],
+  "failure_reasons": [],
+  "stdout": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/say-reference-zh1rhvg3/jest-results.json\n\n",
+  "stderr": "(node:37687) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./say.spec.js\n  say\n    \u2713 zero (1 ms)\n    \u2713 one\n    \u2713 fourteen\n    \u2713 twenty\n    \u2713 twenty-two\n    \u2713 thirty (1 ms)\n    \u2713 ninety-nine\n    \u2713 one hundred\n    \u2713 one hundred twenty-three\n    \u2713 two hundred\n    \u2713 nine hundred ninety-nine\n    \u2713 one thousand\n    \u2713 one thousand two hundred thirty-four\n    \u2713 one million\n    \u2713 one million two\n    \u2713 one million two thousand three hundred forty-five\n    \u2713 one billion\n    \u2713 a really big number\n    \u2713 raises an error below zero (3 ms)\n    \u2713 raises an error above 999,999,999,999\n\nTest Suites: 1 passed, 1 total\nTests:       20 passed, 20 total\nSnapshots:   0 total\nTime:        0.213 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/say-reference-zh1rhvg3/jest-results.json\n"
+}

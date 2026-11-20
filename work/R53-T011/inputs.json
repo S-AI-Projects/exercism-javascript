@@ -1,0 +1,87 @@
+{
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "ankorGH",
+      "jagdish-15",
+      "msomji",
+      "rchavarria",
+      "ryanplusplus",
+      "SleeplessByte",
+      "tejasbubane",
+      "fearless-spider"
+    ],
+    "files": {
+      "solution": [
+        "say.js"
+      ],
+      "test": [
+        "say.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
+    "source": "A variation on the JavaRanch CattleDrive, Assignment 4",
+    "source_url": "https://web.archive.org/web/20240907035912/https://coderanch.com/wiki/718804",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "solution_paths": [
+    "say.js"
+  ],
+  "test_paths": [
+    "say.spec.js"
+  ],
+  "example_paths": [
+    ".meta/proof.ci.js"
+  ],
+  "canonical_cases": {
+    "before": {
+      "total": 19,
+      "included": 19,
+      "excluded": 0
+    },
+    "after": {
+      "total": 19,
+      "included": 19,
+      "excluded": 0
+    }
+  },
+  "test_sources": {
+    "say.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { say } from './say';\n\ndescribe('say', () => {\n  test('zero', () => {\n    expect(say(0)).toBe('zero');\n  });\n\n  xtest('one', () => {\n    expect(say(1)).toBe('one');\n  });\n\n  xtest('fourteen', () => {\n    expect(say(14)).toBe('fourteen');\n  });\n\n  xtest('twenty', () => {\n    expect(say(20)).toBe('twenty');\n  });\n\n  xtest('twenty-two', () => {\n    expect(say(22)).toBe('twenty-two');\n  });\n\n  xtest('thirty', () => {\n    expect(say(30)).toBe('thirty');\n  });\n\n  xtest('ninety-nine', () => {\n    expect(say(99)).toBe('ninety-nine');\n  });\n\n  xtest('one hundred', () => {\n    expect(say(100)).toBe('one hundred');\n  });\n\n  xtest('one hundred twenty-three', () => {\n    expect(say(123)).toBe('one hundred twenty-three');\n  });\n\n  xtest('two hundred', () => {\n    expect(say(200)).toBe('two hundred');\n  });\n\n  xtest('nine hundred ninety-nine', () => {\n    expect(say(999)).toBe('nine hundred ninety-nine');\n  });\n\n  xtest('one thousand', () => {\n    expect(say(1000)).toBe('one thousand');\n  });\n\n  xtest('one thousand two hundred thirty-four', () => {\n    expect(say(1234)).toBe('one thousand two hundred thirty-four');\n  });\n\n  xtest('one million', () => {\n    expect(say(1000000)).toBe('one million');\n  });\n\n  xtest('one million two', () => {\n    expect(say(1000002)).toBe('one million two');\n  });\n\n  xtest('one million two thousand three hundred forty-five', () => {\n    expect(say(1002345)).toBe(\n      'one million two thousand three hundred forty-five',\n    );\n  });\n\n  xtest('one billion', () => {\n    expect(say(1000000000)).toBe('one billion');\n  });\n\n  xtest('a really big number', () => {\n    let expected = 'nine hundred eighty-seven billion ';\n    expected += 'six hundred fifty-four million ';\n    expected += 'three hundred twenty-one thousand ';\n    expected += 'one hundred twenty-three';\n    expect(say(987654321123)).toBe(expected);\n  });\n\n  xtest('raises an error below zero', () => {\n    expect(() => {\n      say(-1);\n    }).toThrow(new Error('Number must be between 0 and 999,999,999,999.'));\n  });\n\n  xtest('raises an error above 999,999,999,999', () => {\n    expect(() => {\n      say(1000000000000);\n    }).toThrow(new Error('Number must be between 0 and 999,999,999,999.'));\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "zero",
+    "one",
+    "fourteen",
+    "twenty",
+    "twenty-two",
+    "thirty",
+    "ninety-nine",
+    "one hundred",
+    "one hundred twenty-three",
+    "two hundred",
+    "nine hundred ninety-nine",
+    "one thousand",
+    "one thousand two hundred thirty-four",
+    "one million",
+    "one million two",
+    "one million two thousand three hundred forty-five",
+    "one billion",
+    "a really big number",
+    "raises an error below zero",
+    "raises an error above 999,999,999,999"
+  ],
+  "skipped_tests_enabled_in_temporary_copy": 19,
+  "original_solution_sha256_before": {
+    "say.js": "f75da14ee4623a3ae10f089f78b19dcac6da8ed88985d1f32e707e7f8a6fd4ce"
+  }
+}
