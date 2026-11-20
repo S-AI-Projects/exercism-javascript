@@ -1,0 +1,122 @@
+{
+  "success": true,
+  "command": [
+    "npm",
+    "run",
+    "test",
+    "--",
+    "--watch=false",
+    "--runInBand",
+    "--json",
+    "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/zebra-reference-hw_v6asj/jest-results.json"
+  ],
+  "return_code": 0,
+  "preparation_check_return_code": 0,
+  "preparation_check_stdout": "PASS: both canonical cases are present; 2 prepared tests match across two fresh copies.\nResults saved in /Users/vaibhavmehta/Desktop/projetct/exercism-javascript/work/R53-T012/preparation-results.json\n",
+  "preparation_check_stderr": "",
+  "expected_test_count": 2,
+  "actual_test_count": 2,
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "pending": 0
+  },
+  "enabled_skipped_test_count": 1,
+  "expected_case_results": {
+    "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+      "description": "resident who drinks water",
+      "test_name": "resident who drinks water",
+      "method": "waterDrinker",
+      "expected": "Norwegian"
+    },
+    "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+      "description": "resident who owns zebra",
+      "test_name": "resident who owns zebra",
+      "method": "zebraOwner",
+      "expected": "Japanese"
+    }
+  },
+  "actual_tests": [
+    {
+      "name": "Zebra puzzle resident who drinks water",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Zebra puzzle resident who owns zebra",
+      "status": "passed",
+      "failure_messages": []
+    }
+  ],
+  "original_solution_sha256_after": {
+    "zebra-puzzle.js": "16a330adc10bd814949c020bed5ea01635596a3d894f4e5b46361cb05877f412"
+  },
+  "original_test_sha256_after": {
+    "zebra-puzzle.spec.js": "822d2d50569ce13cf0176356bdb28bb4e9cc212d8f2a1ce63fe277efb394a1f5"
+  },
+  "original_solution_and_tests_unchanged": true,
+  "preparation_results": {
+    "success": true,
+    "canonical_cases": {
+      "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+        "description": "resident who drinks water",
+        "test_name": "resident who drinks water",
+        "method": "waterDrinker",
+        "expected": "Norwegian"
+      },
+      "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+        "description": "resident who owns zebra",
+        "test_name": "resident who owns zebra",
+        "method": "zebraOwner",
+        "expected": "Japanese"
+      }
+    },
+    "metadata_entries": {
+      "16efb4e4-8ad7-4d5e-ba96-e5537b66fd42": {
+        "description": "resident who drinks water"
+      },
+      "084d5b8b-24e2-40e6-b008-c800da8cd257": {
+        "description": "resident who owns zebra"
+      }
+    },
+    "included_case_count": 2,
+    "excluded_case_count": 0,
+    "prepared_test_count": 2,
+    "prepared_test_names": [
+      "resident who drinks water",
+      "resident who owns zebra"
+    ],
+    "prepared_test_files_identical": true,
+    "original_test_and_solution_unchanged": true,
+    "preparation_runs": [
+      {
+        "command": [
+          "node",
+          "--input-type=module",
+          "-e",
+          "import { prepare } from \"file:///Users/vaibhavmehta/Desktop/projetct/exercism-javascript/scripts/helpers.mjs\"; prepare('practice/zebra-puzzle');"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "node",
+          "--input-type=module",
+          "-e",
+          "import { prepare } from \"file:///Users/vaibhavmehta/Desktop/projetct/exercism-javascript/scripts/helpers.mjs\"; prepare('practice/zebra-puzzle');"
+        ],
+        "return_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "prepared_test_source": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { ZebraPuzzle } from './zebra-puzzle';\n\ndescribe('Zebra puzzle', () => {\n  test('resident who drinks water', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.waterDrinker()).toEqual('Norwegian');\n  });\n  test('resident who owns zebra', () => {\n    const puzzle = new ZebraPuzzle();\n    expect(puzzle.zebraOwner()).toEqual('Japanese');\n  });\n});\n",
+    "failure_reasons": []
+  },
+  "failure_reasons": [],
+  "stdout": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/zebra-reference-hw_v6asj/jest-results.json\n\n",
+  "stderr": "(node:49253) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./zebra-puzzle.spec.js\n  Zebra puzzle\n    \u2713 resident who drinks water (2 ms)\n    \u2713 resident who owns zebra\n\nTest Suites: 1 passed, 1 total\nTests:       2 passed, 2 total\nSnapshots:   0 total\nTime:        0.214 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/zebra-reference-hw_v6asj/jest-results.json\n"
+}
