@@ -1,0 +1,165 @@
+{
+  "success": true,
+  "expected_test_count": 9,
+  "enabled_skipped_tests": {
+    "reference": 8,
+    "alternative": 8
+  },
+  "runs": {
+    "reference": {
+      "command": [
+        "npm",
+        "run",
+        "test",
+        "--",
+        "--watch=false",
+        "--runInBand",
+        "--json",
+        "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-reference-e94dl006/reference-jest-results.json"
+      ],
+      "return_code": 0,
+      "counts": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "pending": 0
+      },
+      "cases": [
+        {
+          "name": "Space Age age on Earth",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Mercury",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Venus",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Mars",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Jupiter",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Saturn",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Uranus",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Neptune",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age invalid planet causes error",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        }
+      ],
+      "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-reference-e94dl006/reference-jest-results.json\n\n(node:84752) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./space-age.spec.js\n  Space Age\n    \u2713 age on Earth (1 ms)\n    \u2713 age on Mercury\n    \u2713 age on Venus\n    \u2713 age on Mars\n    \u2713 age on Jupiter\n    \u2713 age on Saturn\n    \u2713 age on Uranus\n    \u2713 age on Neptune (1 ms)\n    \u2713 invalid planet causes error (1 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       9 passed, 9 total\nSnapshots:   0 total\nTime:        0.207 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-reference-e94dl006/reference-jest-results.json\n"
+    },
+    "alternative": {
+      "command": [
+        "npm",
+        "run",
+        "test",
+        "--",
+        "--watch=false",
+        "--runInBand",
+        "--json",
+        "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-alternative-q2wrt8e3/alternative-jest-results.json"
+      ],
+      "return_code": 0,
+      "counts": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "pending": 0
+      },
+      "cases": [
+        {
+          "name": "Space Age age on Earth",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Mercury",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Venus",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Mars",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Jupiter",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Saturn",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Uranus",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age age on Neptune",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        },
+        {
+          "name": "Space Age invalid planet causes error",
+          "expected_status": "passed",
+          "actual_status": "passed",
+          "failure_messages": []
+        }
+      ],
+      "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-alternative-q2wrt8e3/alternative-jest-results.json\n\n(node:84863) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./space-age.spec.js\n  Space Age\n    \u2713 age on Earth\n    \u2713 age on Mercury (1 ms)\n    \u2713 age on Venus\n    \u2713 age on Mars\n    \u2713 age on Jupiter\n    \u2713 age on Saturn\n    \u2713 age on Uranus\n    \u2713 age on Neptune\n    \u2713 invalid planet causes error (2 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       9 passed, 9 total\nSnapshots:   0 total\nTime:        0.208 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/space-age-alternative-q2wrt8e3/alternative-jest-results.json\n"
+    }
+  },
+  "learner_solution_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}
