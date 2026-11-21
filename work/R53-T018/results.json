@@ -1,0 +1,190 @@
+{
+  "success": true,
+  "real_metadata_validation": {
+    "expected": "pass",
+    "return_code": 0,
+    "output": "PASS: checked 3 declared file paths in /Users/vaibhavmehta/Desktop/projetct/exercism-javascript/exercises/practice/luhn.",
+    "passed": true
+  },
+  "invalid_metadata_fixtures": [
+    {
+      "name": "missing reference file",
+      "expected_failure_reason": "Declared example file does not exist",
+      "return_code": 1,
+      "output": "FAIL: Declared example file does not exist: .meta/proof.ci.js",
+      "passed": true
+    },
+    {
+      "name": "missing test file",
+      "expected_failure_reason": "Declared test file does not exist",
+      "return_code": 1,
+      "output": "FAIL: Declared test file does not exist: missing.spec.js",
+      "passed": true
+    },
+    {
+      "name": "path outside exercise directory",
+      "expected_failure_reason": "escapes the exercise directory",
+      "return_code": 1,
+      "output": "FAIL: Path '../outside.spec.js' escapes the exercise directory.",
+      "passed": true
+    }
+  ],
+  "enabled_skipped_tests": 21,
+  "exercise_run": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/luhn-reference-rtri16dt/jest-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 22,
+      "passed": 22,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "Luhn single digit strings can not be valid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn a single zero is invalid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn a simple valid SIN that remains valid if reversed",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn a simple valid SIN that becomes invalid if reversed",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn a valid Canadian SIN",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn invalid Canadian SIN",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn invalid credit card",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn invalid long number with an even remainder",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn invalid long number with a remainder divisible by 5",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid number with an even number of digits",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid number with an odd number of spaces",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid strings with a non-digit added at the end invalid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid strings with punctuation included become invalid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid strings with symbols included become invalid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn single zero with space is invalid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn more than a single zero is valid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn input digit 9 is correctly converted to output digit 9",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn very long input is valid",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn valid luhn with an odd number of digits and non zero first digit",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn using ascii value for non-doubled non-digit isn't allowed",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn using ascii value for doubled non-digit isn't allowed",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "Luhn non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      }
+    ],
+    "output_excerpt": "ded.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./luhn.spec.js\n  Luhn\n    \u2713 single digit strings can not be valid (1 ms)\n    \u2713 a single zero is invalid\n    \u2713 a simple valid SIN that remains valid if reversed\n    \u2713 a simple valid SIN that becomes invalid if reversed\n    \u2713 a valid Canadian SIN\n    \u2713 invalid Canadian SIN\n    \u2713 invalid credit card (1 ms)\n    \u2713 invalid long number with an even remainder\n    \u2713 invalid long number with a remainder divisible by 5\n    \u2713 valid number with an even number of digits\n    \u2713 valid number with an odd number of spaces\n    \u2713 valid strings with a non-digit added at the end invalid\n    \u2713 valid strings with punctuation included become invalid\n    \u2713 valid strings with symbols included become invalid\n    \u2713 single zero with space is invalid\n    \u2713 more than a single zero is valid\n    \u2713 input digit 9 is correctly converted to output digit 9\n    \u2713 very long input is valid\n    \u2713 valid luhn with an odd number of digits and non zero first digit\n    \u2713 using ascii value for non-doubled non-digit isn't allowed\n    \u2713 using ascii value for doubled non-digit isn't allowed\n    \u2713 non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed\n\nTest Suites: 1 passed, 1 total\nTests:       22 passed, 22 total\nSnapshots:   0 total\nTime:        0.317 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/luhn-reference-rtri16dt/jest-results.json\n"
+  },
+  "learner_solution_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}
