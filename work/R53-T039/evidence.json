@@ -1,0 +1,109 @@
+{
+  "exercise": "exercises/practice/satellite",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "satellite.js",
+      "test": "satellite.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_count": 9,
+    "spec_case_count": 9,
+    "case_names": [
+      "Empty tree",
+      "Tree with one item",
+      "Tree with many items",
+      "Reject traversals of different length",
+      "Reject inconsistent traversals of same length",
+      "Reject traversals with repeated items",
+      "A degenerate binary tree",
+      "Another degenerate binary tree",
+      "Tree with many more items"
+    ]
+  },
+  "modes": {
+    "reference": {
+      "mode": "all",
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand",
+        "--json",
+        "--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/reference/satellite-jest-results.json"
+      ],
+      "returncode": 0,
+      "counts": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0,
+        "pending": 0
+      },
+      "executed": 9,
+      "accepted_as_success": true,
+      "output": "\n> @exercism/javascript-satellite@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/reference\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\" \"--json\" \"--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/reference/satellite-jest-results.json\"\n\n(node:9205) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./satellite.spec.js\n  Satellite\n    \u2713 Empty tree (1 ms)\n    \u2713 Tree with one item\n    \u2713 Tree with many items\n    \u2713 Reject traversals of different length (3 ms)\n    \u2713 Reject inconsistent traversals of same length\n    \u2713 Reject traversals with repeated items\n    \u2713 A degenerate binary tree (1 ms)\n    \u2713 Another degenerate binary tree\n    \u2713 Tree with many more items\n\nTest Suites: 1 passed, 1 total\nTests:       9 passed, 9 total\nSnapshots:   0 total\nTime:        0.232 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/reference/satellite-jest-results.json\n",
+      "learner_sha256_before": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_sha256_after": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_unchanged": true,
+      "temporary_directory_removed": true
+    },
+    "failing": {
+      "mode": "all",
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand",
+        "--json",
+        "--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/failing/satellite-jest-results.json"
+      ],
+      "returncode": 1,
+      "counts": {
+        "total": 9,
+        "passed": 0,
+        "failed": 9,
+        "pending": 0
+      },
+      "executed": 9,
+      "accepted_as_success": false,
+      "output": "\n> @exercism/javascript-satellite@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/failing\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\" \"--json\" \"--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/failing/satellite-jest-results.json\"\n\n(node:9245) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL ./satellite.spec.js\n  Satellite\n    \u2715 Empty tree\n    \u2715 Tree with one item\n    \u2715 Tree with many items\n    \u2715 Reject traversals of different length (6 ms)\n    \u2715 Reject inconsistent traversals of same length (1 ms)\n    \u2715 Reject traversals with repeated items\n    \u2715 A degenerate binary tree\n    \u2715 Another degenerate binary tree\n    \u2715 Tree with many more items\n\n  \u25cf Satellite \u203a Empty tree\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:6:30)\n\n  \u25cf Satellite \u203a Tree with one item\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:11:30)\n\n  \u25cf Satellite \u203a Tree with many items\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:26:30)\n\n  \u25cf Satellite \u203a Reject traversals of different length\n\n    expect(received).toThrow(expected)\n\n    Expected message: \"traversals must have the same length\"\n    Received message: \"deliberate failure\"\n\n        > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n            |                                                 ^\n          2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at satellite.spec.js:33:25\n      at Object.<anonymous> (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:1824:9)\n      at Object.throwingMatcher [as toThrow] (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:2235:93)\n      at Object.toThrow (satellite.spec.js:34:8)\n      at Object.toThrow (satellite.spec.js:34:8)\n\n  \u25cf Satellite \u203a Reject inconsistent traversals of same length\n\n    expect(received).toThrow(expected)\n\n    Expected message: \"traversals must have the same elements\"\n    Received message: \"deliberate failure\"\n\n        > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n            |                                                 ^\n          2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at satellite.spec.js:41:25\n      at Object.<anonymous> (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:1824:9)\n      at Object.throwingMatcher [as toThrow] (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:2235:93)\n      at Object.toThrow (satellite.spec.js:42:8)\n      at Object.toThrow (satellite.spec.js:42:8)\n\n  \u25cf Satellite \u203a Reject traversals with repeated items\n\n    expect(received).toThrow(expected)\n\n    Expected message: \"traversals must contain unique items\"\n    Received message: \"deliberate failure\"\n\n        > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n            |                                                 ^\n          2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at satellite.spec.js:49:25\n      at Object.<anonymous> (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:1824:9)\n      at Object.throwingMatcher [as toThrow] (../../../../../../../../Users/ankitchoudhary/exercism-javascript/node_modules/.pnpm/expect@30.2.0/node_modules/expect/build/index.js:2235:93)\n      at Object.toThrow (satellite.spec.js:50:8)\n      at Object.toThrow (satellite.spec.js:50:8)\n\n  \u25cf Satellite \u203a A degenerate binary tree\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:73:30)\n\n  \u25cf Satellite \u203a Another degenerate binary tree\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:96:30)\n\n  \u25cf Satellite \u203a Tree with many more items\n\n    deliberate failure\n\n    > 1 | export const treeFromTraversals = () => { throw new Error('deliberate failure'); };\n        |                                                 ^\n      2 |\n\n      at treeFromTraversals (satellite.js:1:49)\n      at Object.<anonymous> (satellite.spec.js:139:30)\n\nTest Suites: 1 failed, 1 total\nTests:       9 failed, 9 total\nSnapshots:   0 total\nTime:        0.241 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/failing/satellite-jest-results.json\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n",
+      "learner_sha256_before": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_sha256_after": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_unchanged": true,
+      "temporary_directory_removed": true
+    },
+    "empty": {
+      "mode": "empty",
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand",
+        "--json",
+        "--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/empty/satellite-jest-results.json"
+      ],
+      "returncode": 0,
+      "counts": {
+        "total": 9,
+        "passed": 0,
+        "failed": 0,
+        "pending": 9
+      },
+      "executed": 0,
+      "accepted_as_success": false,
+      "output": "\n> @exercism/javascript-satellite@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/empty\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\" \"--json\" \"--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/empty/satellite-jest-results.json\"\n\n(node:9293) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nTest Suites: 1 skipped, 0 of 1 total\nTests:       9 skipped, 9 total\nSnapshots:   0 total\nTime:        0.234 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T039-gt1eec4f/empty/satellite-jest-results.json\n",
+      "learner_sha256_before": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_sha256_after": "8e002cbb823ad9e354c9c3ad17e02b8bab475c74ff1c338fd04e5a008f4f208a",
+      "learner_unchanged": true,
+      "temporary_directory_removed": true
+    }
+  }
+}
