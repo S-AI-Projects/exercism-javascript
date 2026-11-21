@@ -13,9 +13,6 @@ export class Series {
   }
 
   slices(sliceSize) {
-    const result = [];
-    let slice = [];
-
     if (sliceSize < 0) {
       throw new Error('slice length cannot be negative');
     }
@@ -28,14 +25,9 @@ export class Series {
       throw new Error('slice length cannot be greater than series length');
     }
 
-    for (let i = 0; i < this.digits.length - sliceSize + 1; i += 1) {
-      for (let j = 0; j < sliceSize; j += 1) {
-        slice.push(this.digits[i + j]);
-      }
-      result.push(slice);
-      slice = [];
-    }
-
-    return result;
+    const sliceCount = this.digits.length - sliceSize + 1;
+    return Array.from({ length: sliceCount }, (_, start) =>
+      this.digits.slice(start, start + sliceSize),
+    );
   }
 }
