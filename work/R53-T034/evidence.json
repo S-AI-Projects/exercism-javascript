@@ -1,0 +1,70 @@
+{
+  "exercise": "exercises/practice/series",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "series.js",
+      "test": "series.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_case_count": 11,
+    "spec_case_count": 11,
+    "named_case_outputs": {
+      "slices of one from one": "[[1]]",
+      "slices of one from two": "[[1], [2]]",
+      "slices of two": "[[3, 5]]"
+    },
+    "case_names": [
+      "slices of one from one",
+      "slices of one from two",
+      "slices of two",
+      "slices of two overlap",
+      "slices can include duplicates",
+      "slices of long series",
+      "slice length is too large",
+      "slice length is way too large",
+      "slice length cannot be zero",
+      "slice length cannot be negative",
+      "empty series is invalid"
+    ]
+  },
+  "learner_sha256_before": "cc92619dda1a3587d61054a5a96652c9ca8f287307b7e594b68a1a216928456f",
+  "learner_sha256_after": "cc92619dda1a3587d61054a5a96652c9ca8f287307b7e594b68a1a216928456f",
+  "baseline": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 11,
+      "failed": 0,
+      "total": 11
+    },
+    "output": "\n> @exercism/javascript-series@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T034-ia5_4mg7/baseline\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10083) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./series.spec.js\n  Series\n    \u2713 slices of one from one (1 ms)\n    \u2713 slices of one from two\n    \u2713 slices of two\n    \u2713 slices of two overlap\n    \u2713 slices can include duplicates\n    \u2713 slices of long series (1 ms)\n    \u2713 slice length is too large (2 ms)\n    \u2713 slice length is way too large\n    \u2713 slice length cannot be zero\n    \u2713 slice length cannot be negative\n    \u2713 empty series is invalid\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.237 s\nRan all test suites.\n"
+  },
+  "updated": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 11,
+      "failed": 0,
+      "total": 11
+    },
+    "output": "\n> @exercism/javascript-series@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T034-ia5_4mg7/updated\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10123) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./series.spec.js\n  Series\n    \u2713 slices of one from one (1 ms)\n    \u2713 slices of one from two\n    \u2713 slices of two\n    \u2713 slices of two overlap (1 ms)\n    \u2713 slices can include duplicates\n    \u2713 slices of long series\n    \u2713 slice length is too large (2 ms)\n    \u2713 slice length is way too large\n    \u2713 slice length cannot be zero\n    \u2713 slice length cannot be negative\n    \u2713 empty series is invalid\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.234 s\nRan all test suites.\n"
+  },
+  "outputs_agree": true
+}
