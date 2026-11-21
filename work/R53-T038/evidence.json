@@ -1,0 +1,38 @@
+{
+  "exercise": "exercises/practice/pangram",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "real_file_map": {
+    "solution:pangram.js": "pangram.js",
+    "test:pangram.spec.js": "pangram.spec.js",
+    "example:.meta/proof.ci.js": ".meta/proof.ci.js"
+  },
+  "editor_role_declared": false,
+  "canonical_count": 11,
+  "spec_count": 10,
+  "invalid_fixture_results": {
+    "missing-reference": "files.example path does not exist: .meta/missing-proof.ci.js",
+    "missing-test": "files.test path does not exist: missing.spec.js",
+    "outside-exercise": "files.solution path escapes the exercise: ../README.md"
+  },
+  "learner_sha256_before": "8e74958c94b03ce72298e94d2f0a16fb3a51ec487663ed224bd019d4dd3ec6f4",
+  "learner_sha256_after": "8e74958c94b03ce72298e94d2f0a16fb3a51ec487663ed224bd019d4dd3ec6f4",
+  "reference_run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 10,
+      "failed": 0,
+      "total": 10
+    },
+    "output": "\n> @exercism/javascript-pangram@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T038-io8nqzre/reference\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:9458) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./pangram.spec.js\n  Pangram()\n    \u2713 empty sentence\n    \u2713 perfect lower case\n    \u2713 only lower case\n    \u2713 missing the letter 'x'\n    \u2713 missing the letter 'h'\n    \u2713 with underscores\n    \u2713 with numbers\n    \u2713 missing letters replaced by numbers\n    \u2713 mixed case and punctuation\n    \u2713 a-m and A-M are 26 different characters but not a pangram\n\nTest Suites: 1 passed, 1 total\nTests:       10 passed, 10 total\nSnapshots:   0 total\nTime:        0.228 s\nRan all test suites.\n"
+  }
+}
