@@ -1,0 +1,72 @@
+{
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "ankorGH",
+      "gabriel376",
+      "jagdish-15",
+      "ovidiu141",
+      "rchavarria",
+      "ryanplusplus",
+      "SleeplessByte",
+      "tejasbubane",
+      "xarxziux"
+    ],
+    "files": {
+      "solution": [
+        "luhn.js"
+      ],
+      "test": [
+        "luhn.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+    "source": "The Luhn Algorithm on Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Luhn_algorithm",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "luhn.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { valid } from './luhn';\n\ndescribe('Luhn', () => {\n  test('single digit strings can not be valid', () => {\n    expect(valid('1')).toEqual(false);\n  });\n\n  xtest('a single zero is invalid', () => {\n    expect(valid('0')).toEqual(false);\n  });\n\n  xtest('a simple valid SIN that remains valid if reversed', () => {\n    expect(valid('059')).toEqual(true);\n  });\n\n  xtest('a simple valid SIN that becomes invalid if reversed', () => {\n    expect(valid('59')).toEqual(true);\n  });\n\n  xtest('a valid Canadian SIN', () => {\n    expect(valid('055 444 285')).toEqual(true);\n  });\n\n  xtest('invalid Canadian SIN', () => {\n    expect(valid('055 444 286')).toEqual(false);\n  });\n\n  xtest('invalid credit card', () => {\n    expect(valid('8273 1232 7352 0569')).toEqual(false);\n  });\n\n  xtest('invalid long number with an even remainder', () => {\n    expect(valid('1 2345 6789 1234 5678 9012')).toEqual(false);\n  });\n\n  xtest('invalid long number with a remainder divisible by 5', () => {\n    expect(valid('1 2345 6789 1234 5678 9013')).toEqual(false);\n  });\n\n  xtest('valid number with an even number of digits', () => {\n    expect(valid('095 245 88')).toEqual(true);\n  });\n\n  xtest('valid number with an odd number of spaces', () => {\n    expect(valid('234 567 891 234')).toEqual(true);\n  });\n\n  xtest('valid strings with a non-digit added at the end invalid', () => {\n    expect(valid('059a')).toEqual(false);\n  });\n\n  xtest('valid strings with punctuation included become invalid', () => {\n    expect(valid('055-444-285')).toEqual(false);\n  });\n\n  xtest('valid strings with symbols included become invalid', () => {\n    expect(valid('055# 444$ 285')).toEqual(false);\n  });\n\n  xtest('single zero with space is invalid', () => {\n    expect(valid(' 0')).toEqual(false);\n  });\n\n  xtest('more than a single zero is valid', () => {\n    expect(valid('0000 0')).toEqual(true);\n  });\n\n  xtest('input digit 9 is correctly converted to output digit 9', () => {\n    expect(valid('091')).toEqual(true);\n  });\n\n  xtest('very long input is valid', () => {\n    expect(valid('9999999999 9999999999 9999999999 9999999999')).toEqual(true);\n  });\n\n  xtest('valid luhn with an odd number of digits and non zero first digit', () => {\n    expect(valid('109')).toEqual(true);\n  });\n\n  xtest(\"using ascii value for non-doubled non-digit isn't allowed\", () => {\n    expect(valid('055b 444 285')).toEqual(false);\n  });\n\n  xtest(\"using ascii value for doubled non-digit isn't allowed\", () => {\n    expect(valid(':9')).toEqual(false);\n  });\n\n  xtest(\"non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed\", () => {\n    expect(valid('59%59')).toEqual(false);\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "single digit strings can not be valid",
+    "a single zero is invalid",
+    "a simple valid SIN that remains valid if reversed",
+    "a simple valid SIN that becomes invalid if reversed",
+    "a valid Canadian SIN",
+    "invalid Canadian SIN",
+    "invalid credit card",
+    "invalid long number with an even remainder",
+    "invalid long number with a remainder divisible by 5",
+    "valid number with an even number of digits",
+    "valid number with an odd number of spaces",
+    "valid strings with a non-digit added at the end invalid",
+    "valid strings with punctuation included become invalid",
+    "valid strings with symbols included become invalid",
+    "single zero with space is invalid",
+    "more than a single zero is valid",
+    "input digit 9 is correctly converted to output digit 9",
+    "very long input is valid",
+    "valid luhn with an odd number of digits and non zero first digit",
+    "using ascii value for non-doubled non-digit isn't allowed",
+    "using ascii value for doubled non-digit isn't allowed",
+    "non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed"
+  ],
+  "expected_test_count": 22,
+  "expected_skipped_tests_enabled": 21,
+  "metadata_fixtures": [
+    "missing reference file",
+    "missing test file",
+    "path outside exercise directory"
+  ]
+}
