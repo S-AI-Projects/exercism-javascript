@@ -1,0 +1,73 @@
+{
+  "exercise": "exercises/practice/twelve-days",
+  "test_source": "exercises/practice/twelve-days/twelve-days.spec.js",
+  "source_snapshot_hashes": {
+    "one": "09ace422d246075ef172220fda4117ff5cdc5e259e8728434177055f1a81dc34",
+    "two": "09ace422d246075ef172220fda4117ff5cdc5e259e8728434177055f1a81dc34"
+  },
+  "source_snapshot_equal": true,
+  "generation_note": "No per-exercise generator is present; snapshots compare the maintained spec source.",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "twelve-days.js",
+      "test": "twelve-days.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_count": 15,
+    "test_count": 15,
+    "case_mappings": {
+      "first day a partridge in a pear tree": "verse first day a partridge in a pear tree",
+      "second day two turtle doves": "verse second day two turtle doves",
+      "third day three french hens": "verse third day three french hens",
+      "fourth day four calling birds": "verse fourth day four calling birds",
+      "fifth day five gold rings": "verse fifth day five gold rings",
+      "sixth day six geese-a-laying": "verse sixth day six geese-a-laying",
+      "seventh day seven swans-a-swimming": "verse seventh day seven swans-a-swimming",
+      "eighth day eight maids-a-milking": "verse eighth day eight maids-a-milking",
+      "ninth day nine ladies dancing": "verse ninth day nine ladies dancing",
+      "tenth day ten lords-a-leaping": "verse tenth day ten lords-a-leaping",
+      "eleventh day eleven pipers piping": "verse eleventh day eleven pipers piping",
+      "twelfth day twelve drummers drumming": "verse twelfth day twelve drummers drumming",
+      "recites first three verses of the song": "lyrics recites first three verses of the song",
+      "recites three verses from the middle of the song": "lyrics recites three verses from the middle of the song",
+      "recites the whole song": "lyrics recites the whole song"
+    },
+    "test_titles": [
+      "verse first day a partridge in a pear tree",
+      "verse second day two turtle doves",
+      "verse third day three french hens",
+      "verse fourth day four calling birds",
+      "verse fifth day five gold rings",
+      "verse sixth day six geese-a-laying",
+      "verse seventh day seven swans-a-swimming",
+      "verse eighth day eight maids-a-milking",
+      "verse ninth day nine ladies dancing",
+      "verse tenth day ten lords-a-leaping",
+      "verse eleventh day eleven pipers piping",
+      "verse twelfth day twelve drummers drumming",
+      "lyrics recites first three verses of the song",
+      "lyrics recites three verses from the middle of the song",
+      "lyrics recites the whole song"
+    ]
+  },
+  "run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 15,
+      "failed": 0,
+      "total": 15
+    },
+    "output": "\n> @exercism/javascript-twelve-days@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T032-9_xxa29e/run\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10620) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./twelve-days.spec.js\n  TwelveDays\n    \u2713 verse first day a partridge in a pear tree (1 ms)\n    \u2713 verse second day two turtle doves\n    \u2713 verse third day three french hens\n    \u2713 verse fourth day four calling birds\n    \u2713 verse fifth day five gold rings\n    \u2713 verse sixth day six geese-a-laying\n    \u2713 verse seventh day seven swans-a-swimming (1 ms)\n    \u2713 verse eighth day eight maids-a-milking\n    \u2713 verse ninth day nine ladies dancing\n    \u2713 verse tenth day ten lords-a-leaping\n    \u2713 verse eleventh day eleven pipers piping\n    \u2713 verse twelfth day twelve drummers drumming\n    \u2713 lyrics recites first three verses of the song\n    \u2713 lyrics recites three verses from the middle of the song\n    \u2713 lyrics recites the whole song\n\nTest Suites: 1 passed, 1 total\nTests:       15 passed, 15 total\nSnapshots:   0 total\nTime:        0.257 s\nRan all test suites.\n"
+  }
+}
