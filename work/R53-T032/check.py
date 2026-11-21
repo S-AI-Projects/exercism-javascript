@@ -88,11 +88,14 @@ def copy_exercise(source: Path, dest: Path) -> tuple[Path, Path, Path]:
 
 
 def run_cases(root: Path, exercise_dir: Path) -> dict[str, object]:
+    dependency_link = exercise_dir / "node_modules"
+    if (root / "node_modules").is_dir() and not dependency_link.exists() and not dependency_link.is_symlink():
+        dependency_link.symlink_to(root / "node_modules", target_is_directory=True)
     if shutil.which("corepack") is None:
         fail("corepack is not installed; install the repository's pnpm package manager before running Jest")
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([str(root / "node_modules/.bin"), env.get("PATH", "")])
-    command = ["corepack", "pnpm", "run", "test", "--", "--watchAll=false", "--runInBand"]
+    command = ["corepack", "pnpm", "run", "test", "--watchAll=false", "--runInBand"]
     result = subprocess.run(command, cwd=exercise_dir, env=env, text=True,
                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
     match = re.search(r"Tests:\s+(?:(\d+) passed,\s*)?(?:(\d+) failed,\s*)?(\d+) total", result.stdout)
