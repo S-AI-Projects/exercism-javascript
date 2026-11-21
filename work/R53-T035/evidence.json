@@ -1,0 +1,84 @@
+{
+  "exercise": "exercises/practice/book-store",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata_and_operation_check": {
+    "config_file_map": {
+      "solution": "book-store.js",
+      "test": "book-store.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_count": 18,
+    "spec_case_count": 17,
+    "fixed_domain": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "operation_table": [
+      {
+        "group_size": 1,
+        "discount": 1.0,
+        "price_cents": 800,
+        "array_lookups": 1,
+        "numeric_multiplications": 2
+      },
+      {
+        "group_size": 3,
+        "discount": 0.9,
+        "price_cents": 2160,
+        "array_lookups": 1,
+        "numeric_multiplications": 2
+      },
+      {
+        "group_size": 5,
+        "discount": 0.75,
+        "price_cents": 3000,
+        "array_lookups": 1,
+        "numeric_multiplications": 2
+      }
+    ],
+    "case_names": [
+      "only a single book",
+      "two of the same book",
+      "empty basket",
+      "two different books",
+      "three different books",
+      "four different books",
+      "five different books",
+      "two groups of four is cheaper than group of five plus group of three",
+      "two groups of four is cheaper than groups of five and three",
+      "group of four plus group of two is cheaper than two groups of three",
+      "two each of first 4 books and 1 copy each of rest",
+      "two copies of each book",
+      "three copies of first book and 2 each of remaining",
+      "three each of first 2 books and 2 each of remaining books",
+      "four groups of four are cheaper than two groups each of five and three",
+      "two groups of four and a group of five",
+      "shuffled book order"
+    ]
+  },
+  "learner_sha256_before": "66fcd5aefc59cc1883bdcffe44db4b0b3aa9a017c1575b344a59d74942d2352c",
+  "learner_sha256_after": "66fcd5aefc59cc1883bdcffe44db4b0b3aa9a017c1575b344a59d74942d2352c",
+  "benchmark": null,
+  "run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 17,
+      "failed": 0,
+      "total": 17
+    },
+    "output": "\n> @exercism/javascript-book-store@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T035-ztb4adis/exercise\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:9938) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./book-store.spec.js\n  Book Store\n    Creating a basket\n      \u2713 only a single book\n      \u2713 two of the same book\n      \u2713 empty basket\n      \u2713 two different books\n      \u2713 three different books\n      \u2713 four different books\n      \u2713 five different books (1 ms)\n      \u2713 two groups of four is cheaper than group of five plus group of three\n      \u2713 two groups of four is cheaper than groups of five and three\n      \u2713 group of four plus group of two is cheaper than two groups of three\n      \u2713 two each of first 4 books and 1 copy each of rest\n      \u2713 two copies of each book\n      \u2713 three copies of first book and 2 each of remaining (1 ms)\n      \u2713 three each of first 2 books and 2 each of remaining books\n      \u2713 four groups of four are cheaper than two groups each of five and three (2 ms)\n      \u2713 two groups of four and a group of five\n      \u2713 shuffled book order (1 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       17 passed, 17 total\nSnapshots:   0 total\nTime:        0.237 s\nRan all test suites.\n"
+  }
+}
