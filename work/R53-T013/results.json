@@ -1,0 +1,232 @@
+{
+  "success": true,
+  "expected_test_count": 14,
+  "original": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/perfect-numbers-mutation-5q1y4sum/original-tests.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "pending": 0
+    },
+    "assertions": [
+      {
+        "name": "Exercise - Perfect Numbers Invalid Inputs Zero is rejected (not a natural number)",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Invalid Inputs Negative integer is rejected (not a natural number)",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Smallest perfect number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Medium perfect number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Large perfect number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Smallest abundant number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Medium abundant number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Large abundant number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Perfect square abundant number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Edge case (no factors other than itself) is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Smallest prime deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Smallest non-prime deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Medium deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Large deficient number is classified correctly",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "\n      \u2713 Zero is rejected (not a natural number) (3 ms)\n      \u2713 Negative integer is rejected (not a natural number)\n    Perfect Numbers\n      \u2713 Smallest perfect number is classified correctly (1 ms)\n      \u2713 Medium perfect number is classified correctly\n      \u2713 Large perfect number is classified correctly (13 ms)\n    Abundant Numbers\n      \u2713 Smallest abundant number is classified correctly\n      \u2713 Medium abundant number is classified correctly\n      \u2713 Large abundant number is classified correctly (13 ms)\n      \u2713 Perfect square abundant number is classified correctly\n    Deficient Numbers\n      \u2713 Edge case (no factors other than itself) is classified correctly\n      \u2713 Smallest prime deficient number is classified correctly\n      \u2713 Smallest non-prime deficient number is classified correctly\n      \u2713 Medium deficient number is classified correctly\n      \u2713 Large deficient number is classified correctly (16 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       14 passed, 14 total\nSnapshots:   0 total\nTime:        0.253 s\nRan all test suites.\nTest results written to: ../../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/perfect-numbers-mutation-5q1y4sum/original-tests.json\n"
+  },
+  "mutated": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/perfect-numbers-mutation-5q1y4sum/mutated-tests.json"
+    ],
+    "return_code": 1,
+    "counts": {
+      "total": 14,
+      "passed": 8,
+      "failed": 6,
+      "pending": 0
+    },
+    "assertions": [
+      {
+        "name": "Exercise - Perfect Numbers Invalid Inputs Zero is rejected (not a natural number)",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Invalid Inputs Negative integer is rejected (not a natural number)",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Smallest perfect number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Medium perfect number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Perfect Numbers Large perfect number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Smallest abundant number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Medium abundant number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Large abundant number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Abundant Numbers Perfect square abundant number is classified correctly",
+        "status": "failed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Edge case (no factors other than itself) is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Smallest prime deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Smallest non-prime deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Medium deficient number is classified correctly",
+        "status": "passed"
+      },
+      {
+        "name": "Exercise - Perfect Numbers Deficient Numbers Large deficient number is classified correctly",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "\"abundant\"\n    Received: \"deficient\"\n\n      37 |\n      38 |     test('Medium abundant number is classified correctly', () => {\n    > 39 |       expect(classify(30)).toEqual('abundant');\n         |                            ^\n      40 |     });\n      41 |\n      42 |     test('Large abundant number is classified correctly', () => {\n\n      at Object.toEqual (perfect-numbers.spec.js:39:28)\n\n  \u25cf Exercise - Perfect Numbers \u203a Abundant Numbers \u203a Perfect square abundant number is classified correctly\n\n    expect(received).toEqual(expected) // deep equality\n\n    Expected: \"abundant\"\n    Received: \"deficient\"\n\n      45 |\n      46 |     test('Perfect square abundant number is classified correctly', () => {\n    > 47 |       expect(classify(196)).toEqual('abundant');\n         |                             ^\n      48 |     });\n      49 |   });\n      50 |\n\n      at Object.toEqual (perfect-numbers.spec.js:47:29)\n\nTest Suites: 1 failed, 1 total\nTests:       6 failed, 8 passed, 14 total\nSnapshots:   0 total\nTime:        0.255 s\nRan all test suites.\nTest results written to: ../../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/perfect-numbers-mutation-5q1y4sum/mutated-tests.json\n"
+  },
+  "failed_mutant_tests": [
+    "Exercise - Perfect Numbers Perfect Numbers Smallest perfect number is classified correctly",
+    "Exercise - Perfect Numbers Perfect Numbers Medium perfect number is classified correctly",
+    "Exercise - Perfect Numbers Perfect Numbers Large perfect number is classified correctly",
+    "Exercise - Perfect Numbers Abundant Numbers Smallest abundant number is classified correctly",
+    "Exercise - Perfect Numbers Abundant Numbers Medium abundant number is classified correctly",
+    "Exercise - Perfect Numbers Abundant Numbers Perfect square abundant number is classified correctly"
+  ],
+  "original_diagnostic_results": [
+    {
+      "input": 1,
+      "classification": "deficient"
+    },
+    {
+      "input": 2,
+      "classification": "deficient"
+    },
+    {
+      "input": 3,
+      "classification": "deficient"
+    },
+    {
+      "input": 4,
+      "classification": "deficient"
+    },
+    {
+      "input": 5,
+      "classification": "deficient"
+    },
+    {
+      "input": 6,
+      "classification": "perfect"
+    }
+  ],
+  "mutated_diagnostic_results": [
+    {
+      "input": 1,
+      "classification": "deficient"
+    },
+    {
+      "input": 2,
+      "classification": "deficient"
+    },
+    {
+      "input": 3,
+      "classification": "deficient"
+    },
+    {
+      "input": 4,
+      "classification": "deficient"
+    },
+    {
+      "input": 5,
+      "classification": "deficient"
+    },
+    {
+      "input": 6,
+      "classification": "deficient"
+    }
+  ],
+  "classification_differences": [
+    {
+      "input": 6,
+      "expected": "perfect",
+      "actual": "deficient"
+    }
+  ],
+  "smallest_differing_input": 6,
+  "learner_solution_unchanged": true,
+  "reference_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}

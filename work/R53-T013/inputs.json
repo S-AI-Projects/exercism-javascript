@@ -1,0 +1,80 @@
+{
+  "config": {
+    "authors": [
+      "komyg"
+    ],
+    "contributors": [
+      "ankorGH",
+      "matthewmorgan",
+      "rchavarria",
+      "serixscorpio",
+      "SleeplessByte",
+      "tejasbubane"
+    ],
+    "files": {
+      "solution": [
+        "perfect-numbers.js"
+      ],
+      "test": [
+        "perfect-numbers.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Determine if a number is perfect, abundant, or deficient based on Nicomachus' (60 - 120 CE) classification scheme for positive integers.",
+    "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",
+    "source_url": "https://nealford.com/books/functionalthinking.html",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "perfect-numbers.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { classify } from './perfect-numbers';\n\ndescribe('Exercise - Perfect Numbers', () => {\n  describe('Invalid Inputs', () => {\n    test('Zero is rejected (not a natural number)', () => {\n      expect(() => classify(0)).toThrow(\n        new Error('Classification is only possible for natural numbers.'),\n      );\n    });\n\n    xtest('Negative integer is rejected (not a natural number)', () => {\n      expect(() => classify(-1)).toThrow(\n        new Error('Classification is only possible for natural numbers.'),\n      );\n    });\n  });\n\n  describe('Perfect Numbers', () => {\n    xtest('Smallest perfect number is classified correctly', () => {\n      expect(classify(6)).toEqual('perfect');\n    });\n\n    xtest('Medium perfect number is classified correctly', () => {\n      expect(classify(28)).toEqual('perfect');\n    });\n\n    xtest('Large perfect number is classified correctly', () => {\n      expect(classify(33550336)).toEqual('perfect');\n    });\n  });\n\n  describe('Abundant Numbers', () => {\n    xtest('Smallest abundant number is classified correctly', () => {\n      expect(classify(12)).toEqual('abundant');\n    });\n\n    xtest('Medium abundant number is classified correctly', () => {\n      expect(classify(30)).toEqual('abundant');\n    });\n\n    xtest('Large abundant number is classified correctly', () => {\n      expect(classify(33550335)).toEqual('abundant');\n    });\n\n    xtest('Perfect square abundant number is classified correctly', () => {\n      expect(classify(196)).toEqual('abundant');\n    });\n  });\n\n  describe('Deficient Numbers', () => {\n    xtest('Edge case (no factors other than itself) is classified correctly', () => {\n      expect(classify(1)).toEqual('deficient');\n    });\n\n    xtest('Smallest prime deficient number is classified correctly', () => {\n      expect(classify(2)).toEqual('deficient');\n    });\n\n    xtest('Smallest non-prime deficient number is classified correctly', () => {\n      expect(classify(4)).toEqual('deficient');\n    });\n\n    xtest('Medium deficient number is classified correctly', () => {\n      expect(classify(32)).toEqual('deficient');\n    });\n\n    xtest('Large deficient number is classified correctly', () => {\n      expect(classify(33550337)).toEqual('deficient');\n    });\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "Zero is rejected (not a natural number)",
+    "Negative integer is rejected (not a natural number)",
+    "Smallest perfect number is classified correctly",
+    "Medium perfect number is classified correctly",
+    "Large perfect number is classified correctly",
+    "Smallest abundant number is classified correctly",
+    "Medium abundant number is classified correctly",
+    "Large abundant number is classified correctly",
+    "Perfect square abundant number is classified correctly",
+    "Edge case (no factors other than itself) is classified correctly",
+    "Smallest prime deficient number is classified correctly",
+    "Smallest non-prime deficient number is classified correctly",
+    "Medium deficient number is classified correctly",
+    "Large deficient number is classified correctly"
+  ],
+  "enabled_skipped_test_count": 13,
+  "mutation": {
+    "from": "i <= number / 2",
+    "to": "i < number / 2",
+    "matches": 1
+  },
+  "detecting_test": {
+    "uuid": "163e8e86-7bfd-4ee2-bd68-d083dc3381a3",
+    "name": "Smallest perfect number is classified correctly"
+  },
+  "diagnostic_inputs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "expected_diagnostic_classifications": [
+    "deficient",
+    "deficient",
+    "deficient",
+    "deficient",
+    "deficient",
+    "perfect"
+  ]
+}
