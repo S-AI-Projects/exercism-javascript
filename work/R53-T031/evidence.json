@@ -1,0 +1,78 @@
+{
+  "exercise": "exercises/practice/markdown",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "markdown.js",
+      "test": "markdown.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_entries_before": 18,
+    "included_before": 17,
+    "excluded_before": 1,
+    "canonical_entries_after": 18,
+    "included_after": 17,
+    "excluded_after": 1,
+    "spec_case_count": 17,
+    "named_cases": [
+      "parses normal text as a paragraph",
+      "parsing italics",
+      "parsing bold text",
+      "mixed normal, italics and bold text",
+      "with h1 header level",
+      "with h2 header level",
+      "with h3 header level",
+      "with h4 header level",
+      "with h5 header level",
+      "with h6 header level",
+      "with h7 header level",
+      "unordered lists",
+      "with a little bit of everything",
+      "with markdown symbols in the header text that should not be interpreted",
+      "with markdown symbols in the list item text that should not be interpreted",
+      "with markdown symbols in the paragraph text that should not be interpreted",
+      "unordered lists close properly with preceding and following lines"
+    ]
+  },
+  "learner_solution_sha256_before": "d78c110a282b8db810713a4370ef47869110adea8fc4d4dc8a67438d1766facd",
+  "runs": {
+    "reference": {
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand"
+      ],
+      "returncode": 0,
+      "test_counts": {
+        "passed": 17,
+        "failed": 0,
+        "total": 17
+      },
+      "output": "\n> @exercism/javascript-markdown@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T031-npo0jypo/reference\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10768) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./markdown.spec.js\n  Markdown\n    \u2713 parses normal text as a paragraph (1 ms)\n    \u2713 parsing italics\n    \u2713 parsing bold text\n    \u2713 mixed normal, italics and bold text\n    \u2713 with h1 header level\n    \u2713 with h2 header level\n    \u2713 with h3 header level\n    \u2713 with h4 header level\n    \u2713 with h5 header level (1 ms)\n    \u2713 with h6 header level\n    \u2713 with h7 header level\n    \u2713 unordered lists\n    \u2713 with a little bit of everything\n    \u2713 with markdown symbols in the header text that should not be interpreted\n    \u2713 with markdown symbols in the list item text that should not be interpreted\n    \u2713 with markdown symbols in the paragraph text that should not be interpreted\n    \u2713 unordered lists close properly with preceding and following lines\n\nTest Suites: 1 passed, 1 total\nTests:       17 passed, 17 total\nSnapshots:   0 total\nTime:        0.239 s\nRan all test suites.\n"
+    },
+    "mutated_h7_reference": {
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand"
+      ],
+      "returncode": 1,
+      "test_counts": {
+        "passed": 16,
+        "failed": 1,
+        "total": 17
+      },
+      "output": "\n> @exercism/javascript-markdown@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T031-npo0jypo/reference\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10810) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL ./markdown.spec.js\n  Markdown\n    \u2713 parses normal text as a paragraph (1 ms)\n    \u2713 parsing italics\n    \u2713 parsing bold text\n    \u2713 mixed normal, italics and bold text\n    \u2713 with h1 header level\n    \u2713 with h2 header level\n    \u2713 with h3 header level\n    \u2713 with h4 header level\n    \u2713 with h5 header level (1 ms)\n    \u2713 with h6 header level (2 ms)\n    \u2715 with h7 header level (1 ms)\n    \u2713 unordered lists\n    \u2713 with a little bit of everything\n    \u2713 with markdown symbols in the header text that should not be interpreted\n    \u2713 with markdown symbols in the list item text that should not be interpreted\n    \u2713 with markdown symbols in the paragraph text that should not be interpreted\n    \u2713 unordered lists close properly with preceding and following lines\n\n  \u25cf Markdown \u203a with h7 header level\n\n    expect(received).toEqual(expected) // deep equality\n\n    Expected: \"<p>####### This will not be an h7</p>\"\n    Received: \"<h7>This will not be an h7</h7>\"\n\n      77 |     const expected = '<p>####### This will not be an h7</p>';\n      78 |     const actual = parse(markdown);\n    > 79 |     expect(actual).toEqual(expected);\n         |                    ^\n      80 |   });\n      81 |\n      82 |   test('unordered lists', () => {\n\n      at Object.toEqual (markdown.spec.js:79:20)\n\nTest Suites: 1 failed, 1 total\nTests:       1 failed, 16 passed, 17 total\nSnapshots:   0 total\nTime:        0.23 s, estimated 1 s\nRan all test suites.\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n"
+    }
+  },
+  "mutation_rejected": true,
+  "learner_solution_sha256_after": "d78c110a282b8db810713a4370ef47869110adea8fc4d4dc8a67438d1766facd"
+}
