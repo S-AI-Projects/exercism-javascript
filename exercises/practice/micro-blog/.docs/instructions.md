@@ -35,3 +35,26 @@ Consider the letter 'a' and the emoji '😛'.
 In UTF-16 the letter takes 2 bytes but the emoji takes 4 bytes.
 
 The trick to this exercise is to use APIs designed around Unicode characters (codepoints) instead of Unicode codeunits.
+
+## JavaScript-specific hint: count visible characters
+
+JavaScript's string `length` counts UTF-16 code units. `Array.from(text)` improves
+on that by iterating Unicode code points, but a visible character can contain
+more than one code point. For example, `e\u0301` is an `e` followed by a
+combining accent. It is one grapheme (what a reader sees as one character), but
+two code points. A family emoji joined with zero-width joiners has the same
+kind of boundary issue.
+
+The maintained reference uses `Intl.Segmenter` with its default grapheme
+granularity. A small contrast shows why:
+
+```javascript
+const text = 'e\u0301bcdef';
+const graphemes = Array.from(new Intl.Segmenter().segment(text), (part) => part.segment);
+
+graphemes.slice(0, 5).join(''); // 'ébcde' — five graphemes
+Array.from(text).slice(0, 5).join(''); // 'ébcd' — five code points, four graphemes
+```
+
+For truncation, choose the unit the exercise calls a character. Splitting a
+grapheme can leave a combining mark or part of an emoji sequence behind.
