@@ -1,0 +1,64 @@
+{
+  "config": {
+    "authors": [
+      "rchavarria"
+    ],
+    "contributors": [
+      "ankorGH",
+      "draalger",
+      "jagdish-15",
+      "kytrinyx",
+      "matthewmorgan",
+      "ovidiu141",
+      "ryanplusplus",
+      "SleeplessByte",
+      "tarunvelli",
+      "tejasbubane",
+      "ZacharyRSmith"
+    ],
+    "files": {
+      "solution": [
+        "word-count.js"
+      ],
+      "test": [
+        "word-count.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
+    "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour.",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "word-count.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { countWords } from './word-count';\n\ndescribe('countWords', () => {\n  test('count one word', () => {\n    const expectedCounts = { word: 1 };\n    expect(countWords('word')).toEqual(expectedCounts);\n  });\n\n  xtest('count one of each word', () => {\n    const expectedCounts = { one: 1, of: 1, each: 1 };\n    expect(countWords('one of each')).toEqual(expectedCounts);\n  });\n\n  xtest('multiple occurrences of a word', () => {\n    const expectedCounts = {\n      one: 1,\n      fish: 4,\n      two: 1,\n      red: 1,\n      blue: 1,\n    };\n    expect(countWords('one fish two fish red fish blue fish')).toEqual(\n      expectedCounts,\n    );\n  });\n\n  xtest('handles cramped lists', () => {\n    const expectedCounts = {\n      one: 1,\n      two: 1,\n      three: 1,\n    };\n    expect(countWords('one,two,three')).toEqual(expectedCounts);\n  });\n\n  xtest('handles expanded lists', () => {\n    const expectedCounts = {\n      one: 1,\n      two: 1,\n      three: 1,\n    };\n    expect(countWords('one,\\ntwo,\\nthree')).toEqual(expectedCounts);\n  });\n\n  xtest('ignore punctuation', () => {\n    const expectedCounts = {\n      car: 1,\n      carpet: 1,\n      as: 1,\n      java: 1,\n      javascript: 1,\n    };\n    expect(countWords('car: carpet as java: javascript!!&@$%^&')).toEqual(\n      expectedCounts,\n    );\n  });\n\n  xtest('include numbers', () => {\n    const expectedCounts = {\n      testing: 2,\n      1: 1,\n      2: 1,\n    };\n    expect(countWords('testing, 1, 2 testing')).toEqual(expectedCounts);\n  });\n\n  xtest('normalize case', () => {\n    const expectedCounts = {\n      go: 3,\n      stop: 2,\n    };\n    expect(countWords('go Go GO Stop stop')).toEqual(expectedCounts);\n  });\n\n  xtest('with apostrophes', () => {\n    const expectedCounts = {\n      first: 1,\n      \"don't\": 2,\n      laugh: 1,\n      then: 1,\n      cry: 1,\n      \"you're\": 1,\n      getting: 1,\n      it: 1,\n    };\n    expect(\n      countWords(\"'First: don't laugh. Then: don't cry. You're getting it.'\"),\n    ).toEqual(expectedCounts);\n  });\n\n  xtest('with quotations', () => {\n    const expectedCounts = {\n      joe: 1,\n      \"can't\": 1,\n      tell: 1,\n      between: 1,\n      large: 2,\n      and: 1,\n    };\n    expect(countWords(\"Joe can't tell between 'large' and large.\")).toEqual(\n      expectedCounts,\n    );\n  });\n\n  xtest('substrings from the beginning', () => {\n    const expectedCounts = {\n      joe: 1,\n      \"can't\": 1,\n      tell: 1,\n      between: 1,\n      app: 1,\n      apple: 1,\n      and: 1,\n      a: 1,\n    };\n    expect(countWords(\"Joe can't tell between app, apple and a.\")).toEqual(\n      expectedCounts,\n    );\n  });\n\n  xtest('multiple spaces not detected as a word', () => {\n    const expectedCounts = {\n      multiple: 1,\n      whitespaces: 1,\n    };\n    expect(countWords(' multiple   whitespaces')).toEqual(expectedCounts);\n  });\n\n  xtest('alternating word separators not detected as a word', () => {\n    const expectedCounts = {\n      one: 1,\n      two: 1,\n      three: 1,\n    };\n    expect(countWords(\",\\n,one,\\n ,two \\n 'three'\")).toEqual(expectedCounts);\n  });\n\n  xtest('quotation for word with apostrophe', () => {\n    const expectedCounts = {\n      can: 1,\n      \"can't\": 2,\n    };\n    expect(countWords(\"can, can't, 'can't'\")).toEqual(expectedCounts);\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "count one word",
+    "count one of each word",
+    "multiple occurrences of a word",
+    "handles cramped lists",
+    "handles expanded lists",
+    "ignore punctuation",
+    "include numbers",
+    "normalize case",
+    "with apostrophes",
+    "with quotations",
+    "substrings from the beginning",
+    "multiple spaces not detected as a word",
+    "alternating word separators not detected as a word",
+    "quotation for word with apostrophe"
+  ],
+  "expected_test_count": 14,
+  "expected_skipped_tests_enabled": 13,
+  "micro_examples": {
+    "ascii": "'HELLO'.toLowerCase() should produce 'hello'.",
+    "unicode": "'İ'.toLowerCase() === 'i' should be false because the lowercase string contains an additional combining dot."
+  }
+}

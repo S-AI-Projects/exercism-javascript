@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "expected_test_count": 14,
+  "skipped_tests_enabled": 13,
+  "exercise_run": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/word-count-6a_hwi6l/jest-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "countWords count one word",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords count one of each word",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords multiple occurrences of a word",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords handles cramped lists",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords handles expanded lists",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords ignore punctuation",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords include numbers",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords normalize case",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords with apostrophes",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords with quotations",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords substrings from the beginning",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords multiple spaces not detected as a word",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords alternating word separators not detected as a word",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      },
+      {
+        "name": "countWords quotation for word with apostrophe",
+        "expected_status": "passed",
+        "actual_status": "passed",
+        "failure_messages": []
+      }
+    ],
+    "output_excerpt": "/qvpwjl0j7378slyjcsfmwkj00000gn/T/word-count-6a_hwi6l/jest-results.json\n\n(node:92099) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./word-count.spec.js\n  countWords\n    ✓ count one word (1 ms)\n    ✓ count one of each word\n    ✓ multiple occurrences of a word\n    ✓ handles cramped lists\n    ✓ handles expanded lists\n    ✓ ignore punctuation\n    ✓ include numbers\n    ✓ normalize case\n    ✓ with apostrophes\n    ✓ with quotations\n    ✓ substrings from the beginning\n    ✓ multiple spaces not detected as a word\n    ✓ alternating word separators not detected as a word\n    ✓ quotation for word with apostrophe\n\nTest Suites: 1 passed, 1 total\nTests:       14 passed, 14 total\nSnapshots:   0 total\nTime:        0.327 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/word-count-6a_hwi6l/jest-results.json\n"
+  },
+  "micro_examples": {
+    "command": [
+      "node",
+      "-e",
+      "const ascii = 'HELLO'.toLowerCase();\nconst unicode = 'İ'.toLowerCase();\nconsole.log(JSON.stringify({\n  ascii,\n  unicode,\n  unicodeEqualsPlainI: unicode === 'i',\n  unicodeCodePoints: Array.from(unicode, (char) =>\n    char.codePointAt(0).toString(16),\n  ),\n}));\n"
+    ],
+    "return_code": 0,
+    "output": "{\"ascii\":\"hello\",\"unicode\":\"i̇\",\"unicodeEqualsPlainI\":false,\"unicodeCodePoints\":[\"69\",\"307\"]}",
+    "error_output": "",
+    "examples": {
+      "ascii_lowercase": {
+        "input": "'HELLO'.toLowerCase()",
+        "expected": "hello",
+        "actual": "hello",
+        "passed": true
+      },
+      "unicode_lowercase": {
+        "input": "'İ'.toLowerCase() === 'i'",
+        "expected": false,
+        "actual": false,
+        "lowercase_value": "i̇",
+        "code_points": [
+          "69",
+          "307"
+        ],
+        "passed": true
+      }
+    }
+  },
+  "learner_solution_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}
