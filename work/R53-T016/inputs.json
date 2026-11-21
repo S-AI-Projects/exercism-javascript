@@ -1,0 +1,62 @@
+{
+  "config": {
+    "authors": [
+      "rchavarria"
+    ],
+    "contributors": [
+      "ankorGH",
+      "cmccandless",
+      "draalger",
+      "jagdish-15",
+      "JesseSingleton",
+      "jscheffner",
+      "kytrinyx",
+      "matthewmorgan",
+      "ryanplusplus",
+      "SleeplessByte",
+      "tarunvelli",
+      "tejasbubane",
+      "xarxziux"
+    ],
+    "files": {
+      "solution": [
+        "space-age.js"
+      ],
+      "test": [
+        "space-age.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
+    "source": "Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial.",
+    "source_url": "https://pine.fm/LearnToProgram/chap_01.html",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "space-age.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { age } from './space-age';\n\ndescribe('Space Age', () => {\n  test('age on Earth', () => {\n    expect(age('earth', 1000000000)).toEqual(31.69);\n  });\n\n  xtest('age on Mercury', () => {\n    expect(age('mercury', 2134835688)).toEqual(280.88);\n  });\n\n  xtest('age on Venus', () => {\n    expect(age('venus', 189839836)).toEqual(9.78);\n  });\n\n  xtest('age on Mars', () => {\n    expect(age('mars', 2129871239)).toEqual(35.88);\n  });\n\n  xtest('age on Jupiter', () => {\n    expect(age('jupiter', 901876382)).toEqual(2.41);\n  });\n\n  xtest('age on Saturn', () => {\n    expect(age('saturn', 2000000000)).toEqual(2.15);\n  });\n\n  xtest('age on Uranus', () => {\n    expect(age('uranus', 1210123456)).toEqual(0.46);\n  });\n\n  xtest('age on Neptune', () => {\n    expect(age('neptune', 1821023456)).toEqual(0.35);\n  });\n\n  xtest('invalid planet causes error', () => {\n    expect(() => age('Sun', 680804807)).toThrow(new Error('not a planet'));\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "age on Earth",
+    "age on Mercury",
+    "age on Venus",
+    "age on Mars",
+    "age on Jupiter",
+    "age on Saturn",
+    "age on Uranus",
+    "age on Neptune",
+    "invalid planet causes error"
+  ],
+  "expected_test_count": 9,
+  "expected_skipped_tests_enabled_per_copy": 8,
+  "approaches": {
+    "reference": "exercises/practice/space-age/.meta/proof.ci.js",
+    "alternative": "work/R53-T016/alternative.js"
+  }
+}
