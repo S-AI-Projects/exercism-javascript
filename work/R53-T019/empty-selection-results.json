@@ -1,0 +1,29 @@
+{
+  "success": false,
+  "command": [
+    "npm",
+    "run",
+    "test",
+    "--",
+    "--watch=false",
+    "--runInBand",
+    "--json",
+    "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/forth-course-check-3d8m9dpo/jest-results.json",
+    "--testPathIgnorePatterns=.+"
+  ],
+  "return_code": 1,
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0,
+    "pending": 0
+  },
+  "expected_test_count": 55,
+  "enabled_skipped_tests": 54,
+  "cases": [],
+  "failures": [
+    "The test process exited with status 1.",
+    "No tests were executed."
+  ],
+  "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/forth-course-check-3d8m9dpo/jest-results.json --testPathIgnorePatterns=.+\n\nNo tests found, exiting with code 1\nRun with `--passWithNoTests` to exit with code 0\nIn /private/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/forth-course-check-3d8m9dpo/forth\n  8 files checked.\n  testMatch: **/__tests__/**/*.[jt]s?(x), **/test/**/*.[jt]s?(x), **/?(*.)+(spec|test).[jt]s?(x) - 1 match\n  testPathIgnorePatterns: .+ - 0 matches\n  testRegex:  - 0 matches\nPattern:  - 0 matches\n"
+}
