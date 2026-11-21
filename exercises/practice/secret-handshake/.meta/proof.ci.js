@@ -5,11 +5,17 @@ export const commands = (handshake) => {
     throw new Error('Handshake must be a number');
   }
 
-  const shakeWith = handshakeCommands.filter(
-    (_, i) => handshake & Math.pow(2, i),
+  const selectedCommands = handshakeCommands.filter(
+    (_, bitIndex) => handshake & Math.pow(2, bitIndex),
   );
 
-  if (handshake & Math.pow(2, 4)) shakeWith.reverse();
+  const reverseFlag = Math.pow(2, 4);
+  const shouldReverse = (handshake & reverseFlag) !== 0;
 
-  return shakeWith;
+  // The fifth bit reverses the commands instead of adding another command.
+  if (shouldReverse) {
+    selectedCommands.reverse();
+  }
+
+  return selectedCommands;
 };

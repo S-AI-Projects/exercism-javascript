@@ -1,0 +1,58 @@
+{
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "ankorGH",
+      "ovidiu141",
+      "PSalant726",
+      "rchavarria",
+      "ryanplusplus",
+      "SleeplessByte",
+      "xarxziux"
+    ],
+    "files": {
+      "solution": [
+        "secret-handshake.js"
+      ],
+      "test": [
+        "secret-handshake.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
+    "source": "Bert, in Mary Poppins",
+    "source_url": "https://www.imdb.com/title/tt0058331/quotes/?item=qt0437047",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "before_reference": "const handshakeCommands = ['wink', 'double blink', 'close your eyes', 'jump'];\n\nexport const commands = (handshake) => {\n  if (typeof handshake !== 'number') {\n    throw new Error('Handshake must be a number');\n  }\n\n  const shakeWith = handshakeCommands.filter(\n    (_, i) => handshake & Math.pow(2, i),\n  );\n\n  if (handshake & Math.pow(2, 4)) shakeWith.reverse();\n\n  return shakeWith;\n};\n",
+  "after_reference": "const handshakeCommands = ['wink', 'double blink', 'close your eyes', 'jump'];\n\nexport const commands = (handshake) => {\n  if (typeof handshake !== 'number') {\n    throw new Error('Handshake must be a number');\n  }\n\n  const selectedCommands = handshakeCommands.filter(\n    (_, bitIndex) => handshake & Math.pow(2, bitIndex),\n  );\n\n  const reverseFlag = Math.pow(2, 4);\n  const shouldReverse = (handshake & reverseFlag) !== 0;\n\n  // The fifth bit reverses the commands instead of adding another command.\n  if (shouldReverse) {\n    selectedCommands.reverse();\n  }\n\n  return selectedCommands;\n};\n",
+  "test_sources": {
+    "secret-handshake.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { commands } from './secret-handshake';\n\ndescribe('Secret Handshake', () => {\n  describe('Create A Handshake For A Number', () => {\n    test('wink for 1', () => {\n      expect(commands(1)).toEqual(['wink']);\n    });\n\n    xtest('double blink for 10', () => {\n      expect(commands(2)).toEqual(['double blink']);\n    });\n\n    xtest('close your eyes for 100', () => {\n      expect(commands(4)).toEqual(['close your eyes']);\n    });\n\n    xtest('jump for 1000', () => {\n      expect(commands(8)).toEqual(['jump']);\n    });\n\n    xtest('combine two actions', () => {\n      expect(commands(3)).toEqual(['wink', 'double blink']);\n    });\n\n    xtest('reverse two actions', () => {\n      expect(commands(19)).toEqual(['double blink', 'wink']);\n    });\n\n    xtest('reversing one action gives the same action', () => {\n      expect(commands(24)).toEqual(['jump']);\n    });\n\n    xtest('reversing no actions still gives no actions', () => {\n      expect(commands(16)).toEqual([]);\n    });\n\n    xtest('all possible actions', () => {\n      expect(commands(15)).toEqual([\n        'wink',\n        'double blink',\n        'close your eyes',\n        'jump',\n      ]);\n    });\n\n    xtest('reverse all possible actions', () => {\n      expect(commands(31)).toEqual([\n        'jump',\n        'close your eyes',\n        'double blink',\n        'wink',\n      ]);\n    });\n\n    xtest('do nothing for zero', () => {\n      expect(commands(0)).toEqual([]);\n    });\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "wink for 1",
+    "double blink for 10",
+    "close your eyes for 100",
+    "jump for 1000",
+    "combine two actions",
+    "reverse two actions",
+    "reversing one action gives the same action",
+    "reversing no actions still gives no actions",
+    "all possible actions",
+    "reverse all possible actions",
+    "do nothing for zero"
+  ],
+  "skipped_tests_enabled_per_run": {
+    "before": 10,
+    "after": 10
+  }
+}

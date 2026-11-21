@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "expected_test_count": 11,
+  "before": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/before-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "Secret Handshake Create A Handshake For A Number wink for 1",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number double blink for 10",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number close your eyes for 100",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number jump for 1000",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number combine two actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reverse two actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reversing one action gives the same action",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reversing no actions still gives no actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number all possible actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reverse all possible actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number do nothing for zero",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "lders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/before-results.json\n\n(node:69773) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./secret-handshake.spec.js\n  Secret Handshake\n    Create A Handshake For A Number\n      \u2713 wink for 1 (1 ms)\n      \u2713 double blink for 10\n      \u2713 close your eyes for 100\n      \u2713 jump for 1000 (1 ms)\n      \u2713 combine two actions\n      \u2713 reverse two actions\n      \u2713 reversing one action gives the same action\n      \u2713 reversing no actions still gives no actions\n      \u2713 all possible actions\n      \u2713 reverse all possible actions\n      \u2713 do nothing for zero\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.299 s\nRan all test suites.\nTest results written to: ../../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/before-results.json\n"
+  },
+  "after": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/after-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "Secret Handshake Create A Handshake For A Number wink for 1",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number double blink for 10",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number close your eyes for 100",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number jump for 1000",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number combine two actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reverse two actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reversing one action gives the same action",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reversing no actions still gives no actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number all possible actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number reverse all possible actions",
+        "status": "passed"
+      },
+      {
+        "name": "Secret Handshake Create A Handshake For A Number do nothing for zero",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/after-results.json\n\n(node:69822) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./secret-handshake.spec.js\n  Secret Handshake\n    Create A Handshake For A Number\n      \u2713 wink for 1 (1 ms)\n      \u2713 double blink for 10\n      \u2713 close your eyes for 100 (1 ms)\n      \u2713 jump for 1000\n      \u2713 combine two actions\n      \u2713 reverse two actions\n      \u2713 reversing one action gives the same action\n      \u2713 reversing no actions still gives no actions\n      \u2713 all possible actions\n      \u2713 reverse all possible actions\n      \u2713 do nothing for zero\n\nTest Suites: 1 passed, 1 total\nTests:       11 passed, 11 total\nSnapshots:   0 total\nTime:        0.236 s\nRan all test suites.\nTest results written to: ../../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/secret-handshake-e49jrxqt/after-results.json\n"
+  },
+  "same_test_results": true,
+  "learner_solution_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}
