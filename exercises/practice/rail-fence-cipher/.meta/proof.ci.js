@@ -1,3 +1,4 @@
+// Expected O(n + rails) time and extra space; each character is visited twice.
 export const encode = (msg, rails) => {
   let stringRails = Array(rails).fill('');
   cycleRails(msg, rails).forEach((cycle, index) => {

@@ -1,0 +1,53 @@
+{
+  "config": {
+    "authors": [
+      "lpizzinidev"
+    ],
+    "files": {
+      "solution": [
+        "rail-fence-cipher.js"
+      ],
+      "test": [
+        "rail-fence-cipher.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Implement encoding and decoding for the rail fence cipher.",
+    "source": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Transposition_cipher#Rail_Fence_cipher",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "rail-fence-cipher.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { decode, encode } from './rail-fence-cipher';\n\ndescribe('Rail Fence Cipher', () => {\n  describe('encode', () => {\n    test('encode with two rails', () => {\n      const fence = encode('XOXOXOXOXOXOXOXOXO', 2);\n      expect(fence).toEqual('XXXXXXXXXOOOOOOOOO');\n    });\n    xtest('encode with three rails', () => {\n      const fence = encode('WEAREDISCOVEREDFLEEATONCE', 3);\n      expect(fence).toEqual('WECRLTEERDSOEEFEAOCAIVDEN');\n    });\n    xtest('encode with ending in the middle', () => {\n      const fence = encode('EXERCISES', 4);\n      expect(fence).toEqual('ESXIEECSR');\n    });\n  });\n  describe('decode', () => {\n    xtest('decode with three rails', () => {\n      const fence = decode('TEITELHDVLSNHDTISEIIEA', 3);\n      expect(fence).toEqual('THEDEVILISINTHEDETAILS');\n    });\n    xtest('decode with five rails', () => {\n      const fence = decode('EIEXMSMESAORIWSCE', 5);\n      expect(fence).toEqual('EXERCISMISAWESOME');\n    });\n    xtest('decode with six rails', () => {\n      const encodedString =\n        '133714114238148966225439541018335470986172518171757571896261';\n      const fence = decode(encodedString, 6);\n      const expectedString =\n        '112358132134558914423337761098715972584418167651094617711286';\n      expect(fence).toEqual(expectedString);\n    });\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "encode with two rails",
+    "encode with three rails",
+    "encode with ending in the middle",
+    "decode with three rails",
+    "decode with five rails",
+    "decode with six rails"
+  ],
+  "enabled_skipped_test_count": 5,
+  "benchmark_message_lengths": [
+    100,
+    1000,
+    5000
+  ],
+  "benchmark_rails": 3,
+  "benchmark_repetitions": 7,
+  "benchmark_calls_per_repetition": 100,
+  "benchmark_message_generation": "Repeat A-Z in order and truncate to the requested length.",
+  "known_correctness_example": {
+    "input": "WEAREDISCOVEREDFLEEATONCE",
+    "rails": 3,
+    "expected": "WECRLTEERDSOEEFEAOCAIVDEN"
+  }
+}
