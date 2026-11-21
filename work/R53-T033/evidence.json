@@ -1,0 +1,75 @@
+{
+  "exercise": "exercises/practice/leap",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "leap.js",
+      "test": "leap.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_case_count": 9,
+    "spec_case_count": 9,
+    "baseline_cases": {
+      "year not divisible by 4 in common year": {
+        "input": 2015,
+        "expected": "false"
+      },
+      "year divisible by 2, not divisible by 4 in common year": {
+        "input": 1970,
+        "expected": "false"
+      },
+      "year divisible by 4, not divisible by 100 in leap year": {
+        "input": 1996,
+        "expected": "true"
+      }
+    },
+    "smallest_positive_century_diagnostic": {
+      "input": 100,
+      "expected": "false"
+    }
+  },
+  "learner_sha256_before": "7784331b66a1b3b8b12b60b8ba08e7808938c2846e23abf47afc28a1c9e7dab7",
+  "learner_sha256_after": "7784331b66a1b3b8b12b60b8ba08e7808938c2846e23abf47afc28a1c9e7dab7",
+  "baseline": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 10,
+      "failed": 0,
+      "total": 10
+    },
+    "output": "\n> @exercism/javascript-leap@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T033-omjbdrn_/run\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10420) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./leap.spec.js\n  A leap year\n    \u2713 year not divisible by 4 in common year (1 ms)\n    \u2713 year divisible by 2, not divisible by 4 in common year\n    \u2713 year divisible by 4, not divisible by 100 in leap year\n    \u2713 year divisible by 4 and 5 is still a leap year\n    \u2713 year divisible by 100, not divisible by 400 in common year\n    \u2713 year divisible by 100 but not by 3 is still not a leap year\n    \u2713 year divisible by 400 in leap year\n    \u2713 year divisible by 400 but not by 125 is still a leap year (1 ms)\n    \u2713 year divisible by 200, not divisible by 400 in common year\n    \u2713 proposed minimum non-leap century year\n\nTest Suites: 1 passed, 1 total\nTests:       10 passed, 10 total\nSnapshots:   0 total\nTime:        0.226 s\nRan all test suites.\n"
+  },
+  "mutant": {
+    "description": "every year divisible by four is accepted",
+    "diagnostic_input": 100,
+    "expected": false,
+    "rejected": true,
+    "run": {
+      "command": [
+        "corepack",
+        "pnpm",
+        "run",
+        "test",
+        "--watchAll=false",
+        "--runInBand"
+      ],
+      "returncode": 1,
+      "counts": {
+        "passed": 6,
+        "failed": 4,
+        "total": 10
+      },
+      "output": "\n> @exercism/javascript-leap@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T033-omjbdrn_/run\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:10460) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nFAIL ./leap.spec.js\n  A leap year\n    \u2713 year not divisible by 4 in common year (1 ms)\n    \u2713 year divisible by 2, not divisible by 4 in common year\n    \u2713 year divisible by 4, not divisible by 100 in leap year\n    \u2713 year divisible by 4 and 5 is still a leap year\n    \u2715 year divisible by 100, not divisible by 400 in common year (1 ms)\n    \u2715 year divisible by 100 but not by 3 is still not a leap year (1 ms)\n    \u2713 year divisible by 400 in leap year\n    \u2713 year divisible by 400 but not by 125 is still a leap year\n    \u2715 year divisible by 200, not divisible by 400 in common year\n    \u2715 proposed minimum non-leap century year\n\n  \u25cf A leap year \u203a year divisible by 100, not divisible by 400 in common year\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: false\n    Received: true\n\n      20 |\n      21 |   test('year divisible by 100, not divisible by 400 in common year', () => {\n    > 22 |     expect(isLeap(2100)).toBe(false);\n         |                          ^\n      23 |   });\n      24 |\n      25 |   test('year divisible by 100 but not by 3 is still not a leap year', () => {\n\n      at Object.toBe (leap.spec.js:22:26)\n\n  \u25cf A leap year \u203a year divisible by 100 but not by 3 is still not a leap year\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: false\n    Received: true\n\n      24 |\n      25 |   test('year divisible by 100 but not by 3 is still not a leap year', () => {\n    > 26 |     expect(isLeap(1900)).toBe(false);\n         |                          ^\n      27 |   });\n      28 |\n      29 |   test('year divisible by 400 in leap year', () => {\n\n      at Object.toBe (leap.spec.js:26:26)\n\n  \u25cf A leap year \u203a year divisible by 200, not divisible by 400 in common year\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: false\n    Received: true\n\n      36 |\n      37 |   test('year divisible by 200, not divisible by 400 in common year', () => {\n    > 38 |     expect(isLeap(1800)).toBe(false);\n         |                          ^\n      39 |   });\n      40 |   test('proposed minimum non-leap century year', () => {\n      41 |     expect(isLeap(100)).toBe(false);\n\n      at Object.toBe (leap.spec.js:38:26)\n\n  \u25cf A leap year \u203a proposed minimum non-leap century year\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: false\n    Received: true\n\n      39 |   });\n      40 |   test('proposed minimum non-leap century year', () => {\n    > 41 |     expect(isLeap(100)).toBe(false);\n         |                         ^\n      42 |   });\n      43 | });\n      44 |\n\n      at Object.toBe (leap.spec.js:41:25)\n\nTest Suites: 1 failed, 1 total\nTests:       4 failed, 6 passed, 10 total\nSnapshots:   0 total\nTime:        0.233 s, estimated 1 s\nRan all test suites.\n\u2009ELIFECYCLE\u2009 Test failed. See above for more details.\n"
+    }
+  }
+}
