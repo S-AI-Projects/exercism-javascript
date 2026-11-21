@@ -1,0 +1,301 @@
+{
+  "success": true,
+  "command": [
+    "npm",
+    "run",
+    "test",
+    "--",
+    "--watch=false",
+    "--runInBand",
+    "--json",
+    "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/forth-course-check-52p174t1/jest-results.json"
+  ],
+  "return_code": 0,
+  "counts": {
+    "total": 55,
+    "passed": 55,
+    "failed": 0,
+    "pending": 0
+  },
+  "expected_test_count": 55,
+  "enabled_skipped_tests": 54,
+  "cases": [
+    {
+      "name": "Forth parsing and numbers numbers just get pushed onto the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth parsing and numbers pushes negative numbers onto the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth addition can add two numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth addition errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth addition errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth addition more than two values on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth subtraction can subtract two numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth subtraction errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth subtraction errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth subtraction more than two values on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth multiplication can multiply two numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth multiplication errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth multiplication errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth multiplication more than two values on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division can divide two numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division performs integer division",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division errors if dividing by zero",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth division more than two values on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth combined arithmetic addition and subtraction",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth combined arithmetic multiplication and division",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth combined arithmetic multiplication and addition",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth combined arithmetic addition and multiplication",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth dup copies a value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth dup copies the top value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth dup errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth drop removes the top value on the stack if it is the only one",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth drop removes the top value on the stack if it is not the only one",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth drop errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth swap swaps the top two values on the stack if they are the only ones",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth swap swaps the top two values on the stack if they are not the only ones",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth swap errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth swap errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth over copies the second element if there are only two",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth over copies the second element if there are more than two",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth over errors if there is nothing on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth over errors if there is only one value on the stack",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can consist of built-in words",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words execute in the right order",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can override other user-defined words",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can override built-in words",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can override built-in operators",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can use different words with the same name",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words can define word that uses word with the same name",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words cannot redefine non-negative numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words cannot redefine negative numbers",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words errors if executing a non-existent word",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth user-defined words only defines locally",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity DUP is case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity DROP is case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity SWAP is case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity OVER is case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity user-defined words are case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "Forth case-insensitivity definitions are case-insensitive",
+      "status": "passed",
+      "failure_messages": []
+    }
+  ],
+  "failures": [],
+  "output_excerpt": "d arithmetic\n      \u2713 addition and subtraction\n      \u2713 multiplication and division\n      \u2713 multiplication and addition\n      \u2713 addition and multiplication\n    dup\n      \u2713 copies a value on the stack\n      \u2713 copies the top value on the stack\n      \u2713 errors if there is nothing on the stack\n    drop\n      \u2713 removes the top value on the stack if it is the only one\n      \u2713 removes the top value on the stack if it is not the only one\n      \u2713 errors if there is nothing on the stack\n    swap\n      \u2713 swaps the top two values on the stack if they are the only ones\n      \u2713 swaps the top two values on the stack if they are not the only ones\n      \u2713 errors if there is nothing on the stack\n      \u2713 errors if there is only one value on the stack (1 ms)\n    over\n      \u2713 copies the second element if there are only two\n      \u2713 copies the second element if there are more than two\n      \u2713 errors if there is nothing on the stack\n      \u2713 errors if there is only one value on the stack (2 ms)\n    user-defined words\n      \u2713 can consist of built-in words\n      \u2713 execute in the right order\n      \u2713 can override other user-defined words\n      \u2713 can override built-in words\n      \u2713 can override built-in operators\n      \u2713 can use different words with the same name\n      \u2713 can define word that uses word with the same name\n      \u2713 cannot redefine non-negative numbers (1 ms)\n      \u2713 cannot redefine negative numbers\n      \u2713 errors if executing a non-existent word\n      \u2713 only defines locally\n    case-insensitivity\n      \u2713 DUP is case-insensitive\n      \u2713 DROP is case-insensitive\n      \u2713 SWAP is case-insensitive\n      \u2713 OVER is case-insensitive\n      \u2713 user-defined words are case-insensitive\n      \u2713 definitions are case-insensitive (1 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       55 passed, 55 total\nSnapshots:   0 total\nTime:        0.235 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/forth-course-check-52p174t1/jest-results.json\n"
+}
