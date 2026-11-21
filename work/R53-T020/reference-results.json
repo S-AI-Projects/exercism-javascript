@@ -1,0 +1,58 @@
+{
+  "success": true,
+  "command": [
+    "npm",
+    "run",
+    "test",
+    "--",
+    "--watch=false",
+    "--runInBand",
+    "--json",
+    "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/accumulate-course-check-m4y0u26t/jest-results.json"
+  ],
+  "return_code": 0,
+  "counts": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "pending": 0
+  },
+  "expected_test_count": 5,
+  "enabled_skipped_tests": 4,
+  "test_names": [
+    "accumulation empty",
+    "accumulate squares",
+    "accumulate upcases",
+    "accumulate reversed strings",
+    "accumulate recursively"
+  ],
+  "cases": [
+    {
+      "name": "accumulate() accumulation empty",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "accumulate() accumulate squares",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "accumulate() accumulate upcases",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "accumulate() accumulate reversed strings",
+      "status": "passed",
+      "failure_messages": []
+    },
+    {
+      "name": "accumulate() accumulate recursively",
+      "status": "passed",
+      "failure_messages": []
+    }
+  ],
+  "failures": [],
+  "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/accumulate-course-check-m4y0u26t/jest-results.json\n\n(node:9130) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./accumulate.spec.js\n  accumulate()\n    \u2713 accumulation empty (1 ms)\n    \u2713 accumulate squares\n    \u2713 accumulate upcases\n    \u2713 accumulate reversed strings\n    \u2713 accumulate recursively\n\nTest Suites: 1 passed, 1 total\nTests:       5 passed, 5 total\nSnapshots:   0 total\nTime:        0.341 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/accumulate-course-check-m4y0u26t/jest-results.json\n"
+}

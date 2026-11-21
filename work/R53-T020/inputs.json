@@ -1,0 +1,54 @@
+{
+  "config": {
+    "authors": [
+      "matthewmorgan"
+    ],
+    "contributors": [
+      "ankorGH",
+      "gargrave",
+      "rchavarria",
+      "ryanplusplus",
+      "SleeplessByte",
+      "xarxziux"
+    ],
+    "files": {
+      "solution": [
+        "accumulate.js"
+      ],
+      "test": [
+        "accumulate.spec.js"
+      ],
+      "example": [
+        ".meta/proof.ci.js"
+      ]
+    },
+    "blurb": "Implement the `accumulate` operation, which, given a collection and an operation to perform on each element of the collection, returns a new collection containing the result of applying that operation to each element of the input collection.",
+    "source": "Conversation with James Edward Gray II",
+    "source_url": "https://twitter.com/jeg2",
+    "custom": {
+      "version.tests.compatibility": "jest-27",
+      "flag.tests.task-per-describe": false,
+      "flag.tests.may-run-long": false,
+      "flag.tests.includes-optional": false
+    }
+  },
+  "test_sources": {
+    "accumulate.spec.js": "import { describe, expect, test, xtest } from '@jest/globals';\nimport { accumulate } from './accumulate';\n\ndescribe('accumulate()', () => {\n  test('accumulation empty', () => {\n    const accumulator = (e) => e * e;\n    expect(accumulate([], accumulator)).toEqual([]);\n  });\n\n  xtest('accumulate squares', () => {\n    const accumulator = (number) => number * number;\n    const result = accumulate([1, 2, 3], accumulator);\n    expect(result).toEqual([1, 4, 9]);\n  });\n\n  xtest('accumulate upcases', () => {\n    const accumulator = (word) => word.toUpperCase();\n    const result = accumulate('hello world'.split(/\\s/), accumulator);\n    expect(result).toEqual(['HELLO', 'WORLD']);\n  });\n\n  xtest('accumulate reversed strings', () => {\n    const accumulator = (word) => word.split('').reverse().join('');\n    const result = accumulate(\n      'the quick brown fox etc'.split(/\\s/),\n      accumulator,\n    );\n    expect(result).toEqual(['eht', 'kciuq', 'nworb', 'xof', 'cte']);\n  });\n\n  xtest('accumulate recursively', () => {\n    const result = accumulate('a b c'.split(/\\s/), (char) =>\n      accumulate('1 2 3'.split(/\\s/), (digit) => char + digit),\n    );\n\n    expect(result).toEqual([\n      ['a1', 'a2', 'a3'],\n      ['b1', 'b2', 'b3'],\n      ['c1', 'c2', 'c3'],\n    ]);\n  });\n});\n"
+  },
+  "expected_test_names": [
+    "accumulation empty",
+    "accumulate squares",
+    "accumulate upcases",
+    "accumulate reversed strings",
+    "accumulate recursively"
+  ],
+  "expected_test_count": 5,
+  "required_contract_cases": [
+    "accumulation empty",
+    "accumulate squares",
+    "accumulate upcases"
+  ],
+  "learner_sha256_before": {
+    "accumulate.js": "2a01c155f7a0536daf91d289eb2ea00357bfbecc7510c5804721ff9191d3afae"
+  }
+}
