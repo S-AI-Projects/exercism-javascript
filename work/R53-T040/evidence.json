@@ -1,0 +1,64 @@
+{
+  "exercise": "exercises/practice/binary",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata_and_decision_table": {
+    "config_file_map": {
+      "solution": "binary.js",
+      "test": "binary.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_count": 15,
+    "spec_case_count": 10,
+    "decision_table": {
+      "0 is decimal 0": {
+        "input": "0",
+        "expected": 0
+      },
+      "1 is decimal 1": {
+        "input": "1",
+        "expected": 1
+      },
+      "10 is decimal 2": {
+        "input": "10",
+        "expected": 2
+      }
+    },
+    "case_names": [
+      "0 is decimal 0",
+      "1 is decimal 1",
+      "10 is decimal 2",
+      "11 is decimal 3",
+      "100 is decimal 4",
+      "1001 is decimal 9",
+      "11010 is decimal 26",
+      "10001101000 is decimal 1128",
+      "ignores leading zeros",
+      "invalid inputs are null"
+    ]
+  },
+  "learner_sha256_before": "3db5ea9745c11efdc1b84dcb734ac299cd29ab532ba1b0405188f4aaf5712937",
+  "learner_sha256_after": "3db5ea9745c11efdc1b84dcb734ac299cd29ab532ba1b0405188f4aaf5712937",
+  "reference_run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T040-thwoqm5k/exercise/binary-jest-results.json"
+    ],
+    "returncode": 0,
+    "counts": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "pending": 0
+    },
+    "executed": 10,
+    "output": "\n> @exercism/javascript-binary@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T040-thwoqm5k/exercise\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\" \"--json\" \"--outputFile=/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T040-thwoqm5k/exercise/binary-jest-results.json\"\n\n(node:9026) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./binary.spec.js\n  binary\n    \u2713 0 is decimal 0 (1 ms)\n    \u2713 1 is decimal 1\n    \u2713 10 is decimal 2\n    \u2713 11 is decimal 3 (2 ms)\n    \u2713 100 is decimal 4\n    \u2713 1001 is decimal 9\n    \u2713 11010 is decimal 26\n    \u2713 10001101000 is decimal 1128\n    \u2713 ignores leading zeros\n    \u2713 invalid inputs are null\n\nTest Suites: 1 passed, 1 total\nTests:       10 passed, 10 total\nSnapshots:   0 total\nTime:        0.31 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T040-thwoqm5k/exercise/binary-jest-results.json\n"
+  }
+}

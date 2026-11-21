@@ -68,12 +68,15 @@ def run(root: Path, source: Path, destination: Path) -> dict[str, object]:
     solution, spec, example = (declared(destination, role) for role in ("solution", "test", "example"))
     spec.write_text(spec.read_text().replace("xtest(", "test("))
     shutil.copyfile(example, solution)
+    dependency_link = destination / "node_modules"
+    if (root / "node_modules").is_dir():
+        dependency_link.symlink_to(root / "node_modules", target_is_directory=True)
     if shutil.which("corepack") is None:
         fail("corepack is not installed; install the repository's pnpm package manager before running Jest")
     report = destination / "binary-jest-results.json"
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([str(root / "node_modules/.bin"), env.get("PATH", "")])
-    command = ["corepack", "pnpm", "run", "test", "--", "--watchAll=false", "--runInBand",
+    command = ["corepack", "pnpm", "run", "test", "--watchAll=false", "--runInBand",
                "--json", f"--outputFile={report}"]
     child = subprocess.run(command, cwd=destination, env=env, text=True, stdout=subprocess.PIPE,
                            stderr=subprocess.STDOUT, check=False)
