@@ -1,0 +1,81 @@
+{
+  "exercise": "exercises/practice/kindergarten-garden",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "kindergarten-garden.js",
+      "test": "kindergarten-garden.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_case_count": 17,
+    "spec_case_count": 22,
+    "named_inputs": {
+      "garden with single student": "RC\\nGG",
+      "different garden with single student": "VC\\nRC",
+      "garden with two students": "VVCG\\nVVRC"
+    },
+    "case_names": [
+      "garden with single student",
+      "different garden with single student",
+      "garden with two students",
+      "second student's garden",
+      "third student's garden",
+      "for Alice, first student's garden",
+      "for Bob, second student's garden",
+      "for Charlie",
+      "for David",
+      "for Eve",
+      "for Fred",
+      "for Ginny",
+      "for Harriet",
+      "for Ileana",
+      "for Joseph",
+      "for Kincaid, second to last student's garden",
+      "for Larry, last student's garden",
+      "for Patricia",
+      "for Roger",
+      "for Samantha",
+      "for Xander",
+      "Bob and Charlie for each garden"
+    ]
+  },
+  "learner_sha256_before": "37f778920813cedd087c21152ec9bf0d16619a4fdfbba682be6aff9d7d2b4800",
+  "learner_sha256_after": "37f778920813cedd087c21152ec9bf0d16619a4fdfbba682be6aff9d7d2b4800",
+  "maintained_run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 22,
+      "failed": 0,
+      "total": 22
+    },
+    "output": "\n> @exercism/javascript-kindergarten-garden@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T036-87d0_m6y/maintained\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:9753) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./kindergarten-garden.spec.js\n  partial Garden\n    \u2713 garden with single student (1 ms)\n    \u2713 different garden with single student (1 ms)\n    \u2713 garden with two students\n    multiple students for the same garden with three students\n      \u2713 second student's garden\n      \u2713 third student's garden\n  full garden\n    \u2713 for Alice, first student's garden\n    \u2713 for Bob, second student's garden\n    \u2713 for Charlie\n    \u2713 for David (1 ms)\n    \u2713 for Eve\n    \u2713 for Fred\n    \u2713 for Ginny\n    \u2713 for Harriet\n    \u2713 for Ileana\n    \u2713 for Joseph\n    \u2713 for Kincaid, second to last student's garden\n    \u2713 for Larry, last student's garden\n  disordered class\n    \u2713 for Patricia\n    \u2713 for Roger\n    \u2713 for Samantha\n    \u2713 for Xander (1 ms)\n  Two gardens, different students\n    \u2713 Bob and Charlie for each garden\n\nTest Suites: 1 passed, 1 total\nTests:       22 passed, 22 total\nSnapshots:   0 total\nTime:        0.24 s\nRan all test suites.\n"
+  },
+  "alternative_run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 22,
+      "failed": 0,
+      "total": 22
+    },
+    "output": "\n> @exercism/javascript-kindergarten-garden@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T036-87d0_m6y/alternative\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:9793) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./kindergarten-garden.spec.js\n  partial Garden\n    \u2713 garden with single student (1 ms)\n    \u2713 different garden with single student\n    \u2713 garden with two students (1 ms)\n    multiple students for the same garden with three students\n      \u2713 second student's garden\n      \u2713 third student's garden\n  full garden\n    \u2713 for Alice, first student's garden\n    \u2713 for Bob, second student's garden\n    \u2713 for Charlie\n    \u2713 for David\n    \u2713 for Eve\n    \u2713 for Fred\n    \u2713 for Ginny (1 ms)\n    \u2713 for Harriet\n    \u2713 for Ileana\n    \u2713 for Joseph\n    \u2713 for Kincaid, second to last student's garden\n    \u2713 for Larry, last student's garden\n  disordered class\n    \u2713 for Patricia\n    \u2713 for Roger\n    \u2713 for Samantha\n    \u2713 for Xander\n  Two gardens, different students\n    \u2713 Bob and Charlie for each garden\n\nTest Suites: 1 passed, 1 total\nTests:       22 passed, 22 total\nSnapshots:   0 total\nTime:        0.232 s\nRan all test suites.\n"
+  },
+  "outputs_agree_on_asserted_cases": true
+}
