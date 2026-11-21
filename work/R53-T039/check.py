@@ -67,13 +67,16 @@ def run_mode(root: Path, source: Path, dest: Path, mode: str, reference: Path) -
         spec_text = spec_text.replace("xtest(", "test(")
     spec.write_text(spec_text)
     shutil.copyfile(reference, solution)
+    dependency_link = dest / "node_modules"
+    if (root / "node_modules").is_dir():
+        dependency_link.symlink_to(root / "node_modules", target_is_directory=True)
 
     if shutil.which("corepack") is None:
         fail("corepack is not installed; install the repository's pnpm package manager before running Jest")
     report = dest / "satellite-jest-results.json"
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([str(root / "node_modules/.bin"), env.get("PATH", "")])
-    command = ["corepack", "pnpm", "run", "test", "--", "--watchAll=false", "--runInBand",
+    command = ["corepack", "pnpm", "run", "test", "--watchAll=false", "--runInBand",
                "--json", f"--outputFile={report}"]
     child = subprocess.run(command, cwd=dest, env=env, text=True, stdout=subprocess.PIPE,
                            stderr=subprocess.STDOUT, check=False)
