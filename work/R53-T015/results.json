@@ -1,0 +1,153 @@
+{
+  "success": true,
+  "expected_exercise_test_count": 6,
+  "exercise_run": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/exercise-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "Rail Fence Cipher encode encode with two rails",
+        "status": "passed"
+      },
+      {
+        "name": "Rail Fence Cipher encode encode with three rails",
+        "status": "passed"
+      },
+      {
+        "name": "Rail Fence Cipher encode encode with ending in the middle",
+        "status": "passed"
+      },
+      {
+        "name": "Rail Fence Cipher decode decode with three rails",
+        "status": "passed"
+      },
+      {
+        "name": "Rail Fence Cipher decode decode with five rails",
+        "status": "passed"
+      },
+      {
+        "name": "Rail Fence Cipher decode decode with six rails",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/exercise-results.json\n\n(node:77694) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./rail-fence-cipher.spec.js\n  Rail Fence Cipher\n    encode\n      \u2713 encode with two rails (1 ms)\n      \u2713 encode with three rails\n      \u2713 encode with ending in the middle\n    decode\n      \u2713 decode with three rails\n      \u2713 decode with five rails\n      \u2713 decode with six rails\n\nTest Suites: 1 passed, 1 total\nTests:       6 passed, 6 total\nSnapshots:   0 total\nTime:        0.336 s\nRan all test suites.\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/exercise-results.json\n"
+  },
+  "benchmark_test_run": {
+    "command": [
+      "npm",
+      "run",
+      "test",
+      "--",
+      "--watch=false",
+      "--runInBand",
+      "--runTestsByPath",
+      "benchmark.spec.js",
+      "--json",
+      "--outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/benchmark-jest-results.json"
+    ],
+    "return_code": 0,
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "pending": 0
+    },
+    "cases": [
+      {
+        "name": "checks and measures encode",
+        "status": "passed"
+      }
+    ],
+    "output_excerpt": "\n> test\n> corepack pnpm jest --watch=false --runInBand --runTestsByPath benchmark.spec.js --json --outputFile=/var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/benchmark-jest-results.json\n\n(node:77741) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./benchmark.spec.js\n  \u2713 checks and measures encode (59 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       1 passed, 1 total\nSnapshots:   0 total\nTime:        0.257 s\nRan all test suites within paths \"benchmark.spec.js\".\nTest results written to: ../../../../../../../../var/folders/rn/qvpwjl0j7378slyjcsfmwkj00000gn/T/rail-fence-20s391th/benchmark-jest-results.json\n"
+  },
+  "benchmark_correctness_checked_before_timing": true,
+  "benchmark_correctness": {
+    "knownExample": {
+      "expected": "WECRLTEERDSOEEFEAOCAIVDEN",
+      "actual": "WECRLTEERDSOEEFEAOCAIVDEN",
+      "passed": true
+    },
+    "generatedMessages": [
+      {
+        "length": 100,
+        "expectedOutputLength": 100,
+        "actualOutputLength": 100,
+        "roundTripPassed": true
+      },
+      {
+        "length": 1000,
+        "expectedOutputLength": 1000,
+        "actualOutputLength": 1000,
+        "roundTripPassed": true
+      },
+      {
+        "length": 5000,
+        "expectedOutputLength": 5000,
+        "actualOutputLength": 5000,
+        "roundTripPassed": true
+      }
+    ]
+  },
+  "benchmark_measurements": [
+    {
+      "length": 100,
+      "rails": 3,
+      "samples_milliseconds_per_encode": [
+        0.0013187499999997953,
+        0.0012354100000004564,
+        0.0012266699999997853,
+        0.0013183300000002872,
+        0.001346250000000282,
+        0.001216670000000022,
+        0.0008999999999997498
+      ],
+      "median_milliseconds_per_encode": 0.0012354100000004564
+    },
+    {
+      "length": 1000,
+      "rails": 3,
+      "samples_milliseconds_per_encode": [
+        0.008168749999999819,
+        0.008383340000000317,
+        0.023615839999999933,
+        0.022435409999999933,
+        0.02205000000000041,
+        0.021732920000000034,
+        0.021978750000000106
+      ],
+      "median_milliseconds_per_encode": 0.021978750000000106
+    },
+    {
+      "length": 5000,
+      "rails": 3,
+      "samples_milliseconds_per_encode": [
+        0.05401125000000036,
+        0.04853916000000027,
+        0.042242499999999836,
+        0.040711670000000026,
+        0.03921375000000012,
+        0.03921707999999967,
+        0.048205839999999965
+      ],
+      "median_milliseconds_per_encode": 0.042242499999999836
+    }
+  ],
+  "learner_solution_unchanged": true,
+  "tests_unchanged": true,
+  "failure_reasons": []
+}
