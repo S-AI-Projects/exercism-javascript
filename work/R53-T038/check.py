@@ -91,11 +91,14 @@ def run_reference(root: Path, source: Path, dest: Path) -> dict[str, object]:
     example = dest / config["files"]["example"][0]
     spec.write_text(spec.read_text().replace("xtest(", "test("))
     shutil.copyfile(example, solution)
+    dependency_link = dest / "node_modules"
+    if (root / "node_modules").is_dir():
+        dependency_link.symlink_to(root / "node_modules", target_is_directory=True)
     if shutil.which("corepack") is None:
         fail("corepack is not installed; install the repository's pnpm package manager before running Jest")
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([str(root / "node_modules/.bin"), env.get("PATH", "")])
-    command = ["corepack", "pnpm", "run", "test", "--", "--watchAll=false", "--runInBand"]
+    command = ["corepack", "pnpm", "run", "test", "--watchAll=false", "--runInBand"]
     result = subprocess.run(command, cwd=dest, env=env, text=True, stdout=subprocess.PIPE,
                             stderr=subprocess.STDOUT, check=False)
     match = re.search(r"Tests:\s+(?:(\d+) passed,\s*)?(?:(\d+) failed,\s*)?(\d+) total", result.stdout)
