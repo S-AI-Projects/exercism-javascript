@@ -95,18 +95,28 @@ def prepare(source: Path, dest: Path, add_diagnostic: bool = True) -> tuple[Path
 
 
 def run(root: Path, cwd: Path) -> dict[str, object]:
+    dependency_link = cwd / "node_modules"
+    if (root / "node_modules").is_dir() and not dependency_link.exists() and not dependency_link.is_symlink():
+        dependency_link.symlink_to(root / "node_modules", target_is_directory=True)
     if shutil.which("corepack") is None:
         fail("corepack is not installed; install the repository's pnpm package manager before running Jest")
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([str(root / "node_modules/.bin"), env.get("PATH", "")])
-    command = ["corepack", "pnpm", "run", "test", "--", "--watchAll=false", "--runInBand"]
+    command = ["corepack", "pnpm", "run", "test", "--watchAll=false", "--runInBand"]
     result = subprocess.run(command, cwd=cwd, env=env, text=True, stdout=subprocess.PIPE,
                             stderr=subprocess.STDOUT, check=False)
-    match = re.search(r"Tests:\s+(?:(\d+) passed,\s*)?(?:(\d+) failed,\s*)?(\d+) total", result.stdout)
-    if not match:
+    summary = re.search(r"Tests:\s+([^\n]+)", result.stdout)
+    if not summary:
         fail("Jest did not report test counts\n" + result.stdout[-3000:])
-    passed, failed, total = match.groups()
-    counts = {"passed": int(passed or 0), "failed": int(failed or 0), "total": int(total)}
+    counts_line = summary.group(1)
+    total = re.search(r"(\d+) total", counts_line)
+    if not total:
+        fail("Jest summary is missing total test count\n" + counts_line)
+    passed = re.search(r"(\d+) passed", counts_line)
+    failed = re.search(r"(\d+) failed", counts_line)
+    counts = {"passed": int(passed.group(1)) if passed else 0,
+              "failed": int(failed.group(1)) if failed else 0,
+              "total": int(total.group(1))}
     return {"command": command, "returncode": result.returncode, "counts": counts, "output": result.stdout}
 
 
