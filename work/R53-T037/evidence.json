@@ -1,0 +1,65 @@
+{
+  "exercise": "exercises/practice/micro-blog",
+  "python_version": "3.14.7 (v3.14.7:823f0323ee6, Aug  5 2026, 07:07:01) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "node_version": "v26.13.1",
+  "pnpm_version": "9.15.2",
+  "metadata": {
+    "config_file_map": {
+      "solution": "micro-blog.js",
+      "test": "micro-blog.spec.js",
+      "example": ".meta/proof.ci.js"
+    },
+    "canonical_count": 12,
+    "spec_case_count": 12,
+    "case_names": [
+      "English language short",
+      "English language long",
+      "German language short (broth)",
+      "German language long (bear carpet → beards)",
+      "Bulgarian language short (good)",
+      "Greek language short (health)",
+      "Maths short",
+      "Maths long",
+      "English and emoji short",
+      "Emoji short",
+      "Emoji long",
+      "Royal Flush?"
+    ]
+  },
+  "micro_example": {
+    "command": [
+      "node",
+      "/Users/ankitchoudhary/exercism-javascript/work/R53-T037/micro-example.mjs"
+    ],
+    "returncode": 0,
+    "actual": {
+      "input": "ébcdef",
+      "byGrapheme": "ébcde",
+      "byCodePoint": "ébcd"
+    },
+    "expected": {
+      "input": "ébcdef",
+      "byGrapheme": "ébcde",
+      "byCodePoint": "ébcd"
+    }
+  },
+  "learner_sha256_before": "e687623711fe75646689dfcce929ef867a867f52a3a108ebd9ae0c5e162bfff0",
+  "learner_sha256_after": "e687623711fe75646689dfcce929ef867a867f52a3a108ebd9ae0c5e162bfff0",
+  "reference_run": {
+    "command": [
+      "corepack",
+      "pnpm",
+      "run",
+      "test",
+      "--watchAll=false",
+      "--runInBand"
+    ],
+    "returncode": 0,
+    "counts": {
+      "passed": 12,
+      "failed": 0,
+      "total": 12
+    },
+    "output": "\n> @exercism/javascript-micro-blog@ test /private/var/folders/3s/69bx86dj4hxglhw9826ymmbm0000gn/T/R53-T037-tf1r4ddy/exercise\n> corepack pnpm jest \"--watchAll=false\" \"--runInBand\"\n\n(node:9609) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n(Use `node --trace-warnings ...` to show where the warning was created)\nPASS ./micro-blog.spec.js\n  Micro-blog\n    ✓ English language short (9 ms)\n    ✓ English language long\n    ✓ German language short (broth)\n    ✓ German language long (bear carpet → beards)\n    ✓ Bulgarian language short (good)\n    ✓ Greek language short (health) (1 ms)\n    ✓ Maths short\n    ✓ Maths long\n    ✓ English and emoji short\n    ✓ Emoji short\n    ✓ Emoji long\n    ✓ Royal Flush?\n\nTest Suites: 1 passed, 1 total\nTests:       12 passed, 12 total\nSnapshots:   0 total\nTime:        0.24 s\nRan all test suites.\n"
+  }
+}
